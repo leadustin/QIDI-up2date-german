@@ -327,7 +327,7 @@ Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht z
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper9.png)
 
 
-## **Herzlichen Glückwunsch - das Fundament ist geschaffen.**
+**Herzlichen Glückwunsch - das Fundament ist geschaffen.**
 
 > [!IMPORTANT]
 > Vorab noch eine Klarstellung. Wenn ihr dem Guide weiter folgt, bekommt ihr den Softwarestand der aktuell auf meinem Drucker ist.
