@@ -68,7 +68,7 @@ Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen 
 Dreht euren Drucker so, das ihr gut an der Rückseite die Schrauben der Abdeckung entfernen könnt. Mit Hilfe dieser <a href="https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP" target="_blank" rel="noopener noreferrer">Anleitung</a> baut ihr die EMMC aus. Bevor ihr die EMMC ausbaut, einmal sich selbst erden und ein Backup eurer Gcodes nicht vergessen.
 Sicher ist sicher.
 
-## **Installation Armbian "Bookworm"
+## **Installation Armbian "Bookworm"**
 
 + Die EMMC per EMMC-Reader mit dem PC verbinden.
 + balenaEtcher starten und das vorher heruntergeladene <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank">Armbian Image</a> auf die EMMC flashen.
