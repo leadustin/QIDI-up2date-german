@@ -413,7 +413,6 @@ Falls zum Ende der Installation folgender Hinweis in der Konsole angezeigt wird,
 ![Timelapse](https://github.com/leadustin/QIDI_aktuell/blob/main/images/timelapse1.png)
 
 ```bash
-- for Printer printer:
 [timelapse]
 output_path: ~/printer_data/timelapse/
 frame_path: /tmp/timelapse/printer
