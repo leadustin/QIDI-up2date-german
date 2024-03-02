@@ -449,6 +449,7 @@ cd ./Spoolman && \
 bash ./scripts/install_debian.sh
 ```
 Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
+
 ![Spoolman](https://github.com/leadustin/QIDI_aktuell/blob/main/images/spoolman1.png)
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
@@ -468,37 +469,42 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 
 
 ### Hardware:
-
-    1x 5 Zoll Touchdisplay mit HDMI-Eingang [Werbung**]
-    1x Raspberry Pi ab Version 3 [Werbung**]
-    Netzteil für Pi mit min. 3A  [Werbung**]
-    1x HDMI-Kabel - möglichst flexibel und mit kleinen Steckern oder mit Winkel-Stecker [Werbung**] - messt euch euren Weg für das Kabel aus und verwendet ein ausreichend langes Kabel
-    1x USB-Kabel - abhängig vom Typ des USB-Anschluss des Displays - auch hier die Verlegelänge ausmessen
-    1x MicroSD-Karte
-    Inbus 2,5mm
++ 1x <a href="https://www.amazon.de/s?k=touchdisplay+hdmin+5+zoll&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BD4FHA7R3L3Q&sprefix=touchdisplay+hdmin+5+zoll%2Caps%2C109&ref=nb_sb_noss" target="_blank" rel="noopener noreferrer">5 Zoll Touchdisplay mit HDMI</a>
++ 1x <a href="https://www.amazon.de/s?k=raspberry+pi&crid=12N8W4YG4U65U&sprefix=rasp%2Caps%2C109&ref=nb_sb_ss_ts-doa-p_3_4" target="_blank" rel="noopener noreferrer">Rapberry Pi ab Version 3</a>
++ 1x <a href="https://www.amazon.de/s?k=netzteil+raspberry&crid=VIPUZVRDEGV1&sprefix=Netzteil+Ra%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_6_11" target="_blank" rel="noopener noreferrer">Netzteil f&uuml;r Raspberry mit min. 3A</a>
++ 1x <a href="https://www.amazon.de/s?k=hdmi+winkel+kabel&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2GQAXFYRU6MAA&sprefix=hdmi+winkel+kabel+%2Caps%2C139&tag=drucktipps3d-21&ref=nb_sb_noss_2" target="_blank" rel="noopener noreferrer">HDMI-Kabel</a> - möglichst flexibel und mit kleinen Steckern oder mit Winkel-Stecker - messt euch euren Weg für das Kabel aus und verwendet ein ausreichend langes Kabel
++ 1x <a href="https://www.amazon.de/s?k=usb+kabel&crid=KCV1Z6W6QX2H&sprefix=USB+K%2Caps%2C116&ref=nb_sb_ss_ts-doa-p_1_5" target="_blank" rel="noopener noreferrer">USB-Kabel</a> - abhängig vom Typ des USB-Anschluss des Displays - auch hier die Verlegelänge ausmessen
++ 1x <a href="https://www.amazon.de/s?k=micro+sd+karte&crid=2700GPKRVNBPD&sprefix=Micro+Sd%2Caps%2C128&ref=nb_sb_ss_ts-doa-p_1_8" target="_blank" rel="noopener noreferrer">MicroSD-Karte</a>
++ 1x <a href="https://www.amazon.de/s?k=Inbus&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14CFHDZSQ958R&sprefix=inbus%2Caps%2C107&ref=nb_sb_noss_1" target="_blank" rel="noopener noreferrer">Inbus-Set</a>
 
 
 ### Software:
 
-    Raspberry Pi OS
++ <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Imager</a>
 
-Fangen wir also an.
+## **Installation Rapberry OS**
 
-    Raspberry Pi Imager öffnen und euren Pi auswählen
-    Unter "OS wählen" auf Raspberry Pi OS (other) klicken und Raspberry Pi OS Lite (64bit) auswählen
+Raspberry Pi Imager öffnen und euren Pi auswählen
+Unter "OS wählen" auf Raspberry Pi OS (other) klicken und Raspberry Pi OS Lite (64bit) auswählen
 
+![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry1.png)
 
-    Bei der Frage ob OS Einstellungen angepasst werden sollen, auf Einstellungen bearbeiten klicken. Im drauf sich öffnenden Fenster tragt ihr eure Daten ein.
-    In meinem Fall habe ich den selben User wie vom Drucker genommen - mks/makerbase
-    Im Tab "Dienste" "SSH aktivieren" und "Passwort zur Authentifizierung verwenden" auswählen
+Bei der Frage ob OS Einstellungen angepasst werden sollen, auf Einstellungen bearbeiten klicken. Im drauf sich öffnenden Fenster tragt ihr eure Daten ein.
+In meinem Fall habe ich den selben User wie vom Drucker genommen - mks/makerbase
+Im Tab "Dienste" "SSH aktivieren" und "Passwort zur Authentifizierung verwenden" auswählen
 
-    Zurück im Menü mit "Ja" die Übernahme der Parameter bestätigen und bestätigen, dass alle Daten auf der SD-Karte nun gelöscht werden.
-    Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte sich so eine Bestätigung öffnen.
+![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry2.png)
+
+Zurück im Menü mit "Ja" die Übernahme der Parameter bestätigen und bestätigen, dass alle Daten auf der SD-Karte nun gelöscht werden.
+Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte sich so eine Bestätigung öffnen.
+
+![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry3.png)
 
 Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
 
-Bei dem von mir verwendeten Display habe ich folgenden Code eingetragen. Solltet ihr ein anderes Display nutzen - bitte entsprechend auf der Hersteller-Website informieren.
+Bei dem von mir verwendeten <a href="https://www.elecrow.com/5-inch-qled-quantum-dot-display-800-x-480-capacitive-touch-screen-support-various-systems.html" target="_blank" rel="noopener noreferrer">Display</a> habe ich folgenden Code eingetragen. Solltet ihr ein anderes Display nutzen - bitte entsprechend auf der Hersteller-Website informieren.
 
+```bash
 added by elecrow-pitft-setup
 hdmi_force_hotplug=1
 max_usb_current=1
@@ -509,117 +515,70 @@ hdmi_mode=87
 hdmi_cvt 800 480 60 6 0 0 0
 dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900 display_rotate=0
 end elecrow-pitft-setup
+```
 
-    Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
-    Unter [all] fügt ihr vorherigen Code ein. Das Ergebnis sieht dann wie folgt aus:
-
-# For more options and information see
-# http://rptl.io/configtxt
-# Some settings may impact device functionality. See link above for details
-
-# Uncomment some or all of these to enable the optional hardware interfaces
-#dtparam=i2c_arm=on
-#dtparam=i2s=on
-#dtparam=spi=on
-
-# Enable audio (loads snd_bcm2835)
-dtparam=audio=on
-
-# Additional overlays and parameters are documented
-# /boot/firmware/overlays/README
-
-# Automatically load overlays for detected cameras
-camera_auto_detect=1
-
-# Automatically load overlays for detected DSI displays
-display_auto_detect=1
-
-# Automatically load initramfs files, if found
-auto_initramfs=1
-
-# Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
-max_framebuffers=2
-
-# Don't have the firmware create an initial video= setting in cmdline.txt.
-# Use the kernel's default instead.
-disable_fw_kms_setup=1
-
-# Run in 64-bit mode
-arm_64bit=1
-
-# Disable compensation for displays with overscan
-disable_overscan=1
-
-# Run as fast as firmware / board allows
-arm_boost=1
-
-[cm4]
-# Enable host mode on the 2711 built-in XHCI USB controller.
-# This line should be removed if the legacy DWC2 controller is required
-# (e.g. for USB device mode) or if USB support is not required.
-otg_mode=1
-
-[all]
-added by elecrow-pitft-setup
-hdmi_force_hotplug=1
-max_usb_current=1
-hdmi_drive=1
-hdmi_group=2
-hdmi_mode=1
-hdmi_mode=87
-hdmi_cvt 800 480 60 6 0 0 0
-dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900 display_rotate=0
-end elecrow-pitft-setup
+Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
+Unter [all] fügt ihr vorherigen Code ein.
 
 
-    Als nächstes die SD-Karte in den Rapberry Pi stecken, alle benötigen Kabel mit dem Display und dem Pi verbinden und Strom einschalten.
-    Wenn die WLAN-Daten korrekt eingegeben wurden, sollte innerhalb kurzer Zeit der Raspberry in der Netzwerkübersicht eures Router auftauchen. Wie beim Drucker auch hier eine feste IP-Zuordnung vornehmen.
-    Auf dem Display sollte nun die typische Start-Sequenz ablaufen.
+
+
+Als nächstes die SD-Karte in den Rapberry Pi stecken, alle benötigen Kabel mit dem Display und dem Pi verbinden und Strom einschalten.
+Wenn die WLAN-Daten korrekt eingegeben wurden, sollte innerhalb kurzer Zeit der Raspberry in der Netzwerkübersicht eures Router auftauchen. Wie beim Drucker auch hier eine feste IP-Zuordnung vornehmen.
+Auf dem Display sollte nun die typische Start-Sequenz ablaufen.
 
 Nächster Schritt ist die Einrichtung von Klipperscreen.
 
-    Putty öffnen und wie beim Drucker eine Verbindung erstellen.
-    Mit mks/makerbase einloggen
-    das System mit folgenden Befehlen aktualisieren
+Putty öffnen und wie beim Drucker eine Verbindung erstellen.
+Mit mks/makerbase einloggen
+das System mit folgenden Befehlen aktualisieren
 
+```bash
 sudo apt update
 sudo apt upgrade
+```
 
     Als nächstes wird KIAUH installiert - selbe Vorgehensweise wie beim Drucker
 
+```bash
 sudo apt-get update && sudo apt-get install git -y
 cd ~ && git clone https://github.com/dw-0/kiauh.git
 ./kiauh/kiauh.sh
+```
 
-    Im Hauptmenü von KIAUH über Punkt 1 in den Installations-Modus wechseln und Punkt 5 - Klipperscreen auswählen
-    Nach der Fertigstellung der Installation und Rückkehr ins Hauptmenü sollte es so aussehen.
-
-    KIAUH mit Q beenden
++ Im Hauptmenü von KIAUH über Punkt 1 in den Installations-Modus wechseln und Punkt 5 - Klipperscreen auswählen
++ Nach der Fertigstellung der Installation und Rückkehr ins Hauptmenü sollte es so aussehen.
++ KIAUH mit Q beenden
 
 Damit Klipperscreen mit Moonraker interagieren kann, benötigen wir noch ein paar Ordner/Files.
 
-    In der Konsole fügen wir folgende Befehle ein:
++ In der Konsole fügen wir folgende Befehle ein:
 
+```bash
 ls
 mkdir printer_data
 cd printer_data/
 mkdir config
 cd config/
+```
 
 Wir haben nun mehrere Ordner erstellt und befinden uns in der Konsole im Ordner /printer_data/config/
 
     In der Konsole folgendes eingeben. Wichtig ist hier auch die Groß-Kleinschreibung!
 
+```bash
 sudo nano KlipperScreen.conf
+```
 
-    Es öffnet sich der nano Editor in dem wir folgendes eingeben:
++ Es öffnet sich der nano Editor in dem wir folgendes eingeben:
 
+```bash
 [main]
 
 [printer Name_wie_euer_Drucker_angezeigt_werden_soll]
 moonraker_host: IP eueres Druckers
 moonraker_port: 7125
+```
 
 Bei mir sieht das dann so aus:
 
@@ -631,13 +590,15 @@ moonraker_port: 7125
 
 Habt ihr alles entsprechend eingetragen, speichern wir die KlipperScreen.conf mit folgenden Tastatureingaben.
 
-STRG+O
-Return
-STRG+X
++ STRG+O
++ Return
++ STRG+X
 
-    Nach dem der Editor geschlossen wurde, mit folgenden Befehl das System rebooten:
+Nach dem der Editor geschlossen wurde, mit folgenden Befehl das System rebooten:
 
+```bash
 sudo reboot
+```
 
 Das System startet neu und lädt die KlipperScreen-UI
 
@@ -645,15 +606,15 @@ Das System startet neu und lädt die KlipperScreen-UI
 
 Der nächste Schritt wäre die Montage des Displays.
 
-    In Mainsail den Druckkopf nach hinten und das Druckbett nach unten fahren. Wir brauchen Platz.
-    Den Drucker nun am Netzschalter ausschalten und den Stecker aus der Steckdose ziehen.
-    Den Drucker so drehen, das ihr halbwegs bequem hinter das originale Display gucken könnt.
-    Das Display ist an den Ecken mit jeweils einer Schraube befestigt. Um diese zu lösen braucht man einen Inbus-Schlüssel 2,5mm
-    Das alte Verbindungskabel des Displays zum Mainboard lösen
++ In Mainsail den Druckkopf nach hinten und das Druckbett nach unten fahren. Wir brauchen Platz.
++ Den Drucker nun am Netzschalter ausschalten und den Stecker aus der Steckdose ziehen.
++ Den Drucker so drehen, das ihr halbwegs bequem hinter das originale Display gucken könnt.
++ Das Display ist an den Ecken mit jeweils einer Schraube befestigt. Um diese zu lösen braucht man einen Inbus-Schlüssel 2,5mm
++ Das alte Verbindungskabel des Displays zum Mainboard lösen
 
-Entsprechend eures verwendeten Displays müsst ihr euch einen Halter konstruieren um das neue Display an den alten Befestigungspunkten zu befestigen. Auch darauf achten - nach fest kommt ab. Ihr schraubt wieder nur in Plastik. Bei mir wurden sogar während der Montage bei Qidi die beiden oberen Haltepunkte abgerissen. :cursing:
+Entsprechend eures verwendeten Displays müsst ihr euch einen Halter konstruieren um das neue Display an den alten Befestigungspunkten zu befestigen. Auch darauf achten - nach fest kommt ab. Ihr schraubt wieder nur in Plastik. Bei mir wurden sogar während der Montage bei Qidi die beiden oberen Haltepunkte abgerissen.
 
-Solltet ihr mein Display nutzen wollen. Im Anhang ist die STEP der Klemmen zum befestigen des Displays. Für die beiden oberen Haltepunkte müssen diese in der Größe modifiziert werden.
+Solltet ihr mein Display nutzen wollen. Im Package ist die STEP der Klemmen zum befestigen des Displays. Für die beiden oberen Haltepunkte müssen diese in der Größe modifiziert werden.
 
 Da bei mir nur noch die unteren Haltepunkte vorhanden sind, habe ich mir das gespart und mit etwas doppelseitigen Klebeband für Halt gesorgt.
 
