@@ -1,6 +1,6 @@
 Ich möchte in diesem Repository meine Aktualisierung des Qidi X-Plus 3 auf die aktuellste Software inkl. einiger nützlicher und optionaler Tools mit euch teilen.
 
-Dieses Tutorial basiert auf der Arbeit von coco.33 und wurde in seiner Urfassung <a href="https://github.com/Phil1988/FreeQIDI">auf FreeQIDI</a>
+Dieses Tutorial basiert auf der Arbeit von coco.33 und wurde in seiner Urfassung auf <a href="https://github.com/Phil1988/FreeQIDI">FreeQIDI</a>
 veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 > [!CAUTION]
 >Bitte beachtet, dass weder ich noch eine andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
