@@ -88,7 +88,7 @@ Sicher ist sicher.
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/putty.png)
 
 
-+ Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen und eine Telefonnummer einzugeben könnt ihr ignorieren und mit Enter bestätigen.
++ Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen einzugeben könnt ihr ignorieren und mit Enter bestätigen.
 + Verbindung zum Drucker neustarten und mit dem zuvor erstellten User einloggen.
 + Aktualisierung des Betriebssystems mit folgenden Befehlen:
 
