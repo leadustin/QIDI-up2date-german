@@ -2,6 +2,7 @@ Ich möchte in diesem Repository meine Aktualisierung des Qidi X-Plus 3 auf die 
 
 Dieses Tutorial basiert auf der Arbeit von coco.33 und wurde in seiner Urfassung auf <a href="https://github.com/Phil1988/FreeQIDI">FreeQIDI</a>
 veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
+# **Disclaimer**
 > [!CAUTION]
 >Bitte beachtet, dass weder ich noch eine andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
 >Ihr werdet das System komplett von null neu aufsetzen. Dies beinhaltet auch das Flashen aller MCUs wie Druckkopf oder den STM-Chip des Mainboards.
