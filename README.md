@@ -29,6 +29,7 @@ Ich persönlich würde jedoch zur 32 GB-Karte von Qidi raten, da mit einigen zus
 
 
 Wo Licht ist, ist leider auch Schatten. In diesem Fall betrifft das das originale Display des Druckers. Dieses lässt sich derzeit nach der Aktualisierung nicht mehr benutzen. Das Display ist im Prinzip ein eigenes System auf dem die Druckoberfläche des Druckers läuft und seriell an das Mainboard angeschlossen ist. Aufgrund diverser Modifikationen an Klipper und Moonraker durch Qidi hat man so eine Schnittstelle zwischen Display und System geschaffen. Dies ist somit auch der Grund warum eine Aktualisierung von Moonraker bzw. Klipper auf einem bestehenden System diese Fehlermeldung erzeugt.
+
 ![Fehlermeldung](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display_error.png)
 
 Eine Alternative für das Display stelle ich später im Tutorial vor.
@@ -39,55 +40,55 @@ Eine Alternative für das Display stelle ich später im Tutorial vor.
 Was wird alles benötigt?
 
 
-Hardware
+**Hardware**
 
-    EMMC-Reader – ich würde die 32GB EMMC von Qidi kaufen, da ist der Reader mit dabei
-    SD-Card-Adapter auf MicroSD oder USB-Adapter auf MicroSD [Werbung**]
-    MicroSD-Card max 32GB [Werbung**]
-    Optional 5+ Zoll Touchdisplay und ein Raspberry ab Version 3
-
-
-Software
++ <a href="https://eu.qidi3d.com/de/collections/x-plus-3-accessories/products/x-max-3-x-plus-3-x-smart-3-emmc-32g" target="_blank" rel="noopener noreferrer">EMMC-Reader</a>EMMC-Reader</a> – ich würde die 32GB EMMC von Qidi kaufen, da ist der Reader mit dabei
++ <a href="https://www.amazon.de/s?k=sd+card+adapter+usb&crid=15YOTDZUGFJQ2&sprefix=sd+card+a%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_2_9" target="_blank" rel="noopener noreferrer">SD-Card-Adapter auf MicroSD oder USB-Adapter auf MicroSD</a>
++ <a href="https://www.amazon.de/s?k=micro+sd+karte&crid=3IBXHOHP33HS4&sprefix=micro%2Caps%2C111&ref=nb_sb_ss_ts-doa-p_1_5" target="_blank" rel="noopener noreferrer">MicroSD-Karte - maximal 32GB</a>
++ Optional 5+ Zoll Touchdisplay und ein Raspberry ab Version 3
 
 
-    balenaEtcher - zum flashen des Betriebssystems auf die EMMC
-    Armbian Image - Abbild des zu flashenden Betriebssystems
-    Raspi Imager (optional)
-    Putty - Tool um per SSH auf den Drucker zuzugreifen
-    WinSCP - Tool um per FTP auf den Drucker zugreifen zu können
+**Software**
+
+
++ <a href="https://etcher.balena.io/" target="_blank" rel="noopener noreferrer">balenaEtcher</a> - zum flashen des Betriebssystems auf die EMMC
++ <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank" rel="noopener noreferrer">Armbian Image</a> - Abbild des zu flashenden Betriebssystems
++ <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Imager</a>
++ <a rel="noopener noreferrer" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">Putty</a> - Tool um per SSH auf den Drucker zuzugreifen
++ <a href="https://winscp.net/eng/download.php" target="_blank" rel="noopener noreferrer">WinSCP</a> - Tool um per FTP auf den Drucker zugreifen zu können
 
 Zusätzlich wird eine LAN-Verbindung für die Einrichtung des Systems benötigt. WLAN geht NICHT!
 
 
-Nachfolgend eine möglichst detailierte Anleitung, die durch den Update-Prozess führt.
+## Nachfolgend eine möglichst detailierte Anleitung, die durch den Update-Prozess führt.
 
 
-    Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen werden.
-    Dreht euren Drucker so, das ihr gut an der Rückseite die Schrauben der Abdeckung entfernen könnt. Mit Hilfe dieser Anleitung baut ihr die EMMC aus. Bevor ihr die EMMC ausbaut, einmal sich selbst erden und ein Backup eurer Gcodes nicht vergessen. Sicher ist sicher.
-    Die EMMC per EMMC-Reader mit dem PC verbinden.
-    balenaEtcher starten und das vorher heruntergeladene Armbian Image auf die EMMC flashen.
+Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen werden.
+Dreht euren Drucker so, das ihr gut an der Rückseite die Schrauben der Abdeckung entfernen könnt. Mit Hilfe dieser Anleitung baut ihr die EMMC aus. Bevor ihr die EMMC ausbaut, einmal sich selbst erden und ein Backup eurer Gcodes nicht vergessen.
+Sicher ist sicher.
+Die EMMC per EMMC-Reader mit dem PC verbinden.
+balenaEtcher starten und das vorher heruntergeladene Armbian Image auf die EMMC flashen.
 
 forum.drucktipps3d.de/attachment/113135/
 
-    Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
-    LAN-Kabel und Stromversorgung anschließen.
-    Drucker einschalten – Das System fährt nun hoch und der Drucker bekommt seine IP vom Router zugewiesen.
-    Router öffnen und die derzeitige IP des Druckers heraussuchen und dem Drucker fest zuweisen. Nachfolgend ein Bild der Einstellungen auf der Fritz!Box. Wer einen anderen Router hat, muss selber suchen.
+Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
+LAN-Kabel und Stromversorgung anschließen.
+Drucker einschalten – Das System fährt nun hoch und der Drucker bekommt seine IP vom Router zugewiesen.
+Router öffnen und die derzeitige IP des Druckers heraussuchen und dem Drucker fest zuweisen. Nachfolgend ein Bild der Einstellungen auf der Fritz!Box. Wer einen anderen Router hat, muss selber suchen.
 
 
-    Putty starten und entsprechend konfigurieren. Verbindung per SSH auf den Drucker. User ist „root“ und Passwort „1234“. Es folgt nun die Ersteinrichtung des Armbian OS. Unteranderem müsst ihr dem User "root" ein neues Passwort geben, die Zeitzone und eure favorisierte Shell auswählen. Ich benutze bash.
+Putty starten und entsprechend konfigurieren. Verbindung per SSH auf den Drucker. User ist „root“ und Passwort „1234“. Es folgt nun die Ersteinrichtung des Armbian OS. Unteranderem müsst ihr dem User "root" ein neues Passwort geben, die Zeitzone und eure favorisierte Shell auswählen. Ich benutze bash.
 
 forum.drucktipps3d.de/attachment/113143/
 
 
-    Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen und eine Telefonnummer einzugeben könnt ihr ignorieren und mit Enter bestätigen.
-    Verbindung zum Drucker neustarten und mit dem zuvor erstellten User einloggen.
-    Aktualisierung des Betriebssystems mit folgenden Befehlen:
+Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen und eine Telefonnummer einzugeben könnt ihr ignorieren und mit Enter bestätigen.
+Verbindung zum Drucker neustarten und mit dem zuvor erstellten User einloggen.
+Aktualisierung des Betriebssystems mit folgenden Befehlen:
 
-Code
 
-sudo apt update
-sudo apt upgrade
+    sudo apt update
+    sudo apt upgrade
 
     Ich empfehle die Befehle immer zeilenweise in die Konsole einzugeben und abzuwarten bis der jeweilige Befehl abgearbeitet wurde. Einfügen in Putty erfolgt per Rechtsklick. Wollt ihr etwas aus Putty kopieren, reicht es den Text mit gedrückter linker Maustaste zu markieren. Der Text wird automatisch in die Windows-Zwischenablage kopiert.
 
