@@ -243,6 +243,9 @@ Mit nachfolgenden Befehlen wird die Firmware kompliliert:
 make clean
 make -j4
 ```
+Dies sollte anch dem kompillieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper3.png)
 
 > [!WARNING]
 > Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist **EURE** Serial-ID des Druckkopfs. Alle IDs auf diesen       > Bildern sind die **MEINES** Druckers und dürfen nicht auf **EUREN** Drucker geflasht werden.
@@ -262,41 +265,51 @@ sudo apt install python3-serial
 > [!WARNING]
 > ### **Flashen des Druckkopfs**
 > Stellt sicher, dass ihr auch **EURE ID** benutzt. Nachfolgenden Befehl komplett mit **EURER ID** in die Konsole einfügen. **Eure ID** habt ihr in einer Text-Datei zwischengespeichert.
+>
+> ```bash
+> python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
+> ```
 
-```bash
-python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
-```
+So sollte es in der Konsole aussehen:
 
-So sollte es in der Konsole aussehen
-
-[attach='113162','none','true'][/attach]
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper4.png)
 
 
 
 Fertig! Der Druckkopf ist auf Klipper 0.12 geflasht.
 
 
-    Flashen des STM32F402 auf dem Mainboard. Vorgehensweise ähnlich des Flashvorgangs des rp2040. Nachfolgende Befehle in die Konsole eingeben:
+## **Flashen des STM32F402 auf dem Mainboard.** 
 
+Vorgehensweise ähnlich des Flashvorgangs des rp2040. Nachfolgende Befehle in die Konsole eingeben:
+
+```bash
 cd ~/klipper
 make menuconfig
+```
 
 
-    Alles wie auf dem Bild dargestellt einstellen und wieder mit "Q" beenden und "Y" speichern
+Alles wie auf dem Bild dargestellt einstellen und wieder mit "Q" beenden und "Y" speichern
 
-[attach='113163','none','true'][/attach]
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper5.png)
 
 
 
-    Jetzt wird die letzte Firmware mit folgenden Befehl kompiliert:
 
+Jetzt wird die letzte Firmware mit folgenden Befehl kompiliert:
+
+```bash
 make clean
 make -j4
+```
 
 
-    Dieser Prozess erstellt eine „klipper.bin“ im Ordner /home/mks/klipper/out/. Die Warnung während des Kompilierens kann ignoriert werden.
+Dieser Prozess erstellt eine „klipper.bin“ im Ordner /home/mks/klipper/out/. Die Warnung während des Kompilierens kann ignoriert werden.
 
-    In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Benutzername und Passwort leer lassen und auf "speichern" klicken. Als nächstes auf "anmelden" drücken und im nächsten Fenster die Login-Daten des Users mks eintragen und die klipper.bin, wie im Bild gezeigt aus /home/mks/klipper/out/ herunterladen.
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper6.png)
+
+
+In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Benutzername und Passwort leer lassen und auf "speichern" klicken. Als nächstes auf "anmelden" drücken und im nächsten Fenster die Login-Daten des Users mks eintragen und die klipper.bin, wie im Bild gezeigt aus /home/mks/klipper/out/ herunterladen.
 
 [attach='113164','none','true'][/attach]
 
