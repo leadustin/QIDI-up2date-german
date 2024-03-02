@@ -459,6 +459,23 @@ cd ./Spoolman && \
 bash ./scripts/install_debian.sh
 ```
 Die Frage ob Spoolman als Service installiert werden soll mit ja beantworten.
+In Mainsail die moonraker.conf öffnen und folgendes am Ende einfügen:
+
+```bash
+[spoolman]
+server: http://192.168.0.123:7912
+#URL to the Spoolman instance. This parameter must be provided.
+sync_rate: 5
+#The interval, in seconds, between sync requests with the
+#Spoolman server.  The default is 5.
+
+[update_manager spoolman]
+type: web
+channel: stable
+repo: Donkie/Spoolman
+path: ~/Spoolman
+```
+
 Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
 
 ![Spoolman](https://github.com/leadustin/QIDI_aktuell/blob/main/images/spoolman1.png)
