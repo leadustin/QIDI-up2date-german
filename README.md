@@ -501,8 +501,9 @@ Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte
 ![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry3.png)
 
 Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
+Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
 
-Bei dem von mir verwendeten <a href="https://www.elecrow.com/5-inch-qled-quantum-dot-display-800-x-480-capacitive-touch-screen-support-various-systems.html" target="_blank" rel="noopener noreferrer">Display</a> habe ich folgenden Code eingetragen. Solltet ihr ein anderes Display nutzen - bitte entsprechend auf der Hersteller-Website informieren.
+Bei dem von mir verwendeten <a href="https://www.elecrow.com/5-inch-qled-quantum-dot-display-800-x-480-capacitive-touch-screen-support-various-systems.html" target="_blank" rel="noopener noreferrer">Display</a> habe ich folgenden Code  unter [all] eingetragen. Solltet ihr ein anderes Display nutzen - bitte entsprechend auf der Hersteller-Website informieren.
 
 ```bash
 added by elecrow-pitft-setup
@@ -517,28 +518,21 @@ dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy
 end elecrow-pitft-setup
 ```
 
-Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
-Unter [all] fügt ihr vorherigen Code ein.
-
-
-
-
-Als nächstes die SD-Karte in den Rapberry Pi stecken, alle benötigen Kabel mit dem Display und dem Pi verbinden und Strom einschalten.
-Wenn die WLAN-Daten korrekt eingegeben wurden, sollte innerhalb kurzer Zeit der Raspberry in der Netzwerkübersicht eures Router auftauchen. Wie beim Drucker auch hier eine feste IP-Zuordnung vornehmen.
++ Als nächstes die SD-Karte in den Rapberry Pi stecken, alle benötigen Kabel mit dem Display und dem Pi verbinden und Strom einschalten.
++ Wenn die WLAN-Daten korrekt eingegeben wurden, sollte innerhalb kurzer Zeit der Raspberry in der Netzwerkübersicht eures Router auftauchen. Wie beim Drucker auch hier eine feste IP-Zuordnung vornehmen.
 Auf dem Display sollte nun die typische Start-Sequenz ablaufen.
 
-Nächster Schritt ist die Einrichtung von Klipperscreen.
+### *Installation KIUAH und Klipperscreen.*
 
-Putty öffnen und wie beim Drucker eine Verbindung erstellen.
-Mit mks/makerbase einloggen
-das System mit folgenden Befehlen aktualisieren
++ Putty öffnen und wie beim Drucker eine Verbindung erstellen.
++ Mit mks/makerbase einloggen
++ Das System mit folgenden Befehlen aktualisieren
 
 ```bash
 sudo apt update
 sudo apt upgrade
 ```
-
-    Als nächstes wird KIAUH installiert - selbe Vorgehensweise wie beim Drucker
++ Als nächstes wird KIAUH installiert - selbe Vorgehensweise wie beim Drucker
 
 ```bash
 sudo apt-get update && sudo apt-get install git -y
@@ -563,8 +557,7 @@ cd config/
 ```
 
 Wir haben nun mehrere Ordner erstellt und befinden uns in der Konsole im Ordner /printer_data/config/
-
-    In der Konsole folgendes eingeben. Wichtig ist hier auch die Groß-Kleinschreibung!
++ In der Konsole folgendes eingeben. Wichtig ist hier auch die Groß-Kleinschreibung!
 
 ```bash
 sudo nano KlipperScreen.conf
@@ -581,12 +574,14 @@ moonraker_port: 7125
 ```
 
 Bei mir sieht das dann so aus:
-
-[main]
-
-[printer X-Plus 3]
-moonraker_host: 192.168.188.69
-moonraker_port: 7125
+> [!TIP]
+> ```bash
+> [main]
+>
+> [printer X-Plus 3]
+> moonraker_host: 192.168.188.69
+> moonraker_port: 7125
+> ```
 
 Habt ihr alles entsprechend eingetragen, speichern wir die KlipperScreen.conf mit folgenden Tastatureingaben.
 
@@ -612,23 +607,18 @@ Der nächste Schritt wäre die Montage des Displays.
 + Das Display ist an den Ecken mit jeweils einer Schraube befestigt. Um diese zu lösen braucht man einen Inbus-Schlüssel 2,5mm
 + Das alte Verbindungskabel des Displays zum Mainboard lösen
 
-Entsprechend eures verwendeten Displays müsst ihr euch einen Halter konstruieren um das neue Display an den alten Befestigungspunkten zu befestigen. Auch darauf achten - nach fest kommt ab. Ihr schraubt wieder nur in Plastik. Bei mir wurden sogar während der Montage bei Qidi die beiden oberen Haltepunkte abgerissen.
+Entsprechend eures verwendeten Displays müsst ihr euch einen Halter konstruieren um das neue Display an den alten Befestigungspunkten zu befestigen. Auch darauf achten - nach fest kommt ab. Ihr schraubt wieder nur in Plastik. Bei mir wurden sogar während der Montage bei Qidi die beiden oberen Haltepunkte abgerissen.:rage:
 
 Solltet ihr mein Display nutzen wollen. Im Package ist die STEP der Klemmen zum befestigen des Displays. Für die beiden oberen Haltepunkte müssen diese in der Größe modifiziert werden.
-
 Da bei mir nur noch die unteren Haltepunkte vorhanden sind, habe ich mir das gespart und mit etwas doppelseitigen Klebeband für Halt gesorgt.
 
 
-Wir nähern uns dem Ende.
+### Wir nähern uns dem Ende.
 
 Als nächstes müssen das HDMI-Kabel und das USB-Kabel vom Display zum Raspberry Pi verlegt werden. Sucht euch einen für euch akzeptablen Weg Richtung Mainboard-Kammer. Es sollte lediglich darauf geachtet werden, dass die Kabel nicht mit dem Druckkopf und dem Druckbett kollidieren. Kabelbinder helfen.
-
 Ich habe alles an der rechten Seite neben dem großen Lüfter nach unten und dann Richtung Mainboard geführt.
-
 
 Bleibt nur noch die Montage des Raspberrys in der Mainboard-Kammer. Besitzer eines X-Max 3 sind hier aufgrund der Größe im Vorteil. Achtet darauf, dass der kleine Lüfter an der Rückseite der Abdeckung nicht mit dem Pi in Kontakt kommt. Weiterhin darauf achten das der Pi und andere Strom leitende Bauteile Abstand von einander halten. Isolierband oder eine Gehäuseunterseite sind dabei hilfreich.
 
 Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen.
-
-
-Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer. 8)
+Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
