@@ -458,6 +458,7 @@ curl -sSL $source_url -o temp.zip && unzip temp.zip -d ./Spoolman && rm temp.zip
 cd ./Spoolman && \
 bash ./scripts/install_debian.sh
 ```
+Die Frage ob Spoolman als Service installiert werden soll mit ja beantworten.
 Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
 
 ![Spoolman](https://github.com/leadustin/QIDI_aktuell/blob/main/images/spoolman1.png)
