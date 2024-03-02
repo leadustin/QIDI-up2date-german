@@ -8,6 +8,11 @@ veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 >All eure Gcodes sowie eure derzeitige printer.cfg sollten daher gesichert werden.
 >Solltet ihr damit einverstanden sein, und Änderungen durchgeführt werden, erlischt auch jeglicher Garantieanspruch an Qidi.
 
+## Inhaltsverzeichnis
+
+- [Display](#display)
+
+
 
 ## Warum sollte man seinen Qidi aktualisieren?
 
@@ -500,6 +505,7 @@ Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte
 
 ![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry3.png)
 
+## Display
 Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
 Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
 
