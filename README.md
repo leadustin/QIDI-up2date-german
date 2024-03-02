@@ -410,11 +410,6 @@ make install
 ```
 
 Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
-Damit Mainsail Timelapse richtig funktioniert, müssen wir noch ffmpeg installieren. Folgenden Befehl wieder in die Konsole einfügen:
-
-```bash
-sudo apt install ffmpeg
-```
 
 Damit wir später Aktualisierungsbenachrichtigungen bei Updates bekommen, öffnen wir in Mainsail die moonraker.conf und fügen am Ende der Datei folgendes ein:
 
