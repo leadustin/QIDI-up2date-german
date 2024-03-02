@@ -31,13 +31,13 @@ Wo Licht ist, ist leider auch Schatten. In diesem Fall betrifft das das original
 
 Eine Alternative für das Display stelle ich später im Tutorial vor.
 
-## Noch interessiert? Dann starten wir jetzt durch.
+**Noch interessiert? Dann starten wir jetzt durch.**
 
 
 Was wird alles benötigt?
 
 
-### **Hardware**
+### **Hardware Update OS**
 
 + <a href="https://eu.qidi3d.com/de/collections/x-plus-3-accessories/products/x-max-3-x-plus-3-x-smart-3-emmc-32g" target="_blank" rel="noopener noreferrer">EMMC-Reader</a>EMMC-Reader</a> – ich würde die 32GB EMMC von Qidi kaufen, da ist der Reader mit dabei
 + <a href="https://www.amazon.de/s?k=sd+card+adapter+usb&crid=15YOTDZUGFJQ2&sprefix=sd+card+a%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_2_9" target="_blank" rel="noopener noreferrer">SD-Card-Adapter auf MicroSD oder USB-Adapter auf MicroSD</a>
@@ -45,7 +45,7 @@ Was wird alles benötigt?
 + Optional 5+ Zoll Touchdisplay und ein Raspberry ab Version 3
 
 
-### **Software**
+### **Software Update OS**
 
 
 + <a href="https://etcher.balena.io/" target="_blank" rel="noopener noreferrer">balenaEtcher</a> - zum flashen des Betriebssystems auf die EMMC
@@ -60,7 +60,7 @@ Was wird alles benötigt?
 + Zusätzlich wird eine LAN-Verbindung für die Einrichtung des Systems benötigt. WLAN geht NICHT!
 
 
-## Nachfolgend eine möglichst detailierte Anleitung, die durch den Update-Prozess führt.
+**Nachfolgend eine möglichst detailierte Anleitung, die durch den Update-Prozess führt.**
 
 
 Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen werden.
@@ -120,7 +120,7 @@ Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbind
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper_mcu_error.png)
 
-### **Flashen des Druckkopfs**
+### **Flashen des Druckkopfs - Einleitung**
 
 Um ihn zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dies wird nur einmal nötig sein, da wir einen speziellen Bootloader Namens "katapult" flashen werden, zukünftige Firmwareupdates können dann ohne physischen Zugriff erfolgen.
 
@@ -197,16 +197,12 @@ Es folgt eine Abfrage des Passworts des User mks. Hier also makerbase eintragen.
 
 ![Flash Toolhead](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_2.png)
 
-
-
-
 Nachfolgende Befehle flashen Katapult auf den Druckkopf:
 
 ```bash
 sudo cp out/katapult.uf2 /mnt
 sudo umount /mnt
 ```
-
 
 Wenn nachfolgender Befehl eingegeben wird, sollte die Bestätigung angezeigt werden, das Katapult auf dem Druckkopf läuft.
 
@@ -216,10 +212,7 @@ ls /dev/serial/by-id
 
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_3.png)
 
-
-
 Von nun an, können zukünftige Versionen von Klipper ohne physischen Zugriff auf den Druckkopf geflasht warden. Nicht vergessen die Abdeckung des Druckkopfs zu montieren.
-
 
 Jetzt müssen wir Klipper auf den Druckkopf flashen, Folgende Befehle in die Konsole eingeben:
 
