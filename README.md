@@ -5,7 +5,7 @@ veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 # **Disclaimer**
 > [!CAUTION]
 >Bitte beachtet, dass weder ich noch eine andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
->Ihr werdet das System komplett von null neu aufsetzen. Dies beinhaltet auch das Flashen aller MCUs wie Druckkopf oder den STM-Chip des Mainboards.
+>Ihr werdet das System komplett neu aufsetzen. Dies beinhaltet auch das Flashen aller MCUs wie Druckkopf oder den STM-Chip des Mainboards.
 >All eure Gcodes sowie eure derzeitige printer.cfg sollten daher gesichert werden.
 >Solltet ihr damit einverstanden sein, und Änderungen durchgeführt werden, erlischt auch jeglicher Garantieanspruch an Qidi.
 
@@ -67,6 +67,9 @@ Was wird alles benötigt?
 Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen werden.
 Dreht euren Drucker so, das ihr gut an der Rückseite die Schrauben der Abdeckung entfernen könnt. Mit Hilfe dieser <a href="https://drive.google.com/drive/folders/1EPYKbYz4ecUIf17z5wtP-jDAOPeDkXJP" target="_blank" rel="noopener noreferrer">Anleitung</a> baut ihr die EMMC aus. Bevor ihr die EMMC ausbaut, einmal sich selbst erden und ein Backup eurer Gcodes nicht vergessen.
 Sicher ist sicher.
+
+## **Installation Armbian "Bookworm"
+
 + Die EMMC per EMMC-Reader mit dem PC verbinden.
 + balenaEtcher starten und das vorher heruntergeladene <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank">Armbian Image</a> auf die EMMC flashen.
 
