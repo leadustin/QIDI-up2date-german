@@ -448,6 +448,8 @@ curl -sSL $source_url -o temp.zip && unzip temp.zip -d ./Spoolman && rm temp.zip
 cd ./Spoolman && \
 bash ./scripts/install_debian.sh
 ```
+Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
+![Spoolman](https://github.com/leadustin/QIDI_aktuell/blob/main/images/spoolman1.png)
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
 
