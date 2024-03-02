@@ -120,7 +120,7 @@ Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbind
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper_mcu_error.png)
 
-### **Flashen des Druckkopfs - Einleitung**
+## **Flashen des Druckkopfs - Einleitung**
 
 Um ihn zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dies wird nur einmal nötig sein, da wir einen speziellen Bootloader Namens "katapult" flashen werden, zukünftige Firmwareupdates können dann ohne physischen Zugriff erfolgen.
 
@@ -255,7 +255,7 @@ sudo apt install python3-serial
 ```
 
 > [!WARNING]
-> ### **Flashen des Druckkopfs**
+> ### **Flashen des Druckkopfs mit Klipper**
 > Stellt sicher, dass ihr auch **EURE ID** benutzt. Nachfolgenden Befehl komplett mit **EURER ID** in die Konsole einfügen. **Eure ID** habt ihr in einer Text-Datei zwischengespeichert.
 >
 > ```bash
@@ -271,7 +271,7 @@ So sollte es in der Konsole aussehen:
 Fertig! Der Druckkopf ist auf Klipper 0.12 geflasht.
 
 
-## **Flashen des STM32F402 auf dem Mainboard.** 
+### **Flashen STM32F402.** 
 
 Vorgehensweise ähnlich des Flashvorgangs des rp2040. Nachfolgende Befehle in die Konsole eingeben:
 
@@ -329,7 +329,7 @@ Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht z
 > Es muss nun lediglich die printer.cfg von euch angepasst werden. Das bedeutet es müssen die Pin-Belegungen, Extruder, Lüfter im Prinzip der komplette Hardwareteil plus Macros eingepflegt werden.
 > Dafür könnt ihr eure alte printer.cfg ausschlachten. Wer das nicht möchte folgt weiter dem Guide.
 
-## **printer.cfg**
+### **printer.cfg**
 
 Die printer.cfg ist quasi das Herzstück des Druckers. In ihr sind alle Einstellungen der Hardware wie Extruder, Lüfter etc. gespeichert.
 Sie enthält in der Regel alle benötigten Macros und Verweise auf Configs anderer Tools. Derzeit fehlen in der printer.cfg wichtige Einträge.
