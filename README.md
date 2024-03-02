@@ -166,7 +166,7 @@ In der Konsole solltet ihr folgende Ausgabe sehen:
 
 
 
-Nachfolgenden Befehl in die Konsole für folgende Ausgabe eingeben. Man sieht das auf dem Druckkopf Klipper installiert ist. Beachtet das die ID auf dem Bild, die meines Druckers ist!
+Nachfolgenden Befehl in die Konsole für folgende Ausgabe eingeben. Man sieht das auf dem Druckkopf Klipper installiert ist. Beachtet das die ID auf dem Bild, die **MEINES** Druckers ist!
 
 ```bash
 ls /dev/serial/by-id/*
@@ -244,8 +244,8 @@ make clean
 make -j4
 ```
 
-
-Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist EURE Serial-ID des Druckkopfs. Alle IDs auf diesen Bildern sind die MEINES Druckers und dürfen nicht auf euren Drucker geflasht werden.
+> [!WARNING]
+> Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist **EURE** Serial-ID des Druckkopfs. Alle IDs auf diesen       > Bildern sind die **MEINES** Druckers und dürfen nicht auf **EUREN** Drucker geflasht werden.
 
 ```bash
 ls /dev/serial/by-id/*
@@ -253,19 +253,21 @@ ls /dev/serial/by-id/*
 
 Das muss in eurer Konsole stehen - “/dev/serial/by-id/usb-katapult_rp2040_EURE-ID”
 
-wir installieren python3-serial mit folgeden Befehl. Dies ermöglicht es uns den Druckkopf zu flashen.
+Installation python3-serial mit folgeden Befehl. Dies ermöglicht es uns den Druckkopf zu flashen.
 
 ```bash
 sudo apt install python3-serial
 ```
 
+> [!WARNING]
+> ### **Flashen des Druckkopfs**
+> Stellt sicher, dass ihr auch **EURE ID** benutzt. Nachfolgenden Befehl komplett mit **EURER ID** in die Konsole einfügen. **Eure ID** habt ihr in einer Text-Datei zwischengespeichert.
 
-    Flashen des Druckkopfs – stellt sicher, dass ihr auch EURE ID benutzt. Nachfolgenden Befehl komplett mit EURER ID in die Konsole einfügen. Eure ID habt ihr in einer Text-Datei zwischengespeichert.
-
+```bash
 python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
+```
 
-
-    So sollte es in der Konsole aussehen
+So sollte es in der Konsole aussehen
 
 [attach='113162','none','true'][/attach]
 
