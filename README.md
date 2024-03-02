@@ -99,7 +99,7 @@ sudo apt upgrade
 
 Ich empfehle die Befehle immer zeilenweise in die Konsole einzugeben und abzuwarten bis der jeweilige Befehl abgearbeitet wurde. Einfügen in Putty erfolgt per Rechtsklick. Wollt ihr etwas aus Putty kopieren, reicht es den Text mit gedrückter linker Maustaste zu markieren. Der Text wird automatisch in die Windows-Zwischenablage kopiert.
 
-Da wir derzeit als root eingelogt sind und KIAUH nicht mit mit diesem User gestartet werden kann, führen wir einen Reboot des Systems durch.
+Da wir derzeit als "root" eingeloggt sind und KIAUH nicht mit mit diesem User gestartet werden kann, führen wir einen Reboot des Systems durch.
 In die Konsole fügen wir folgenden Befehl ein:
 
 ```bash
