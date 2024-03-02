@@ -408,6 +408,16 @@ git clone https://github.com/mainsail-crew/moonraker-timelapse.git
 cd ~/moonraker-timelapse
 make install
 ```
+Falls zum Ende der Installation folgender Hinweis in der Konsole angezeigt wird, bitte die moonraker.conf öffnen und am Ende folgendes einfügen:
+
+![Timelapse](https://github.com/leadustin/QIDI_aktuell/blob/main/images/timelaps1.png)
+
+```bash
+- for Printer printer:
+[timelapse]
+output_path: ~/printer_data/timelapse/
+frame_path: /tmp/timelapse/printer
+```
 
 Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
 
