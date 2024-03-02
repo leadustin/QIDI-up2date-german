@@ -479,7 +479,7 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 
 + <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Imager</a>
 
-## **Installation Rapberry OS**
+## **Installation Raspberry OS**
 
 Raspberry Pi Imager öffnen und euren Pi auswählen
 Unter "OS wählen" auf Raspberry Pi OS (other) klicken und Raspberry Pi OS Lite (64bit) auswählen
