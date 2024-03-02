@@ -96,7 +96,8 @@ sudo apt upgrade
 
 Ich empfehle die Befehle immer zeilenweise in die Konsole einzugeben und abzuwarten bis der jeweilige Befehl abgearbeitet wurde. Einfügen in Putty erfolgt per Rechtsklick. Wollt ihr etwas aus Putty kopieren, reicht es den Text mit gedrückter linker Maustaste zu markieren. Der Text wird automatisch in die Windows-Zwischenablage kopiert.
 
-Als nächstes erfolgt die Installation von KIAUH (Klipper Installation And Update Helper) Dieses nützliche Tool installiert, aktualisiert und deinstalliert automatisch von uns ausgewählte Tools. Wie gehabt die Befehle pro Zeile einzeln eingeben um mit der Installation zu starten.
+**Installation von KIAUH** (Klipper Installation And Update Helper)
+Dieses nützliche Tool installiert, aktualisiert und deinstalliert automatisch von uns ausgewählte Tools. Wie gehabt die Befehle pro Zeile einzeln eingeben um mit der Installation zu starten.
 
 ```bash
 sudo apt-get update && sudo apt-get install git -y
@@ -106,7 +107,11 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 
 Nach erfolgreicher Installation solltet ihr euch im Hauptmenü von KIAUH befinden.
 
-Über Menüpunkt 1 diese Software in dieser Reihenfolge installieren. Klipper->Moonraker->Mainsail. Klipper fragt während der Installation nach der Python-Version, immer Version 3 auswählen! Bei der Anzahl der Instanzen wählt ihr 1. Bei der Installation von Mainsail wird die Frage gestellt, ob Macros installiert werden sollen. Hier mit JA antworten. Die Installation wird einige Zeit in Anspruch nehmen, daher geduldig sein auch wenn sich in der Konsole mal nichts tut. So sollte das am Ende in KIAUH aussehen.
+Über Menüpunkt 1 diese Software in dieser Reihenfolge installieren. Klipper->Moonraker->Mainsail. 
+Klipper fragt während der Installation nach der Python-Version, immer Version 3 auswählen! Bei der Anzahl der Instanzen wählt ihr 1. 
+Bei der Installation von Mainsail wird die Frage gestellt, ob Macros installiert werden sollen. Hier mit JA antworten. 
+
+Die Installation wird einige Zeit in Anspruch nehmen, daher geduldig sein auch wenn sich in der Konsole mal nichts tut. So sollte das am Ende in KIAUH aussehen.
 
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/kiuah_tools.png)
 
@@ -114,17 +119,18 @@ Nach erfolgreicher Installation solltet ihr euch im Hauptmenü von KIAUH befinde
 Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbinden.
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
 
-## Flashen des Druckkopfs
+**Flashen des Druckkopfs**
+
 Um ihn zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dies wird nur einmal nötig sein, da wir einen speziellen Bootloader Namens "katapult" flashen werden, zukünftige Firmwareupdates können dann ohne physischen Zugriff erfolgen.
 
-    Installation von katapult. Wir verbinden uns mit Putty per SSH auf unseren Drucker und loggen uns mit mks/makerbase ein. Nach dem Einloggen nachfolgende Befehle in die Konsole eingeben:
+**Installation von katapult**
+Wir verbinden uns mit Putty per SSH auf unseren Drucker und loggen uns mit mks/makerbase ein. Nach dem Einloggen nachfolgende Befehle in die Konsole eingeben:
 
-Code
-
+```bash
 git clone https://github.com/Arksine/katapult
 cd ~/katapult
 make menuconfig
-
+```
 
 Wir befinden uns nun im Katapult-Konfigurations-Menü. Zuerst ändern wir die Section “Micro-controller Architecture" auf RP2040. Als nächstes sicherstellen, das unter „Build Katapult deployment application der Bootloader auf „16KiB bootloader“ steht. Mit “Q” beenden und mit „Y“ speichern. Noch mal querchecken ob alles wie auf dem Bild eingestellt ist.
 
