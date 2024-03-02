@@ -8,12 +8,6 @@ veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 >All eure Gcodes sowie eure derzeitige printer.cfg sollten daher gesichert werden.
 >Solltet ihr damit einverstanden sein, und Änderungen durchgeführt werden, erlischt auch jeglicher Garantieanspruch an Qidi.
 
-## Inhaltsverzeichnis
-
-- [Display](#display)
-
-
-
 ## Warum sollte man seinen Qidi aktualisieren?
 
 
