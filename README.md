@@ -66,10 +66,10 @@ Zusätzlich wird eine LAN-Verbindung für die Einrichtung des Systems benötigt.
 Da wir am offenen Gerät arbeiten, muss zuerst die Stromversorgung unterbrochen werden.
 Dreht euren Drucker so, das ihr gut an der Rückseite die Schrauben der Abdeckung entfernen könnt. Mit Hilfe dieser Anleitung baut ihr die EMMC aus. Bevor ihr die EMMC ausbaut, einmal sich selbst erden und ein Backup eurer Gcodes nicht vergessen.
 Sicher ist sicher.
-Die EMMC per EMMC-Reader mit dem PC verbinden.
-balenaEtcher starten und das vorher heruntergeladene Armbian Image auf die EMMC flashen.
++ Die EMMC per EMMC-Reader mit dem PC verbinden.
++ balenaEtcher starten und das vorher heruntergeladene <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank">Armbian Image</a> auf die EMMC flashen.
 
-forum.drucktipps3d.de/attachment/113135/
+![Fehlermeldung](https://github.com/leadustin/QIDI_aktuell/blob/main/images/balena.png)
 
 Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
 LAN-Kabel und Stromversorgung anschließen.
