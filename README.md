@@ -349,62 +349,323 @@ Wer weis was er macht und sich seine printer.cfg entsprechend seinen Vorstellung
 
 Die originale printer.cfg von Qidi ist ein ziemliches Durcheinander mit teils sinnlosen und gefährlichen Macros - Stichwort wäre hier "Force_Move".
 Da werden so einige Druckköpfe in die Druckbetten gefahren sein.
+
 Die von mir angebotenen printer.cfg sind für den X-Plus 3 sowie für den X-Max 3.
 Für eine bessere Übersicht enthalten diese printer.cfg nur technische Einstellungen für die Hardware des Druckers.
 Alles was Macros betrifft ist in einer eigenen macro.cfg gesammelt. Dazu kommen noch ein paar separate Configs.
 Alles per "include" in die printer.cfg eingebunden.
 
 
-    Die dem Drucker entsprechende RAR-Datei herunterladen und entpacken
-    Mainsail aufrufen und im Tab "Maschine" die printer.cfg löschen und über "Datei hochladen" die printer.cfg aus dem Archiv hochladen
++ Die dem Drucker entsprechende RAR-Datei herunterladen und entpacken
++ Mainsail aufrufen und im Tab "Maschine" die printer.cfg mit einem Rechtsklick markieren, löschen und über "Datei hochladen" die printer.cfg aus dem Archiv hochladen
 
+![Mainsail Upload](https://github.com/leadustin/QIDI_aktuell/blob/main/images/mainsail_upload.png)
 
-    in Mainsail auf printer.cfg klicken - es öffnet sich der Mainsail-Editor
-    Folgenden Abschnitt suchen und dort EURE ID eintragen.
++ In Mainsail auf printer.cfg klicken - es öffnet sich der Mainsail-Editor
++ Folgenden Abschnitt suchen und dort **EURE ID** eintragen.
 
+```bash
 [mcu MKS_THR]
 [serial:/dev/serial/by-id/usb-Klipper_rp2040_55DA4D9503AF5658-if00
+```
 
-    Im Mainsail-Editor auf "Speichern und Neustart" klicken. Klipper wird neu gestartet und lädt alle Configs.
-    Wenn die ID unter mcu MKS_THR korrekt eingetragen wurde, sollte auch die mcu-bezogene rote Fehlermeldung weg sein. Dafür haben wir jetzt eine andere rote Fehlermeldung. Es fehlt die Adaptive_Mesh.cfg. Diese befindet sich in der heruntergeladenen RAR-Datei im Ordner "Macros".
-    Erstellt In Mainsail einen Ordner mit dem Namen "Macros" über den Button "Verzeichnis erstellen"
+Im Mainsail-Editor auf "Speichern und Neustart" klicken. Klipper wird neu gestartet und lädt alle Configs.
+Wenn die ID unter mcu MKS_THR korrekt eingetragen wurde, sollte auch die mcu-bezogene rote Fehlermeldung weg sein. Dafür haben wir jetzt eine andere rote Fehlermeldung. 
+Es fehlt die Adaptive_Mesh.cfg. Diese befindet sich in der heruntergeladenen RAR-Datei im Ordner "Macros".
+ + Erstellt In Mainsail einen Ordner mit dem Namen "Macros" über den Button "Verzeichnis erstellen"
 
+![Mainsail Folder](https://github.com/leadustin/QIDI_aktuell/blob/main/images/mainsail_folder.png)
 
-    Öffnet diesen Ordner und ladet alle Dateien aus dem entpackten Ordner "Macros" hoch
++ Öffnet diesen Ordner und ladet alle Dateien aus dem entpackten Ordner "Macros" hoch
 
 Da uns noch ein paar Dateien fehlen, starten wir nun Putty und loggen uns mit mks/makerbase auf den Drucker ein.
 
-    Nachfolgenden Befehl in die Konsole eingeben
+Nachfolgenden Befehl in die Konsole eingeben
 
+```bash
 ./kiauh/kiauh.sh
+```
 
-    KIAUH öffnet sich und über Punkt 1 in die Installation wechseln
-    Installation Crownsnest wählen und während der Installation alles mit "Yes" bestätigen. Crownsnest ist für die Konfiguration einer oder mehrerer Webcams verantwortlich. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
-    Installation Octoeverywhere wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
-    KIAUH schließen
++ KIAUH öffnet sich und über Punkt 1 in die Installation wechseln
++ Installation Crownsnest wählen und während der Installation alles mit "Yes" bestätigen. Crownsnest ist für die Konfiguration einer oder mehrerer Webcams verantwortlich. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
++ Installation Octoeverywhere wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
++ KIAUH schließen
 
 Es fehlen noch 3 Tools, die wir jetzt installieren werden. Zum einen wäre das Klippain Shake&Tune, Mainsail Timelapse und Spoolman.
 
+### Mainsail Timelapse
++ Mainsail Timelapse ist ein Tool mit dem Zeitraffer-Videos der Drucke erstellt werden können. Folgende Befehle für die Installation von Mainsail Timelapse in der Konsole ausführen:
 
-    Mainsail Timelapse ist ein Tool mit dem Zeitraffer-Videos der Drucke erstellt werden können. Folgende Befehle für die Installation von Mainsail Timelapse in der Konsole ausführen:
-
+```bash
 cd ~/
 git clone https://github.com/mainsail-crew/moonraker-timelapse.git
 cd ~/moonraker-timelapse
 make install
+```
 
-    Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
-    Damit Mainsail Timelapse richtig funktioniert, müssen wir noch ffmpeg installieren. Folgenden Befehl wieder in die Konsole einfügen:
+Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
+Damit Mainsail Timelapse richtig funktioniert, müssen wir noch ffmpeg installieren. Folgenden Befehl wieder in die Konsole einfügen:
 
+```bash
 sudo apt install ffmpeg
+```
 
-    Damit wir später Aktualisierungsbenachrichtigungen bei Updates bekommen, öffnen wir in Mainsail die moonraker.conf und fügen am Ende der Datei folgendes ein:
+Damit wir später Aktualisierungsbenachrichtigungen bei Updates bekommen, öffnen wir in Mainsail die moonraker.conf und fügen am Ende der Datei folgendes ein:
 
+```bash
 [update_manager timelapse]
 type: git_repo
 primary_branch: main
 path: ~/moonraker-timelapse
 origin: https://github.com/mainsail-crew/moonraker-timelapse.git
 managed_services: klipper moonraker
+```
 
-    Im Mainsail-Editor dann auf "Speichern und Neustart" drücken.
++ Im Mainsail-Editor dann auf "Speichern und Neustart" drücken.
+
+### Klippain Shake&Tune. 
+Mit diesem Tool lassen sich unter anderem Vibrationskalibrierungen durchführen und die Spannung der Riemen überprüfen und somit entsprechend Verbesserungen erzielen.
+
++ In die Konsole folgenden Befehl einfügen:
+
+```bash
+wget -O - https://raw.githubusercontent.com/Frix-x/klippain-shaketune/main/install.sh | bash
+```
+> [!TIP]
+> Über die Macros "BELTS_SHAPER_CALIBRATION" und "AXES_SHAPER_CALIBRATION" werden diverse Tests durchgeführt und zum Abschluss in einer Grafik aufbereitet. Vor Benutzung der Macros bitte den Drucker "homen".
+
+### Spoolman
+Spoolman ist ein Filamentverwaltungs-Tool mit dem der Verbrauch des Filaments protokolliert wird.
+
++ Folgende Befehle kopieren und in die Konsole einfügen:
+
+```bash
+sudo apt-get update && \
+sudo apt-get install -y curl jq && \
+mkdir -p ./Spoolman && \
+source_url=$(curl -s https://api.github.com/repos/Donkie/Spoolman/releases/latest | jq -r '.assets[] | select(.name == "spoolman.zip").browser_download_url') && \
+curl -sSL $source_url -o temp.zip && unzip temp.zip -d ./Spoolman && rm temp.zip && \
+cd ./Spoolman && \
+bash ./scripts/install_debian.sh
+```
+
++ Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
+
+
+
+## Widmen wir uns nun dem Display!
+
+> [!NOTE]
+> Wie wir festgestellt haben, lässt sich das originale Display nach der Systemaktualisierung derzeit nicht benutzen.
+> Es gibt jedoch die Möglichkeit die Bedienung per Touchscreen wiederherzustellen. Stichwort ist hier "Klipperscreen".
+> Klipperscreen ist angelehnt an Octoscreen und bietet eine grafische Oberfläche zum Steuern eines oder mehrerer Drucker.
+>
+> Ich beschreibe hier den Austausch des originalen Displays mit einem 5 Zoll Touchdisplays in Kombination mit einem Raspberry Pi als fest installiertes Display.
+
+## Was benötigen wir dafür alles?
+
+
+### Hardware:
+
+    1x 5 Zoll Touchdisplay mit HDMI-Eingang [Werbung**]
+    1x Raspberry Pi ab Version 3 [Werbung**]
+    Netzteil für Pi mit min. 3A  [Werbung**]
+    1x HDMI-Kabel - möglichst flexibel und mit kleinen Steckern oder mit Winkel-Stecker [Werbung**] - messt euch euren Weg für das Kabel aus und verwendet ein ausreichend langes Kabel
+    1x USB-Kabel - abhängig vom Typ des USB-Anschluss des Displays - auch hier die Verlegelänge ausmessen
+    1x MicroSD-Karte
+    Inbus 2,5mm
+
+
+### Software:
+
+    Raspberry Pi OS
+
+Fangen wir also an.
+
+    Raspberry Pi Imager öffnen und euren Pi auswählen
+    Unter "OS wählen" auf Raspberry Pi OS (other) klicken und Raspberry Pi OS Lite (64bit) auswählen
+
+
+    Bei der Frage ob OS Einstellungen angepasst werden sollen, auf Einstellungen bearbeiten klicken. Im drauf sich öffnenden Fenster tragt ihr eure Daten ein.
+    In meinem Fall habe ich den selben User wie vom Drucker genommen - mks/makerbase
+    Im Tab "Dienste" "SSH aktivieren" und "Passwort zur Authentifizierung verwenden" auswählen
+
+    Zurück im Menü mit "Ja" die Übernahme der Parameter bestätigen und bestätigen, dass alle Daten auf der SD-Karte nun gelöscht werden.
+    Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte sich so eine Bestätigung öffnen.
+
+Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
+
+Bei dem von mir verwendeten Display habe ich folgenden Code eingetragen. Solltet ihr ein anderes Display nutzen - bitte entsprechend auf der Hersteller-Website informieren.
+
+added by elecrow-pitft-setup
+hdmi_force_hotplug=1
+max_usb_current=1
+hdmi_drive=1
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+hdmi_cvt 800 480 60 6 0 0 0
+dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900 display_rotate=0
+end elecrow-pitft-setup
+
+    Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
+    Unter [all] fügt ihr vorherigen Code ein. Das Ergebnis sieht dann wie folgt aus:
+
+# For more options and information see
+# http://rptl.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+
+# Additional overlays and parameters are documented
+# /boot/firmware/overlays/README
+
+# Automatically load overlays for detected cameras
+camera_auto_detect=1
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+
+# Automatically load initramfs files, if found
+auto_initramfs=1
+
+# Enable DRM VC4 V3D driver
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+
+# Don't have the firmware create an initial video= setting in cmdline.txt.
+# Use the kernel's default instead.
+disable_fw_kms_setup=1
+
+# Run in 64-bit mode
+arm_64bit=1
+
+# Disable compensation for displays with overscan
+disable_overscan=1
+
+# Run as fast as firmware / board allows
+arm_boost=1
+
+[cm4]
+# Enable host mode on the 2711 built-in XHCI USB controller.
+# This line should be removed if the legacy DWC2 controller is required
+# (e.g. for USB device mode) or if USB support is not required.
+otg_mode=1
+
+[all]
+added by elecrow-pitft-setup
+hdmi_force_hotplug=1
+max_usb_current=1
+hdmi_drive=1
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+hdmi_cvt 800 480 60 6 0 0 0
+dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900 display_rotate=0
+end elecrow-pitft-setup
+
+
+    Als nächstes die SD-Karte in den Rapberry Pi stecken, alle benötigen Kabel mit dem Display und dem Pi verbinden und Strom einschalten.
+    Wenn die WLAN-Daten korrekt eingegeben wurden, sollte innerhalb kurzer Zeit der Raspberry in der Netzwerkübersicht eures Router auftauchen. Wie beim Drucker auch hier eine feste IP-Zuordnung vornehmen.
+    Auf dem Display sollte nun die typische Start-Sequenz ablaufen.
+
+Nächster Schritt ist die Einrichtung von Klipperscreen.
+
+    Putty öffnen und wie beim Drucker eine Verbindung erstellen.
+    Mit mks/makerbase einloggen
+    das System mit folgenden Befehlen aktualisieren
+
+sudo apt update
+sudo apt upgrade
+
+    Als nächstes wird KIAUH installiert - selbe Vorgehensweise wie beim Drucker
+
+sudo apt-get update && sudo apt-get install git -y
+cd ~ && git clone https://github.com/dw-0/kiauh.git
+./kiauh/kiauh.sh
+
+    Im Hauptmenü von KIAUH über Punkt 1 in den Installations-Modus wechseln und Punkt 5 - Klipperscreen auswählen
+    Nach der Fertigstellung der Installation und Rückkehr ins Hauptmenü sollte es so aussehen.
+
+    KIAUH mit Q beenden
+
+Damit Klipperscreen mit Moonraker interagieren kann, benötigen wir noch ein paar Ordner/Files.
+
+    In der Konsole fügen wir folgende Befehle ein:
+
+ls
+mkdir printer_data
+cd printer_data/
+mkdir config
+cd config/
+
+Wir haben nun mehrere Ordner erstellt und befinden uns in der Konsole im Ordner /printer_data/config/
+
+    In der Konsole folgendes eingeben. Wichtig ist hier auch die Groß-Kleinschreibung!
+
+sudo nano KlipperScreen.conf
+
+    Es öffnet sich der nano Editor in dem wir folgendes eingeben:
+
+[main]
+
+[printer Name_wie_euer_Drucker_angezeigt_werden_soll]
+moonraker_host: IP eueres Druckers
+moonraker_port: 7125
+
+Bei mir sieht das dann so aus:
+
+[main]
+
+[printer X-Plus 3]
+moonraker_host: 192.168.188.69
+moonraker_port: 7125
+
+Habt ihr alles entsprechend eingetragen, speichern wir die KlipperScreen.conf mit folgenden Tastatureingaben.
+
+STRG+O
+Return
+STRG+X
+
+    Nach dem der Editor geschlossen wurde, mit folgenden Befehl das System rebooten:
+
+sudo reboot
+
+Das System startet neu und lädt die KlipperScreen-UI
+
+
+
+Der nächste Schritt wäre die Montage des Displays.
+
+    In Mainsail den Druckkopf nach hinten und das Druckbett nach unten fahren. Wir brauchen Platz.
+    Den Drucker nun am Netzschalter ausschalten und den Stecker aus der Steckdose ziehen.
+    Den Drucker so drehen, das ihr halbwegs bequem hinter das originale Display gucken könnt.
+    Das Display ist an den Ecken mit jeweils einer Schraube befestigt. Um diese zu lösen braucht man einen Inbus-Schlüssel 2,5mm
+    Das alte Verbindungskabel des Displays zum Mainboard lösen
+
+Entsprechend eures verwendeten Displays müsst ihr euch einen Halter konstruieren um das neue Display an den alten Befestigungspunkten zu befestigen. Auch darauf achten - nach fest kommt ab. Ihr schraubt wieder nur in Plastik. Bei mir wurden sogar während der Montage bei Qidi die beiden oberen Haltepunkte abgerissen. :cursing:
+
+Solltet ihr mein Display nutzen wollen. Im Anhang ist die STEP der Klemmen zum befestigen des Displays. Für die beiden oberen Haltepunkte müssen diese in der Größe modifiziert werden.
+
+Da bei mir nur noch die unteren Haltepunkte vorhanden sind, habe ich mir das gespart und mit etwas doppelseitigen Klebeband für Halt gesorgt.
+
+
+Wir nähern uns dem Ende.
+
+Als nächstes müssen das HDMI-Kabel und das USB-Kabel vom Display zum Raspberry Pi verlegt werden. Sucht euch einen für euch akzeptablen Weg Richtung Mainboard-Kammer. Es sollte lediglich darauf geachtet werden, dass die Kabel nicht mit dem Druckkopf und dem Druckbett kollidieren. Kabelbinder helfen.
+
+Ich habe alles an der rechten Seite neben dem großen Lüfter nach unten und dann Richtung Mainboard geführt.
+
+
+Bleibt nur noch die Montage des Raspberrys in der Mainboard-Kammer. Besitzer eines X-Max 3 sind hier aufgrund der Größe im Vorteil. Achtet darauf, dass der kleine Lüfter an der Rückseite der Abdeckung nicht mit dem Pi in Kontakt kommt. Weiterhin darauf achten das der Pi und andere Strom leitende Bauteile Abstand von einander halten. Isolierband oder eine Gehäuseunterseite sind dabei hilfreich.
+
+Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen.
+
+
+Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer. 8)
