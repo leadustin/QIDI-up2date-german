@@ -453,8 +453,6 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
 
-
-
 ## Widmen wir uns nun dem Display!
 
 > [!NOTE]
@@ -563,7 +561,7 @@ Wir haben nun mehrere Ordner erstellt und befinden uns in der Konsole im Ordner 
 sudo nano KlipperScreen.conf
 ```
 
-+ Es öffnet sich der nano Editor in dem wir folgendes eingeben:
++ Es öffnet sich der nano Editor in dem wir folgendes eingeben. IP-Adresse eures Druckers sollte bekannt sein. 😄
 
 ```bash
 [main]
