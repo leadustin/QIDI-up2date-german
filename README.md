@@ -271,7 +271,7 @@ So sollte es in der Konsole aussehen:
 Fertig! Der Druckkopf ist auf Klipper 0.12 geflasht.
 
 
-### **Flashen STM32F402.** 
+## **Flashen STM32F402.** 
 
 Vorgehensweise ähnlich des Flashvorgangs des rp2040. Nachfolgende Befehle in die Konsole eingeben:
 
@@ -329,7 +329,7 @@ Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht z
 > Es muss nun lediglich die printer.cfg von euch angepasst werden. Das bedeutet es müssen die Pin-Belegungen, Extruder, Lüfter im Prinzip der komplette Hardwareteil plus Macros eingepflegt werden.
 > Dafür könnt ihr eure alte printer.cfg ausschlachten. Wer das nicht möchte folgt weiter dem Guide.
 
-### **printer.cfg**
+## **printer.cfg**
 
 Die printer.cfg ist quasi das Herzstück des Druckers. In ihr sind alle Einstellungen der Hardware wie Extruder, Lüfter etc. gespeichert.
 Sie enthält in der Regel alle benötigten Macros und Verweise auf Configs anderer Tools. Derzeit fehlen in der printer.cfg wichtige Einträge.
@@ -382,6 +382,8 @@ Nachfolgenden Befehl in die Konsole eingeben
 + Installation Crownsnest wählen und während der Installation alles mit "Yes" bestätigen. Crownsnest ist für die Konfiguration einer oder mehrerer Webcams verantwortlich. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
 + Installation Octoeverywhere wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
 + KIAUH schließen
+
+## **Nützliche Tools**
 
 Es fehlen noch 3 Tools, die wir jetzt installieren werden. Zum einen wäre das Klippain Shake&Tune, Mainsail Timelapse und Spoolman.
 
@@ -446,7 +448,7 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
 
-## Widmen wir uns nun dem Display!
+## Alternatives Touchdisplay!
 
 > [!NOTE]
 > Wie wir festgestellt haben, lässt sich das originale Display nach der Systemaktualisierung derzeit nicht benutzen.
@@ -455,10 +457,10 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 >
 > Ich beschreibe hier den Austausch des originalen Displays mit einem 5 Zoll Touchdisplays in Kombination mit einem Raspberry Pi als fest installiertes Display.
 
-## Was benötigen wir dafür alles?
+**Was benötigen wir dafür alles?**
 
 
-### Hardware:
+### Hardware für Display:
 + 1x <a href="https://www.amazon.de/s?k=touchdisplay+hdmin+5+zoll&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BD4FHA7R3L3Q&sprefix=touchdisplay+hdmin+5+zoll%2Caps%2C109&ref=nb_sb_noss" target="_blank" rel="noopener noreferrer">5 Zoll Touchdisplay mit HDMI</a>
 + 1x <a href="https://www.amazon.de/s?k=raspberry+pi&crid=12N8W4YG4U65U&sprefix=rasp%2Caps%2C109&ref=nb_sb_ss_ts-doa-p_3_4" target="_blank" rel="noopener noreferrer">Rapberry Pi ab Version 3</a>
 + 1x <a href="https://www.amazon.de/s?k=netzteil+raspberry&crid=VIPUZVRDEGV1&sprefix=Netzteil+Ra%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_6_11" target="_blank" rel="noopener noreferrer">Netzteil f&uuml;r Raspberry mit min. 3A</a>
@@ -468,7 +470,7 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 + 1x <a href="https://www.amazon.de/s?k=Inbus&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14CFHDZSQ958R&sprefix=inbus%2Caps%2C107&ref=nb_sb_noss_1" target="_blank" rel="noopener noreferrer">Inbus-Set</a>
 
 
-### Software:
+### Software für Display:
 
 + <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Imager</a>
 
@@ -490,7 +492,7 @@ Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte
 
 ![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry3.png)
 
-## Display
+## Setup Display 
 Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
 Die SD-Karte mit dem gerade geflashten OS öffnen und nach der config.txt suchen und diese in einem Editor wie Notepad etc. öffnen.
 
@@ -590,7 +592,7 @@ Das System startet neu und lädt die KlipperScreen-UI
 
 
 
-Der nächste Schritt wäre die Montage des Displays.
+## **Montage des Displays.**
 
 + In Mainsail den Druckkopf nach hinten und das Druckbett nach unten fahren. Wir brauchen Platz.
 + Den Drucker nun am Netzschalter ausschalten und den Stecker aus der Steckdose ziehen.
@@ -604,12 +606,16 @@ Solltet ihr mein Display nutzen wollen. Im Package ist die STEP der Klemmen zum 
 Da bei mir nur noch die unteren Haltepunkte vorhanden sind, habe ich mir das gespart und mit etwas doppelseitigen Klebeband für Halt gesorgt.
 
 
-### Wir nähern uns dem Ende.
+## **Kabel verlegen**
 
 Als nächstes müssen das HDMI-Kabel und das USB-Kabel vom Display zum Raspberry Pi verlegt werden. Sucht euch einen für euch akzeptablen Weg Richtung Mainboard-Kammer. Es sollte lediglich darauf geachtet werden, dass die Kabel nicht mit dem Druckkopf und dem Druckbett kollidieren. Kabelbinder helfen.
 Ich habe alles an der rechten Seite neben dem großen Lüfter nach unten und dann Richtung Mainboard geführt.
 
+## **Montage Raspberry**
+
 Bleibt nur noch die Montage des Raspberrys in der Mainboard-Kammer. Besitzer eines X-Max 3 sind hier aufgrund der Größe im Vorteil. Achtet darauf, dass der kleine Lüfter an der Rückseite der Abdeckung nicht mit dem Pi in Kontakt kommt. Weiterhin darauf achten das der Pi und andere Strom leitende Bauteile Abstand von einander halten. Isolierband oder eine Gehäuseunterseite sind dabei hilfreich.
+
+## **Stromversorgung Raspberry**
 
 Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen.
 Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
