@@ -38,7 +38,7 @@ Eine Alternative für das Display stelle ich später im Tutorial vor.
 Was wird alles benötigt?
 
 
-**Hardware**
+### **Hardware**
 
 + <a href="https://eu.qidi3d.com/de/collections/x-plus-3-accessories/products/x-max-3-x-plus-3-x-smart-3-emmc-32g" target="_blank" rel="noopener noreferrer">EMMC-Reader</a>EMMC-Reader</a> – ich würde die 32GB EMMC von Qidi kaufen, da ist der Reader mit dabei
 + <a href="https://www.amazon.de/s?k=sd+card+adapter+usb&crid=15YOTDZUGFJQ2&sprefix=sd+card+a%2Caps%2C113&ref=nb_sb_ss_ts-doa-p_2_9" target="_blank" rel="noopener noreferrer">SD-Card-Adapter auf MicroSD oder USB-Adapter auf MicroSD</a>
@@ -46,7 +46,7 @@ Was wird alles benötigt?
 + Optional 5+ Zoll Touchdisplay und ein Raspberry ab Version 3
 
 
-**Software**
+### **Software**
 
 
 + <a href="https://etcher.balena.io/" target="_blank" rel="noopener noreferrer">balenaEtcher</a> - zum flashen des Betriebssystems auf die EMMC
@@ -55,7 +55,7 @@ Was wird alles benötigt?
 + <a rel="noopener noreferrer" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">Putty</a> - Tool um per SSH auf den Drucker zuzugreifen
 + <a href="https://winscp.net/eng/download.php" target="_blank" rel="noopener noreferrer">WinSCP</a> - Tool um per FTP auf den Drucker zugreifen zu können
 
-**Backup**
+### **Backup**
 
 + Da das komplette System gelöscht wird, erstellt bitte ein Backup eurer G-Codes und der printer.cfg
 + Zusätzlich wird eine LAN-Verbindung für die Einrichtung des Systems benötigt. WLAN geht NICHT!
@@ -96,7 +96,8 @@ sudo apt upgrade
 
 Ich empfehle die Befehle immer zeilenweise in die Konsole einzugeben und abzuwarten bis der jeweilige Befehl abgearbeitet wurde. Einfügen in Putty erfolgt per Rechtsklick. Wollt ihr etwas aus Putty kopieren, reicht es den Text mit gedrückter linker Maustaste zu markieren. Der Text wird automatisch in die Windows-Zwischenablage kopiert.
 
-**Installation von KIAUH** (Klipper Installation And Update Helper)
+### **Installation von KIAUH** (Klipper Installation And Update Helper)
+
 Dieses nützliche Tool installiert, aktualisiert und deinstalliert automatisch von uns ausgewählte Tools. Wie gehabt die Befehle pro Zeile einzeln eingeben um mit der Installation zu starten.
 
 ```bash
@@ -120,11 +121,11 @@ Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbind
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper_mcu_error.png)
 
-**Flashen des Druckkopfs**
+### **Flashen des Druckkopfs**
 
 Um ihn zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dies wird nur einmal nötig sein, da wir einen speziellen Bootloader Namens "katapult" flashen werden, zukünftige Firmwareupdates können dann ohne physischen Zugriff erfolgen.
 
-**Installation von katapult**
+### **Installation von katapult**
 
 Wir verbinden uns mit Putty per SSH auf unseren Drucker und loggen uns mit mks/makerbase ein. Nach dem Einloggen nachfolgende Befehle in die Konsole eingeben:
 
@@ -134,30 +135,269 @@ cd ~/katapult
 make menuconfig
 ```
 
-Wir befinden uns nun im Katapult-Konfigurations-Menü. Zuerst ändern wir die Section “Micro-controller Architecture" auf RP2040. Als nächstes sicherstellen, das unter „Build Katapult deployment application der Bootloader auf „16KiB bootloader“ steht. Mit “Q” beenden und mit „Y“ speichern. Noch mal querchecken ob alles wie auf dem Bild eingestellt ist.
+Wir befinden uns nun im Katapult-Konfigurations-Menü.
 
-forum.drucktipps3d.de/attachment/113152/
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult1.png)
+
+Zuerst ändern wir die Section “Micro-controller Architecture" auf RP2040.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult2.png)
+
+Als nächstes sicherstellen, das unter „Build Katapult deployment application der Bootloader auf „16KiB bootloader“ steht.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult3.png)
+
+Mit “Q” beenden und mit „Y“ speichern.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult4.png)
 
 
 Jetzt erstellen wir unsere erste Firmware in dem wir nachfolgenden Befehl eingeben:
 
-Code
+```bash
+make clean
+make -j4
+```
+
+In der Konsole solltet ihr folgende Ausgabe sehen:
+
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult5.png)
+
+
+
+Nachfolgenden Befehl in die Konsole für folgende Ausgabe eingeben. Man sieht das auf dem Druckkopf Klipper installiert ist. Beachtet das die ID auf dem Bild, die meines Druckers ist!
+
+```bash
+ls /dev/serial/by-id/*
+```
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult6.png)
+
+
+Druckkopf in DFU-Mode versetzen. Hierfür wie folgt vorgehen:
+
++ Hintere Abdeckung des Druckkopfs entfernen
++ Boot-Knopf drücken und gedrückt halten
++ Reset-Knopf drücken und wieder loslassen
++ Boot-Knopf loslassen
+
+
+
+Folgende Befehle in die Konsole eingeben um das Flashen des Druckkopfs vorzubereiten:
+
+```bash
+sudo mount /dev/sda1 /mnt
+systemctl daemon-reload
+```
+
+![Flash Toolhead](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_1.png)
+
+
+Es folgt eine Abfrage des Passworts des User mks. Hier also makerbase eintragen.
+
+
+![Flash Toolhead](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_2.png)
+
+
+
+
+Nachfolgende Befehle flashen Katapult auf den Druckkopf:
+
+```bash
+sudo cp out/katapult.uf2 /mnt
+sudo umount /mnt
+```
+
+
+Wenn nachfolgender Befehl eingegeben wird, sollte die Bestätigung angezeigt werden, das Katapult auf dem Druckkopf läuft.
+
+```bash
+ls /dev/serial/by-id
+```
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_3.png)
+
+
+
+Von nun an, können zukünftige Versionen von Klipper ohne physischen Zugriff auf den Druckkopf geflasht warden. Nicht vergessen die Abdeckung des Druckkopfs zu montieren.
+
+
+Jetzt müssen wir Klipper auf den Druckkopf flashen, Folgende Befehle in die Konsole eingeben:
+
+```bash
+cd ~/klipper
+make menuconfig
+```
+
+Im Prinzip wird hier ähnlich des Konfig-Menüs von Katapult verfahren. Wie auf dem nachfolgenden Bild dargestellt das Menü konfigurieren.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper1.png)
+
+Mit "Q" beenden und mit "Y" speichern.
+
+![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper2.png)
+
+Mit nachfolgenden Befehlen wird die Firmware kompliliert:
+
+```bash
+make clean
+make -j4
+```
+
+
+Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist EURE Serial-ID des Druckkopfs. Alle IDs auf diesen Bildern sind die MEINES Druckers und dürfen nicht auf euren Drucker geflasht werden.
+
+```bash
+ls /dev/serial/by-id/*
+```
+
+Das muss in eurer Konsole stehen - “/dev/serial/by-id/usb-katapult_rp2040_EURE-ID”
+
+wir installieren python3-serial mit folgeden Befehl. Dies ermöglicht es uns den Druckkopf zu flashen.
+
+```bash
+sudo apt install python3-serial
+```
+
+
+    Flashen des Druckkopfs – stellt sicher, dass ihr auch EURE ID benutzt. Nachfolgenden Befehl komplett mit EURER ID in die Konsole einfügen. Eure ID habt ihr in einer Text-Datei zwischengespeichert.
+
+python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
+
+
+    So sollte es in der Konsole aussehen
+
+[attach='113162','none','true'][/attach]
+
+
+
+Fertig! Der Druckkopf ist auf Klipper 0.12 geflasht.
+
+
+    Flashen des STM32F402 auf dem Mainboard. Vorgehensweise ähnlich des Flashvorgangs des rp2040. Nachfolgende Befehle in die Konsole eingeben:
+
+cd ~/klipper
+make menuconfig
+
+
+    Alles wie auf dem Bild dargestellt einstellen und wieder mit "Q" beenden und "Y" speichern
+
+[attach='113163','none','true'][/attach]
+
+
+
+    Jetzt wird die letzte Firmware mit folgenden Befehl kompiliert:
 
 make clean
 make -j4
 
 
-    In der Konsole solltet ihr folgende Ausgabe sehen:
+    Dieser Prozess erstellt eine „klipper.bin“ im Ordner /home/mks/klipper/out/. Die Warnung während des Kompilierens kann ignoriert werden.
+
+    In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Benutzername und Passwort leer lassen und auf "speichern" klicken. Als nächstes auf "anmelden" drücken und im nächsten Fenster die Login-Daten des Users mks eintragen und die klipper.bin, wie im Bild gezeigt aus /home/mks/klipper/out/ herunterladen.
+
+[attach='113164','none','true'][/attach]
 
 
-forum.drucktipps3d.de/attachment/113153/
+    Die MicroSD-Card als FAT32 formatieren. Wichtig! Keine Karte größer 32GB benutzen! Die klipper.bin in X_4.bin umbenennen und auf die SD-Karte direkt ins Root-Verzeichnis kopieren. Die MicroSD-Karte auswerfen.
+
+    Den Drucker am Netzschalter ausschalten und mindestens 30 Sekunden warten, damit sich der Superkondensator entladen kann.
+
+    Die MicroSD-Karte in den Kartenslot des Mainboards stecken und den Drucker wieder anschalten. Die STM32F402 MCU wird nun geflasht. Der Prozess sollte ungefähr 10 Sekunden dauern. Zur Sicherheit den Drucker erst nach 1 Minute ausstellen und die SD-Karte entfernen.
+
+[attach='113165','none','true'][/attach]
 
 
 
-    Nachfolgenden Befehl in die Konsole für folgende Ausgabe eingeben. Man sieht das auf dem Druckkopf Klipper installiert ist. Beachtet das die ID auf dem Bild, die meines Druckers ist!
+    Den Stecker des Display vom Mainboard ziehen, da dieses nur eine Fehlermeldung anzeigen wird. Drucker anschalten und auf die Weboberfläche zugreifen. Im Tab "Maschine" sollte nun nachfolgendes Bild angezeigt werden. Die Fehlermeldung bzgl. der mcu MKS_THR wird erstmal ignoriert. Darum kümmern wir uns später.
+    Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht zu fest ins Gewinde zu drehen, da man hier leider nur in Plastik schraubt. Wer auch das alternative Touchdisplay installieren möchte, kann den Drucker offen lassen.
 
-Code
+[attach='113166','none','true'][/attach]
 
-ls /dev/serial/by-id/*
 
-forum.drucktipps3d.de/attachment/113154/
+Herzlichen Glückwunsch - das Fundament ist geschaffen. Weiter geht es mit der printer.cfg
+
+
+Vorab noch eine Klarstellung. Wenn ihr dem Guide weiter folgt, bekommt ihr den Softwarestand der aktuell auf meinem Drucker ist. Falls ihr das nicht wollt und euren Drucker anders konfigurieren möchtet, dann ist dies der Zeitpunkt abzuspringen. Klipper, Moonraker und Mainsail sind up to date. Was zu flashen war wurde geflasht.
+
+Es muss nun lediglich die printer.cfg von euch angepasst werden. Das bedeutet es müssen die Pin-Belegungen, Extruder, Lüfter im Prinzip der komplette Hardwareteil plus Macros eingepflegt werden. Dafür könnt ihr eure alte printer.cfg ausschlachten. Wer das nicht möchte folgt weiter dem Guide.
+
+
+Die printer.cfg ist quasi das Herzstück des Druckers. In ihr sind alle Einstellungen der Hardware wie Extruder, Lüfter etc. gespeichert.
+
+Sie enthält in der Regel alle benötigten Macros und Verweise auf Configs anderer Tools. Derzeit fehlen in der printer.cfg wichtige Einträge.
+
+Dies ist auch der Grund warum es auf der Weboberfläche eine Fehlermeldung gibt.
+
+
+Wer weis was er macht und sich seine printer.cfg entsprechend seinen Vorstellungen und Wünschen konfigurieren
+
+möchte, kann diesen Part überspringen. Für alle anderen weiter im Text.
+
+
+Die originale printer.cfg von Qidi ist ein ziemliches Durcheinander mit teils sinnlosen und gefährlichen Macros - Stichwort wäre hier "Force_Move".
+
+Da werden so einige Druckköpfe in die Druckbetten gefahren sein.
+
+Die von mir angebotenen printer.cfg sind für den X-Plus 3 sowie für den X-Max 3.
+
+Für eine bessere Übersicht enthalten diese printer.cfg nur technische Einstellungen für die Hardware des Druckers.
+
+Alles was Macros betrifft ist in einer eigenen macro.cfg gesammelt. Dazu kommen noch ein paar separate Configs.
+
+Alles per "include" in die printer.cfg eingebunden.
+
+
+    Die dem Drucker entsprechende RAR-Datei herunterladen und entpacken
+    Mainsail aufrufen und im Tab "Maschine" die printer.cfg löschen und über "Datei hochladen" die printer.cfg aus dem Archiv hochladen
+
+
+    in Mainsail auf printer.cfg klicken - es öffnet sich der Mainsail-Editor
+    Folgenden Abschnitt suchen und dort EURE ID eintragen.
+
+[mcu MKS_THR]
+[serial:/dev/serial/by-id/usb-Klipper_rp2040_55DA4D9503AF5658-if00
+
+    Im Mainsail-Editor auf "Speichern und Neustart" klicken. Klipper wird neu gestartet und lädt alle Configs.
+    Wenn die ID unter mcu MKS_THR korrekt eingetragen wurde, sollte auch die mcu-bezogene rote Fehlermeldung weg sein. Dafür haben wir jetzt eine andere rote Fehlermeldung. Es fehlt die Adaptive_Mesh.cfg. Diese befindet sich in der heruntergeladenen RAR-Datei im Ordner "Macros".
+    Erstellt In Mainsail einen Ordner mit dem Namen "Macros" über den Button "Verzeichnis erstellen"
+
+
+    Öffnet diesen Ordner und ladet alle Dateien aus dem entpackten Ordner "Macros" hoch
+
+Da uns noch ein paar Dateien fehlen, starten wir nun Putty und loggen uns mit mks/makerbase auf den Drucker ein.
+
+    Nachfolgenden Befehl in die Konsole eingeben
+
+./kiauh/kiauh.sh
+
+    KIAUH öffnet sich und über Punkt 1 in die Installation wechseln
+    Installation Crownsnest wählen und während der Installation alles mit "Yes" bestätigen. Crownsnest ist für die Konfiguration einer oder mehrerer Webcams verantwortlich. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
+    Installation Octoeverywhere wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
+    KIAUH schließen
+
+Es fehlen noch 3 Tools, die wir jetzt installieren werden. Zum einen wäre das Klippain Shake&Tune, Mainsail Timelapse und Spoolman.
+
+
+    Mainsail Timelapse ist ein Tool mit dem Zeitraffer-Videos der Drucke erstellt werden können. Folgende Befehle für die Installation von Mainsail Timelapse in der Konsole ausführen:
+
+cd ~/
+git clone https://github.com/mainsail-crew/moonraker-timelapse.git
+cd ~/moonraker-timelapse
+make install
+
+    Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
+    Damit Mainsail Timelapse richtig funktioniert, müssen wir noch ffmpeg installieren. Folgenden Befehl wieder in die Konsole einfügen:
+
+sudo apt install ffmpeg
+
+    Damit wir später Aktualisierungsbenachrichtigungen bei Updates bekommen, öffnen wir in Mainsail die moonraker.conf und fügen am Ende der Datei folgendes ein:
+
+[update_manager timelapse]
+type: git_repo
+primary_branch: main
+path: ~/moonraker-timelapse
+origin: https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services: klipper moonraker
+
+    Im Mainsail-Editor dann auf "Speichern und Neustart" drücken.
