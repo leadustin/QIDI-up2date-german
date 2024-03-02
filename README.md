@@ -242,7 +242,7 @@ Mit nachfolgenden Befehlen wird die Firmware kompliliert:
 make clean
 make -j4
 ```
-Dies sollte anch dem kompillieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
+Dies sollte nach dem Kompillieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
 
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper3.png)
 
