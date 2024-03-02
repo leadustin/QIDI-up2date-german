@@ -459,7 +459,7 @@ cd ./Spoolman && \
 bash ./scripts/install_debian.sh
 ```
 Die Frage ob Spoolman als Service installiert werden soll mit ja beantworten.
-In Mainsail die moonraker.conf öffnen und folgendes am Ende einfügen:
+In Mainsail die moonraker.conf öffnen und folgendes am Ende einfügen. Die IP-Adresse entsprechend in die IP eures Druckers ändern. Dann auf "Speichern und Neustart" klicken.
 
 ```bash
 [spoolman]
