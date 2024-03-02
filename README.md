@@ -328,36 +328,30 @@ Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht z
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper9.png)
 
 
-Herzlichen Glückwunsch - das Fundament ist geschaffen. Weiter geht es mit der printer.cfg
+## **Herzlichen Glückwunsch - das Fundament ist geschaffen.**
 
+> [!IMPORTANT]
+> Vorab noch eine Klarstellung. Wenn ihr dem Guide weiter folgt, bekommt ihr den Softwarestand der aktuell auf meinem Drucker ist.
+> Falls ihr das nicht wollt und euren Drucker anders konfigurieren möchtet, dann ist dies der Zeitpunkt abzuspringen. Klipper, Moonraker und Mainsail sind up to date. Was zu flashen war wurde geflasht.
+>
+> Es muss nun lediglich die printer.cfg von euch angepasst werden. Das bedeutet es müssen die Pin-Belegungen, Extruder, Lüfter im Prinzip der komplette Hardwareteil plus Macros eingepflegt werden.
+> Dafür könnt ihr eure alte printer.cfg ausschlachten. Wer das nicht möchte folgt weiter dem Guide.
 
-Vorab noch eine Klarstellung. Wenn ihr dem Guide weiter folgt, bekommt ihr den Softwarestand der aktuell auf meinem Drucker ist. Falls ihr das nicht wollt und euren Drucker anders konfigurieren möchtet, dann ist dies der Zeitpunkt abzuspringen. Klipper, Moonraker und Mainsail sind up to date. Was zu flashen war wurde geflasht.
-
-Es muss nun lediglich die printer.cfg von euch angepasst werden. Das bedeutet es müssen die Pin-Belegungen, Extruder, Lüfter im Prinzip der komplette Hardwareteil plus Macros eingepflegt werden. Dafür könnt ihr eure alte printer.cfg ausschlachten. Wer das nicht möchte folgt weiter dem Guide.
-
+## **printer.cfg**
 
 Die printer.cfg ist quasi das Herzstück des Druckers. In ihr sind alle Einstellungen der Hardware wie Extruder, Lüfter etc. gespeichert.
-
 Sie enthält in der Regel alle benötigten Macros und Verweise auf Configs anderer Tools. Derzeit fehlen in der printer.cfg wichtige Einträge.
-
 Dies ist auch der Grund warum es auf der Weboberfläche eine Fehlermeldung gibt.
 
+Wer weis was er macht und sich seine printer.cfg entsprechend seinen Vorstellungen und Wünschen konfigurieren möchte, kann diesen Part überspringen. Für alle anderen weiter im Text.
 
-Wer weis was er macht und sich seine printer.cfg entsprechend seinen Vorstellungen und Wünschen konfigurieren
-
-möchte, kann diesen Part überspringen. Für alle anderen weiter im Text.
 
 
 Die originale printer.cfg von Qidi ist ein ziemliches Durcheinander mit teils sinnlosen und gefährlichen Macros - Stichwort wäre hier "Force_Move".
-
 Da werden so einige Druckköpfe in die Druckbetten gefahren sein.
-
 Die von mir angebotenen printer.cfg sind für den X-Plus 3 sowie für den X-Max 3.
-
 Für eine bessere Übersicht enthalten diese printer.cfg nur technische Einstellungen für die Hardware des Druckers.
-
 Alles was Macros betrifft ist in einer eigenen macro.cfg gesammelt. Dazu kommen noch ein paar separate Configs.
-
 Alles per "include" in die printer.cfg eingebunden.
 
 
