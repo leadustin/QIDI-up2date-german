@@ -313,7 +313,7 @@ In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Be
 + Die klipper.bin in X_4.bin umbenennen und auf die SD-Karte direkt ins Root-Verzeichnis kopieren.
 + Die MicroSD-Karte auswerfen.
 + Den Drucker am Netzschalter ausschalten und mindestens 30 Sekunden warten, damit sich der Superkondensator entladen kann.
-+Die MicroSD-Karte in den Kartenslot des Mainboards stecken und den Drucker wieder anschalten. Die STM32F402 MCU wird nun geflasht. Der Prozess sollte ungefähr 10 Sekunden dauern. Zur Sicherheit den Drucker erst nach 1 Minute ausstellen und die SD-Karte entfernen.
++ Die MicroSD-Karte in den Kartenslot des Mainboards stecken und den Drucker wieder anschalten. Die STM32F402 MCU wird nun geflasht. Der Prozess sollte ungefähr 10 Sekunden dauern. Zur Sicherheit den Drucker erst nach 1 Minute ausstellen und die SD-Karte entfernen.
 
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper8.png)
 
