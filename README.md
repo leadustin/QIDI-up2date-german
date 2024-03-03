@@ -383,8 +383,14 @@ Nachfolgenden Befehl in die Konsole eingeben
 ```
 
 + KIAUH öffnet sich und über Punkt 1 in die Installation wechseln
-+ Installation Crownsnest wählen und während der Installation alles mit "Yes" bestätigen. Crownsnest ist für die Konfiguration einer oder mehrerer Webcams verantwortlich. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
-+ Installation Octoeverywhere wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
+
+## **Crownsnets**
+Crownsnest ist für die Konfiguration und Steuerung von Webcams etc. verantwotlich  
++ Crownsnest für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
+
+## **Octoeverywhere**
+Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
++ Octoeverywhere für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen. 
 + KIAUH schließen
 
 ## **Nützliche Tools**
