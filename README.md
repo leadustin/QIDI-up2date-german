@@ -392,7 +392,7 @@ Crownsnest ist für die Konfiguration und Steuerung von Webcams etc. verantwotli
 Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
 + Octoeverywhere für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen.
  
-+ Wir sind mit der Installation über KIAUH fertig und schließen das Tool im Hauptmenü mit "Q".
+Wir sind mit der Installation über KIAUH fertig und schließen das Tool im Hauptmenü mit "Q".
 
 ## **Nützliche Tools**
 
