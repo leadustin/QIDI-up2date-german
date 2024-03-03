@@ -345,7 +345,7 @@ Wer weis was er macht und sich seine printer.cfg entsprechend seinen Vorstellung
 
 
 Die originale printer.cfg von Qidi ist ein ziemliches Durcheinander mit teils sinnlosen und gefährlichen Macros - Stichwort wäre hier "Force_Move".
-Da werden so einige Druckköpfe in die Druckbetten gefahren sein.
+Da werden so einige Druckköpfe in die Druckbetten oder über das Druckbett hinaus gefahren sein.
 
 Die von mir angebotenen printer.cfg sind für den X-Plus 3 sowie für den X-Max 3.
 Für eine bessere Übersicht enthalten diese printer.cfg nur technische Einstellungen für die Hardware des Druckers.
