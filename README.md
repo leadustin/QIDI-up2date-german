@@ -89,7 +89,7 @@ Sicher ist sicher.
 
 
 + Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen einzugeben könnt ihr ignorieren und mit Enter bestätigen.
-+ Verbindung zum Drucker neustarten und mit dem zuvor erstellten User einloggen.
++ Verbindung zum Drucker neustarten und mit dem zuvor erstellten User mks einloggen.
 + Aktualisierung des Betriebssystems mit folgenden Befehlen:
 
 ```bash
@@ -98,14 +98,6 @@ sudo apt upgrade
 ```
 
 Bei einigen Tools kann es passieren, dass es keinen sichtbaren Fortschritt in der Konsole gibt. Das ist normal, also kein Grund zur Panik.  Einfügen von Befehlen in Putty erfolgt per Rechtsklick. Wollt ihr etwas aus Putty kopieren, reicht es den Text mit gedrückter linker Maustaste zu markieren. Der Text wird automatisch in die Windows-Zwischenablage kopiert.
-
-Da wir derzeit als "root" eingeloggt sind und KIAUH nicht mit mit diesem User gestartet werden kann, führen wir einen Reboot des Systems durch.
-In die Konsole fügen wir folgenden Befehl ein:
-
-```bash
-sudo reboot
-```
-Nach dem Neustart mit mks/makerbase einloggen.
 
 ### **Installation von KIAUH** (Klipper Installation And Update Helper)
 
