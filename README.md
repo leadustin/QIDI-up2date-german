@@ -561,6 +561,9 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 
 + Im Hauptmenü von KIAUH über Punkt 1 in den Installations-Modus wechseln und Punkt 5 - Klipperscreen auswählen
 + Nach der Fertigstellung der Installation und Rückkehr ins Hauptmenü sollte es so aussehen.
+
+![Klipperscreen](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipperscreen1.png)
+
 + KIAUH mit Q beenden
 
 Damit Klipperscreen mit Moonraker interagieren kann, benötigen wir noch ein paar Ordner/Files.
@@ -647,7 +650,7 @@ Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen 
 Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
 
 ## **Touchscreen in Aktion**
-Und so sieht das Ganze dann in aktion und fest im Qidi aus.
+Und so sieht das Ganze dann in Aktion und fest im Qidi verbaut aus.
 
 ![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display1.png)
 
