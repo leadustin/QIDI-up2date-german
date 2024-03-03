@@ -15,7 +15,7 @@ veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 
 Die Hardware des Druckers an sich ist solide und hat das Potential für sehr gute Druckergebnisse.
 Der Flaschenhals der Serie 3 ist jedoch die veraltete Software. Eine Gegenüberstellung macht sichtbar warum allein dies ein Grund ist das System neu aufzusetzen.
-+ **Qidi original**     **Aktuelles Build**
++ **Qidi original**  <-->   **Aktuelles Build**
 + Armbian Buster     <--> Armbian Bookworm
 + Klipper 0.10.x     <--> Klipper 0.12.x
 + Moonraker 0.7.x    <--> Moonraker 0.8.x
