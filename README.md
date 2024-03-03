@@ -101,7 +101,7 @@ Bei einigen Tools kann es passieren, dass es keinen sichtbaren Fortschritt in de
 
 ### **Installation von KIAUH** (Klipper Installation And Update Helper)
 
-Dieses nützliche Tool installiert, aktualisiert und deinstalliert automatisch von uns ausgewählte Tools. Wie gehabt die Befehle pro Zeile einzeln eingeben um mit der Installation zu starten.
+Dieses nützliche Tool installiert, aktualisiert und deinstalliert automatisch von uns ausgewählte Tools. Wie gehabt die Befehle kopieren um mit der Installation zu starten.
 
 ```bash
 sudo apt-get update && sudo apt-get install git -y
