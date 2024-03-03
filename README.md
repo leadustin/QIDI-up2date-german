@@ -645,3 +645,6 @@ Bleibt nur noch die Montage des Raspberrys in der Mainboard-Kammer. Besitzer ein
 
 Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen.
 Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
+
+![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display1.png)
+![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display2.jpg)
