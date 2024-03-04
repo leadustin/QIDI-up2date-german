@@ -665,4 +665,3 @@ Und so sieht das Ganze dann in Aktion und fest im Qidi verbaut aus.
 
 ![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display1.png)
 
-![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display2.jpg)
