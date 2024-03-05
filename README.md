@@ -25,7 +25,7 @@ Der Flaschenhals der Serie 3 ist jedoch die veraltete Software. Eine Gegenübers
 
 
 
-Mit einer Aktualisierung des kompletten Systems bekommt man die Möglichkeit, jegliche derzeit aktuelle Software zu nutzen und den Drucker, um einige nützliche Tools zu erweitern. Der benötigte Speicherplatz auf der EMMC sinkt von derzeit knapp 6,5GB auf rund 3GB. Falls ihr die originale Speicherkarte weiter benutzen, wollt, ist dies ein nicht zu unterschätzender Faktor.
+Mit einer Aktualisierung des kompletten Systems bekommt man die Möglichkeit, jegliche derzeit aktuelle Software zu nutzen und den Drucker, um einige nützliche Tools zu erweitern. Der benötigte Speicherplatz auf der EMMC sinkt von derzeit knapp 6,5GB auf rund 3GB. Falls ihr die originale Speicherkarte weiter benutzen wollt, ist dies ein nicht zu unterschätzender Faktor.
 
 Ich persönlich würde jedoch zur 32 GB-Karte von Qidi raten, da mit einigen zusätzlichen Tools der Speicherverbrauch schnell die 8GB überschreitet. Vereinfacht gesagt bekommt ihr einen Drucker, welcher richtig konfiguriert dem Original überlegen ist und der dem Gedanken von Open Source so nah wie nur möglich kommt.
 
