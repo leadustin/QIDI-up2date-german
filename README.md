@@ -657,7 +657,7 @@ Bleibt nur noch die Montage des Raspberrys in der Mainboard-Kammer. Besitzer ein
 
 ## **Stromversorgung Raspberry**
 
-Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen.
+Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen mit dem Drucker an einen IKEA-Smart-Plug angeschlossen. Wie ihr das dann letztendlich selbst löst, bleibt euch überlassen. 
 Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
 
 ## **Touchscreen in Aktion**
