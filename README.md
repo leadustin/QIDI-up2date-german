@@ -388,8 +388,8 @@ Nachfolgenden Befehl in die Konsole eingeben
 
 + KIAUH öffnet sich und über Punkt 1 in die Installation wechseln
 
-## **Crownsnets**
-Crownsnest ist für die Konfiguration und Steuerung von Webcams etc. verantwotlich  
+## **Crownsnest**
+Crownsnest ist für die Konfiguration und Steuerung von Webcams etc. verantwotlich. Wer keine Kamera benutzt, kann diesen Punkt überspringen.
 + Crownsnest für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Nach der Installation die "crownsnest.conf" im Mainsail Editor öffnen und entsprechend eure Webcam konfigurieren und dann "Speichern und Neustart" klicken.
 
 ## **Octoeverywhere**
@@ -403,7 +403,7 @@ Wir sind mit der Installation über KIAUH fertig und schließen das Tool im Haup
 Es fehlen noch 3 Tools, die wir jetzt installieren werden. Zum einen wäre das Klippain Shake&Tune, Mainsail Timelapse und Spoolman.
 
 ### Mainsail Timelapse
-+ Mainsail Timelapse ist ein Tool mit dem Zeitraffer-Videos der Drucke erstellt werden können. Folgende Befehle für die Installation von Mainsail Timelapse in der Konsole ausführen:
++ Mainsail Timelapse ist ein Tool mit dem Zeitraffer-Videos der Drucke erstellt werden können. Wie bei Crownsnest, wer keine Kamera benutzt kann die Installation überspringen. Folgende Befehle für die Installation von Mainsail Timelapse in der Konsole ausführen:
 
 ```bash
 cd ~/
