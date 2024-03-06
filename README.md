@@ -77,7 +77,7 @@ Sicher ist sicher.
 + Die EMMC per EMMC-Reader mit dem PC verbinden.
 + balenaEtcher starten und das vorher heruntergeladene <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank">Armbian Image</a> auf die EMMC flashen.
 
-![Balena](https://github.com/leadustin/QIDI_aktuell/blob/main/images/balena.png)
+![Balena](/blob/main/images/balena.png)
 
 + Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
 + LAN-Kabel und Stromversorgung anschließen.
