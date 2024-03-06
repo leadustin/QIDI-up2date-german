@@ -77,19 +77,19 @@ Sicher ist sicher.
 + Die EMMC per EMMC-Reader mit dem PC verbinden.
 + balenaEtcher starten und das vorher heruntergeladene <a href="https://github.com/redrathnure/armbian-mkspi" target="_blank">Armbian Image</a> auf die EMMC flashen.
 
-![Balena](/blob/main/images/balena.png)
+![Balena](/../main/images/balena.png)
 
 + Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
 + LAN-Kabel und Stromversorgung anschließen.
 + Drucker einschalten – Das System fährt nun hoch und der Drucker bekommt seine IP vom Router zugewiesen.
 + Router öffnen und die derzeitige IP des Druckers heraussuchen und dem Drucker fest zuweisen. Nachfolgend ein Bild der Einstellungen auf der Fritz!Box. Wer einen anderen Router hat, muss selber suchen.
 
-![Fritz!Box](https://github.com/leadustin/QIDI_aktuell/blob/main/images/fritzbox_ip.png)
+![Fritz!Box](/../main/images/fritzbox_ip.png)
 
 
 + Putty starten und entsprechend konfigurieren. Verbindung per SSH auf den Drucker. User ist „root“ und Passwort „1234“. Es folgt nun die Ersteinrichtung des Armbian OS. Unteranderem müsst ihr dem User "root" ein neues Passwort geben, die Zeitzone und eure favorisierte Shell auswählen. Ich benutze bash.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/putty.png)
+![Putty](/../main/images/putty.png)
 
 
 + Ihr werdet aufgefordert einen neuen Nutzer anzulegen. Als Namen tragt ihr „mks“ und als Passwort „makerbase“ ein. Aufforderungen einen Real-Namen einzugeben könnt ihr ignorieren und mit Enter bestätigen.
@@ -121,12 +121,12 @@ Bei der Installation von Mainsail wird die Frage gestellt, ob Macros installiert
 
 Die Installation wird einige Zeit in Anspruch nehmen, daher geduldig sein auch wenn sich in der Konsole mal nichts tut. So sollte das am Ende in KIAUH aussehen.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/kiuah_tools.png)
+![Putty](/../main/images/kiuah_tools.png)
 
 
 Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbinden.
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper_mcu_error.png)
+![Putty](/../main/images/klipper_mcu_error.png)
 
 ## **Flashen des Druckkopfs - Einleitung**
 
@@ -144,19 +144,19 @@ make menuconfig
 
 Wir befinden uns nun im Katapult-Konfigurations-Menü.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult1.png)
+![Putty](/../main/images/katapult1.png)
 
 Zuerst ändern wir die Section “Micro-controller Architecture" auf RP2040.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult2.png)
+![Putty](/../main/images/katapult2.png)
 
 Als nächstes sicherstellen, das unter „Build Katapult deployment application der Bootloader auf „16KiB bootloader“ steht.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult3.png)
+![Putty](/../main/images/katapult3.png)
 
 Mit “Q” beenden und mit „Y“ speichern.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult4.png)
+![Putty](/../main/images/katapult4.png)
 
 
 Jetzt erstellen wir unsere erste Firmware in dem wir nachfolgenden Befehl eingeben:
@@ -169,7 +169,7 @@ make -j4
 In der Konsole solltet ihr folgende Ausgabe sehen:
 
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult5.png)
+![Putty](/../main/images/katapult5.png)
 
 
 
@@ -178,7 +178,7 @@ Nachfolgenden Befehl in die Konsole für folgende Ausgabe eingeben. Man sieht da
 ```bash
 ls /dev/serial/by-id/*
 ```
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/katapult6.png)
+![Putty](/../main/images/katapult6.png)
 
 
 Druckkopf in DFU-Mode versetzen. Hierfür wie folgt vorgehen:
@@ -197,13 +197,13 @@ sudo mount /dev/sda1 /mnt
 systemctl daemon-reload
 ```
 
-![Flash Toolhead](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_1.png)
+![Flash Toolhead](/../main/images/flash_1.png)
 
 
 Es folgt eine Abfrage des Passworts des User mks. Hier also makerbase eintragen.
 
 
-![Flash Toolhead](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_2.png)
+![Flash Toolhead](/../main/images/flash_2.png)
 
 Nachfolgende Befehle flashen Katapult auf den Druckkopf:
 
@@ -218,7 +218,7 @@ Wenn nachfolgender Befehl eingegeben wird, sollte die Bestätigung angezeigt wer
 ls /dev/serial/by-id
 ```
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/flash_3.png)
+![Putty](/../main/images/flash_3.png)
 
 Von nun an, können zukünftige Versionen von Klipper ohne physischen Zugriff auf den Druckkopf geflasht warden. Nicht vergessen die Abdeckung des Druckkopfs zu montieren.
 
@@ -231,11 +231,11 @@ make menuconfig
 
 Im Prinzip wird hier ähnlich des Konfig-Menüs von Katapult verfahren. Wie auf dem nachfolgenden Bild dargestellt das Menü konfigurieren.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper1.png)
+![Putty](/../main/images/klipper1.png)
 
 Mit "Q" beenden und mit "Y" speichern.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper2.png)
+![Putty](/../main/images/klipper2.png)
 
 Mit nachfolgenden Befehlen wird die Firmware kompliliert:
 
@@ -245,7 +245,7 @@ make -j4
 ```
 Dies sollte nach dem Kompillieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper3.png)
+![Putty](/../main/images/klipper3.png)
 
 > [!WARNING]
 > Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist **EURE** Serial-ID des Druckkopfs. Alle IDs auf diesen Bildern sind die **MEINES** Druckers und dürfen nicht auf **EUREN** Drucker geflasht werden.
@@ -272,7 +272,7 @@ sudo apt install python3-serial
 
 So sollte es in der Konsole aussehen:
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper4.png)
+![Putty](/../main/images/klipper4.png)
 
 
 
@@ -291,7 +291,7 @@ make menuconfig
 
 Alles wie auf dem Bild dargestellt einstellen und wieder mit "Q" beenden und "Y" speichern
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper5.png)
+![Putty](/../main/images/klipper5.png)
 
 
 
@@ -306,12 +306,12 @@ make -j4
 
 Dieser Prozess erstellt eine „klipper.bin“ im Ordner /home/mks/klipper/out/. Die Warnung während des Kompilierens kann ignoriert werden.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper6.png)
+![Putty](/../main/images/klipper6.png)
 
 
 In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Benutzername und Passwort leer lassen und auf "speichern" klicken. Als nächstes auf "anmelden" drücken und im nächsten Fenster die Login-Daten des Users mks eintragen und die klipper.bin, wie im Bild gezeigt aus /home/mks/klipper/out/ herunterladen.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper7.png)
+![Putty](/../main/images/klipper7.png)
 
 + Die MicroSD-Card als FAT32 formatieren. Wichtig! Keine Karte größer 32GB benutzen!
 + Die klipper.bin in X_4.bin umbenennen und auf die SD-Karte direkt ins Root-Verzeichnis kopieren.
@@ -319,13 +319,13 @@ In WinSCP ein neues Verbindungsziel erstellen, die IP des Druckers eintragen. Be
 + Den Drucker am Netzschalter ausschalten und mindestens 30 Sekunden warten, damit sich der Superkondensator entladen kann.
 + Die MicroSD-Karte in den Kartenslot des Mainboards stecken und den Drucker wieder anschalten. Die STM32F402 MCU wird nun geflasht. Der Prozess sollte ungefähr 10 Sekunden dauern. Zur Sicherheit den Drucker erst nach 1 Minute ausstellen und die SD-Karte entfernen.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper8.png)
+![Putty](/../main/images/klipper8.png)
 
 Den Stecker des Display vom Mainboard ziehen, da dieses nur eine Fehlermeldung anzeigen wird. Drucker anschalten und auf die Weboberfläche zugreifen. Im Tab "Maschine" sollte nun nachfolgendes Bild angezeigt werden. Die Fehlermeldung bzgl. der mcu MKS_THR wird erstmal ignoriert. Darum kümmern wir uns später.
 
 Hintere Abdeckung des Druckers montieren und dabei achten, die Schrauben nicht zu fest ins Gewinde zu drehen, da man hier leider nur in Plastik schraubt. Wer auch das alternative Touchdisplay installieren möchte, kann den Drucker offen lassen.
 
-![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper9.png)
+![Putty](/../main/images/klipper9.png)
 
 
 **Herzlichen Glückwunsch - das Fundament ist geschaffen.**
@@ -359,7 +359,7 @@ Alles per "include" in die printer.cfg eingebunden.
 + Die dem Drucker entsprechende RAR-Datei herunterladen und entpacken
 + Mainsail aufrufen und im Tab "Maschine" die printer.cfg mit einem Rechtsklick markieren, löschen und über "Datei hochladen" die printer.cfg aus dem Archiv hochladen
 
-![Mainsail Upload](https://github.com/leadustin/QIDI_aktuell/blob/main/images/mainsail_upload.png)
+![Mainsail Upload](/../main/images/mainsail_upload.png)
 
 + In Mainsail auf printer.cfg klicken - es öffnet sich der Mainsail-Editor
 + Folgenden Abschnitt suchen und dort **EURE ID** eintragen.
@@ -374,7 +374,7 @@ Wenn die ID unter mcu MKS_THR korrekt eingetragen wurde, sollte auch die mcu-bez
 Es fehlt die Adaptive_Mesh.cfg. Diese befindet sich in der heruntergeladenen RAR-Datei im Ordner "Macros".
  + Erstellt In Mainsail einen Ordner mit dem Namen "Macros" über den Button "Verzeichnis erstellen"
 
-![Mainsail Folder](https://github.com/leadustin/QIDI_aktuell/blob/main/images/mainsail_folder.png)
+![Mainsail Folder](/../main/images/mainsail_folder.png)
 
 + Öffnet diesen Ordner und ladet alle Dateien aus dem entpackten Ordner "Macros" hoch
 
@@ -413,7 +413,7 @@ make install
 ```
 Falls zum Ende der Installation folgender Hinweis in der Konsole angezeigt wird, bitte die moonraker.conf öffnen und am Ende folgendes einfügen:
 
-![Timelapse](https://github.com/leadustin/QIDI_aktuell/blob/main/images/timelapse1.png)
+![Timelapse](/../main/images/timelapse1.png)
 
 ```bash
 [timelapse]
@@ -481,7 +481,7 @@ path: ~/Spoolman
 
 Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
 
-![Spoolman](https://github.com/leadustin/QIDI_aktuell/blob/main/images/spoolman1.png)
+![Spoolman](/../main/images/spoolman1.png)
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
 
@@ -516,18 +516,18 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 Raspberry Pi Imager öffnen und euren Pi auswählen
 Unter "OS wählen" auf Raspberry Pi OS (other) klicken und Raspberry Pi OS Lite (64bit) auswählen
 
-![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry1.png)
+![Raspberry OS](/../main/images/raspberry1.png)
 
 Bei der Frage ob OS Einstellungen angepasst werden sollen, auf Einstellungen bearbeiten klicken. Im drauf sich öffnenden Fenster tragt ihr eure Daten ein.
 In meinem Fall habe ich den selben User wie vom Drucker genommen - mks/makerbase
 Im Tab "Dienste" "SSH aktivieren" und "Passwort zur Authentifizierung verwenden" auswählen
 
-![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry2.png)
+![Raspberry OS](/../main/images/raspberry2.png)
 
 Zurück im Menü mit "Ja" die Übernahme der Parameter bestätigen und bestätigen, dass alle Daten auf der SD-Karte nun gelöscht werden.
 Die SD-Karte wird nun mit dem OS beschrieben. Nach Abschluss des Flashens sollte sich so eine Bestätigung öffnen.
 
-![Raspberry OS](https://github.com/leadustin/QIDI_aktuell/blob/main/images/raspberry3.png)
+![Raspberry OS](/../main/images/raspberry3.png)
 
 ## Setup Display 
 Je nach verwendeten Display kann es nötig sein, die config.txt des OS um ein paar Zeilen zu erweitern.
@@ -573,7 +573,7 @@ cd ~ && git clone https://github.com/dw-0/kiauh.git
 + Im Hauptmenü von KIAUH über Punkt 1 in den Installations-Modus wechseln und Punkt 5 - Klipperscreen auswählen
 + Nach der Fertigstellung der Installation und Rückkehr ins Hauptmenü sollte es so aussehen.
 
-![Klipperscreen](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipperscreen1.png)
+![Klipperscreen](/../main/images/klipperscreen1.png)
 
 + KIAUH mit Q beenden
 
@@ -663,5 +663,5 @@ Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixier
 ## **Touchscreen in Aktion**
 Und so sieht das Ganze dann in Aktion und fest im Qidi verbaut aus.
 
-![Display](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display1.png)
+![Display](/../main/images/display1.png)
 
