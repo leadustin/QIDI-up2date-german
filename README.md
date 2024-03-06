@@ -248,7 +248,7 @@ Dies sollte nach dem Kompillieren der Firmware in der Konsole stehen. Die Warnun
 ![Putty](https://github.com/leadustin/QIDI_aktuell/blob/main/images/klipper3.png)
 
 > [!WARNING]
-> Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist **EURE** Serial-ID des Druckkopfs. Alle IDs auf diesen       > Bildern sind die **MEINES** Druckers und dürfen nicht auf **EUREN** Drucker geflasht werden.
+> Mit nachfolgenden Befehl die ID aufrufen und alles nach „usb-katapult_rp2040_“ in den Zwischenspeicher kopieren und dann in eine .txt-Datei. Dies ist **EURE** Serial-ID des Druckkopfs. Alle IDs auf diesen Bildern sind die **MEINES** Druckers und dürfen nicht auf **EUREN** Drucker geflasht werden.
 
 ```bash
 ls /dev/serial/by-id/*
