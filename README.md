@@ -1,5 +1,5 @@
 Ich möchte in diesem Repository meine Aktualisierung des Qidi X-Plus 3 auf die aktuellste Software inkl. einiger nützlicher und optionaler Tools mit euch teilen.
-Dieser Guide ist auch kompatibel mit dem Qidi X-Max 3.
+Dieser Guide ist kompatibel mit dem Qidi X-Max 3 und dem X-Plus 3.
 
 Dieses Tutorial basiert auf der Arbeit von coco.33 und wurde in seiner Urfassung auf <a href="https://github.com/Phil1988/FreeQIDI">FreeQIDI</a>
 veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
