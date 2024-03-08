@@ -6,4 +6,4 @@ Für den kompletten Umbau des Druckers sollte man diesem Guide folgen. Hier wird
 + [Total-Umbau](update/update+upgrade.md)
 
 Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Github Repository erstellen möchte, findet hier eine Lösung
-+ [Contribution guidelines for this project](backup/Autobackup.md)
++ [Automatisches Backup](backup/Autobackup.md)
