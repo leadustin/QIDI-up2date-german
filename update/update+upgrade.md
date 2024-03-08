@@ -33,7 +33,7 @@ Ich persönlich würde jedoch zur 32 GB-Karte von Qidi raten, da mit einigen zus
 
 Wo Licht ist, ist leider auch Schatten. In diesem Fall betrifft das das originale Display des Druckers. Dieses lässt sich derzeit nach der Aktualisierung nicht mehr benutzen. Das Display ist im Prinzip ein eigenes System auf dem die Druckoberfläche des Druckers läuft und seriell an das Mainboard angeschlossen ist. Aufgrund diverser Modifikationen an Klipper und Moonraker durch Qidi hat man so eine Schnittstelle zwischen Display und System geschaffen. Dies ist somit auch der Grund warum eine Aktualisierung von Moonraker bzw. Klipper auf einem bestehenden System diese Fehlermeldung erzeugt.
 
-![Fehlermeldung](https://github.com/leadustin/QIDI_aktuell/blob/main/images/display_error.png)
+![Fehlermeldung](/../main/images/display_error.png)
 
 Eine Alternative für das Display stelle ich später im Tutorial vor.
 
