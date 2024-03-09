@@ -101,13 +101,13 @@ Mit dem Tool euer Wahl per SSH auf den Drucker verbinden. Ich benutze in diesem 
 + mit nachfolgendem Befehl wird das autocommit-Script heruntergeladen
 
   ```bash
-   wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+  wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
   ```
 
 + Als nächstes wird die bevorzugte Weboberfläche ausgewählt. Wer Mainsail benutzt, entfernt die # in der Mainsail-Zeile. Wer Fluidd nutzt entsprechend bei Fluidd. Dafür öffnen wir mit folgendem Befehl die autocommit.sh
 
   ```bash
-   nano ~/printer_data/config/autocommit.sh
+  nano ~/printer_data/config/autocommit.sh
   ```
 + Nachfolgendes Bild zeigt die Konfiguration für Mainsail. Fluidd ist entsprechend auskommentiert.
 
@@ -118,13 +118,94 @@ Mit dem Tool euer Wahl per SSH auf den Drucker verbinden. Ich benutze in diesem 
 + Mit nachfolgenden Befehl geben wir uns sowie allen anderen Usern des Systems die Berechtigung die autocommit.sh auszuführen
 
   ```bash
-   chmod +x autocommit.sh
+  chmod +x autocommit.sh
   ```
 + Mit folgenden Befehl prüfen ob die Berechtigungen, wie auf dem nachfolgenden Bild gezeigt, richtig gesetzt sind.
   ```bash
   ls -la autocommit.sh
   ```
 ![Berechtigungen](/../main/images/backup12.png)
+
++ Für den Export und Backup der data.mdb benötigen wir noch ein weiteres Tool, welches mit nachfolgenden Befehl installiert wird.
+
+  ```bash
+  sudo apt install lmdb-utils
+  ```
+> [!IMPORTANT]
+> In den Standard-Einstellungen werden ALLE Tabellen der data.mbd im Repository gesichert. Wer mit API-Schlüsseln und anderen Benutzerdaten arbeitet kann dies verhindern, in dem in der "autocommit.sh" der Bereich "history_only" auf "true" gesetzt wird.
+
+## **Backup auf Github vorbereiten**
+Um Github auf das Backup unserer Daten vorzubereiten, müssen wir folgenden Befehl in die Konsole einfügen:
+
+```bash
+git init -b main
+```
+![Github initialisieren](/../main/images/backup13.png)
+
+Nun müssen wir Git mitteilen über welche URL auf unser Repository zugegriffen werden soll.
++ nachfolgenden Text in die Zwischenablage kopieren und in die Textfile vor die Token-URL einfügen:
+  ```bash
+  git remote add origin
+  ```
+![Git-URL](/../main/images/backup14.png)
+
++ Den in der Textfile erstellten befehl aus dem vorherigen Bild in die Konsole eingeben
++ Als nächstes erfolgt eine Verifizierung mit folgendem Befehl:
+  
+  ```bash
+  git remote -v
+  ```
+![Verifizierung](/../main/images/backup15.png)
+
++ Nun müssen wir Git noch unsere Email sowie euren Namen mitteilen. Dafür werden folgende Befehle verwendet, die entsprechend mit euren Daten ergänzt werden. 
+
+  ```bash
+   git config --global user.email "your@email.com"
+   git config --global user.name "your name"
+  ```
+Damit wir nicht unnötige Dateien sichern, benötigen wir eine Ausschlußliste, die wie folgt erstellt wird:
++ Wir sollten uns derzeit noch im Verzeichnis "printer_data/config/" befinden. Wenn nicht mit nachfolgendem Befehl dort hin wechseln.
+  
+  ```bash
+  cd ~/printer_data/config
+  ```
++ Mit diesem Befehl erstellen wir die Datei .gitignore. Wichtig ist der Punkt vor gitignore!
+  
+  ```bash
+  nano .gitignore
+  ```
++ Im Editor nun die Pfade der Dateien eintragen, die NICHT gesichert werden sollen. Da ich Klippain Shake&Tune installiert habe, wären das dann diese Pfade. Speichern der Datei mit STRG+O, gefolgt von Enter und dann STRG+X
+  
+  ```bash
+  K-ShakeTune_results/belts/*.csv
+  K-ShakeTune_results/belts/*.png
+  K-ShakeTune_results/inputshaper/*.csv
+  K-ShakeTune_results/inputshaper/*.png
+  K-ShakeTune_results/vibrations/*.tar.gz
+  K-ShakeTune_results/vibrations/*.png
+  ```
+> [!NOTE]
+  Das Ausschließen von Dateien ist ein optionaler Schritt! Wer alle Daten aus dem Ordner printer_data/config sichern möchte, lässt die .gitignore leer.
+
+## **Das erste Backup**
+Wir sind soweit das erste Backup zu erstellen.
++ Nachfolgenden Befehl in die Konsole einfügen:
+
+  ```bash
+  sh autocommit.sh
+  ```
++ Wenn alle notwendigen Schritte zuvor richtig ausgeführt wurden, sollte es in der Konsole in etwas so aussehen. Da ich für diesen Guide ein eigenes System aufgesetzt habe, werden bei euch die übermittelten Daten von der Anzahl her höher sein.
+
+  ![Backup](/../main/images/backup16.png)
+
++ Wenn der Befehl sh.autocommit.sh erneut in die Konsole eingefügt wird, ohne das es Änderungen am System gab, sollte es so wie auf dem Bild aussehen.
+
+  ![BackupClean](/../main/images/backup17.png) 
+
++ Wie eine Änderung an einer Config angezeigt wird zeigt nachfolgendes Bild. Als Beispiel dient eine Änderung in der printer.cfg
+
+  ![BackupChange](/../main/images/backup18.png) 
+
   
 
 
