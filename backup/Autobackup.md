@@ -16,5 +16,9 @@ Das nachfolgende Bild zeigt eine Änderung eines Kommentars in der printer.cfg.
 ![Backup](/../main/images/backup1.png)
 
 ## **Eigenes Github Repository erstellen**
-> [!HINWEIS]
-> Solltest du noch keinen Github-Account besitzen, kannst du dir hier einen Account erstellen.
+> [!NOTE]
+> Solltest du noch keinen Github-Account besitzen, kannst du dir <a href="https://github.com/signup">hier</a> einen Account erstellen.
++ Einloggen in den erstellten Github Account
++ Erstellen eines neuen Github Repository durch klicken auf NEW
+
+![Neues Repository](/../main/images/backup2.png)
