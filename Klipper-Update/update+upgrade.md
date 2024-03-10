@@ -662,8 +662,12 @@ Die Stromversorgung des Raspberrys habe ich nach draußen geführt und zusammen 
 Abdeckung des Druckers wieder schließen und vorsichtig mit den Schrauben fixieren. Auch hier wird in Plastik geschraubt. Wer zu fest dreht, dreht irgendwann für immer.😜
 
 ## **Touchscreen in Aktion**
-Und so sieht das Ganze dann in Aktion und fest im Qidi verbaut aus.
+So sieht das Ganze dann in Aktion und fest im Qidi verbaut aus.
 
 ![Display](/../main/images/display1.png)
+
+Und ein weiterer Screen.
+
+![Display](/../main/images/display2.png)
 
 
