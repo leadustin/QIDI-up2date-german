@@ -6,7 +6,7 @@ Dieses Tutorial basiert auf der Arbeit von coco.33 und wurde in seiner Urfassung
 veröffentlicht und bezieht sich auf die Qidi X-3 Serie.
 # **Disclaimer**
 > [!CAUTION]
->Bitte beachtet, dass weder ich noch eine andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
+>Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
 >Ihr werdet das System komplett neu aufsetzen. Dies beinhaltet auch das Flashen aller MCUs wie Druckkopf oder den STM-Chip des Mainboards.
 >All eure Gcodes sowie eure derzeitige printer.cfg sollten daher gesichert werden.
 >Solltet ihr damit einverstanden sein, und Änderungen durchgeführt werden, erlischt auch jeglicher Garantieanspruch an Qidi.
