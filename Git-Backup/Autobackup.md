@@ -238,7 +238,7 @@ Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die
     RUN_SHELL_COMMAND CMD=backup_cfg
 ```
 Wir nähern uns dem Ende, benötigen aber noch das Tool "gcode_shell_command". Solltet ihr Klippain Shake&Tune installiert haben, entfällt dieser Schritt, da Klippain Shake&Tune das Script mit installiert. 
-Für den fall das Klippain Shake&Tune noch nicht installiert wurde,gibt es jetzt 2 Wege für die Installation. 
+Für den Fall das Klippain Shake&Tune noch nicht installiert wurde, gibt es jetzt 2 Wege für die Installation. 
 + Entweder über KIAUH über Punkt 4 und dann Punkt 8.
 + Weg 2 wäre über nachfolgenden Befehl in der Konsole:
 
