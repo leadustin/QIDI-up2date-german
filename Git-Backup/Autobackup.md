@@ -20,14 +20,14 @@ Das nachfolgende Bild zeigt eine Änderung eines Kommentars in der printer.cfg.
 ## **Eigenes Github Repository erstellen**
 > [!NOTE]
 > Solltest du noch keinen Github-Account besitzen, kannst du dir <a href="https://github.com/signup">hier</a> einen Account erstellen.
-+ Einloggen in den erstellten Github Account
++ Einloggen in den erstellten Github Account.
 + Erstellen eines neuen Github Repository durch klicken auf NEW.
 
 ![Neues Repository](/../main/images/backup2.png)
 
 Die nächsten Schritte sind die Namensfindung, Zugriffsberechtigung und diverse andere Einstellungen.
 1. Namen des Repository
-   + Einen aussagekräftigen Namen wählen. Falls man plant mehrere Drucker einzupflegen, wäre hier der Name des jeweiligen Drucker sinnvoll
+   + Einen aussagekräftigen Namen wählen. Falls man plant mehrere Drucker einzupflegen, wäre hier der Name des jeweiligen Drucker sinnvoll.
 
 2. Beschreibung Repository
    + Die Beschreibung des Respository ist optional. Hier könnte der Drucker detailierter beschrieben werden.
@@ -64,7 +64,7 @@ Im nächsten Schritt wird das Token mit entsprechenden Zugriffsrechten konfiguri
 2. Gültigkeitsdauer
    + Unter Expiration "No expiration" auswählen.
 > [!TIP]
-> Wer mag kann hier auch einen Zeitraum wählen nach dem das Zugriffs-Token seine Gültigkeit verliert. Nach Ablauf dieser Zeitspanne ist kein Zugriff auf das Repository durch den Drucker möglich und muss erneuert werden.
+> Wer mag kann hier auch einen Zeitraum wählen nach dem das Zugriffs-Token seine Gültigkeit verliert. Nach Ablauf dieser Zeitspanne ist kein Zugriff auf das Repository durch den Drucker möglich und das Token muss erneuert werden.
 3. Zugriffsbereiche wählen
    + Für die Definierung der Zugriffsbereiche nur "workflow" und "read:org" wählen.
 4. Abschluss Konfiguration
@@ -86,7 +86,7 @@ Kopiert das Token in die Text-Datei in die ihr die HTTPS-URL euers Repository ko
 ## **Kombinieren der HTTPS-URL mit dem Token**
 Als nächster Schritt müssen Token und URL kombiniert werden.
 + Fügt in der URL hinter den beiden **//** ein **@** ein.
-+ Kopiert euren Token in die Zwischenablage und fügt das Token zwischen **//** und dem **@** ein. Das nachfolgende Bild zeigt wie die URL aussehen muss.
++ Kopiert euer Token in die Zwischenablage und fügt das Token zwischen **//** und dem **@** ein. Das nachfolgende Bild zeigt wie die URL aussehen muss.
 > [!NOTE]
 >  Nur noch mal zur Erinnerung. Das für diesen Guide erstellte Repository und Token wurden nach Erstellung der Anleitung gelöscht!
 
@@ -151,7 +151,7 @@ Nun müssen wir Git mitteilen über welche URL auf unser Repository zugegriffen 
   ```
 ![Git-URL](/../main/images/backup14.png)
 
-+ Den in der Textfile erstellten befehl aus dem vorherigen Bild in die Konsole eingeben
++ Den in der Textfile erstellten Befehl aus dem vorherigen Bild in die Konsole eingeben.
 + Als nächstes erfolgt eine Verifizierung mit folgendem Befehl:
   
   ```bash
@@ -159,7 +159,7 @@ Nun müssen wir Git mitteilen über welche URL auf unser Repository zugegriffen 
   ```
 ![Verifizierung](/../main/images/backup15.png)
 
-+ Nun müssen wir Git noch unsere Email sowie euren Namen mitteilen. Dafür werden folgende Befehle verwendet, die entsprechend mit euren Daten ergänzt werden. 
++ Nun müssen wir Git noch unsere Email sowie euren Namen mitteilen. Dabei handelt es sich um die Email und den Namen, den ihr bei Github verwendet. Dafür werden folgende Befehle verwendet, die entsprechend mit euren Daten ergänzt werden. 
 
   ```bash
    git config --global user.email "your@email.com"
@@ -221,7 +221,7 @@ Mit einem Klick auf eine der Commits öffnet sich die Vergleichsansicht. In dies
  ![Commits](/../main/images/backup21.png)
 
 ## **Update per Macro**
-Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die Datei ein, die eure Macros enthält. Solltet ihr meinen Guide des Komplett-Updates des Druckers durchgeführt haben, sollte das Macro in die Macros/macro.cfg eingefügt werden.
+Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die Datei ein, die eure Macros enthält. Solltet ihr meinen Guide des [Komplett-Updates](/Klipper-Update/update+upgrade.md) des Druckers durchgeführt haben, sollte das Macro in die Macros/macro.cfg eingefügt werden.
 ```bash
  [gcode_shell_command backup_cfg]
  command: ~/printer_data/config/autocommit.sh
@@ -232,6 +232,7 @@ Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die
  description: Backs up config directory GitHub
  gcode:
      RUN_SHELL_COMMAND CMD=backup_cfg
+
  [delayed_gcode auto_backups]
  initial_duration: 10 #Nach 10 Sekunden wird automatisch ein Backup erstellt
  gcode:
