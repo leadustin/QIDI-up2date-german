@@ -19,7 +19,7 @@ Das nachfolgende Bild zeigt eine Änderung eines Kommentars in der printer.cfg.
 > [!NOTE]
 > Solltest du noch keinen Github-Account besitzen, kannst du dir <a href="https://github.com/signup">hier</a> einen Account erstellen.
 + Einloggen in den erstellten Github Account
-+ Erstellen eines neuen Github Repository durch klicken auf NEW
++ Erstellen eines neuen Github Repository durch klicken auf NEW.
 
 ![Neues Repository](/../main/images/backup2.png)
 
@@ -31,7 +31,7 @@ Die nächsten Schritte sind die Namensfindung, Zugriffsberechtigung und diverse 
    + Die Beschreibung des Respository ist optional. Hier könnte der Drucker detailierter beschrieben werden.
 
 3. Public oder privat
-   + Soll das Repository für alle zugänglichs ein muss public gewählt werden andernfalls private wählen.
+   + Soll das Repository für alle zugänglich sein muss "public" gewählt werden, andernfalls "private" wählen.
 
 4. Initialisierung des Repositorys
    + Dieser Teil definiert welche Grunddateien im Repository enthalten sind. Wie im nachfolgenden Bild auswählen.
@@ -44,19 +44,19 @@ Die nächsten Schritte sind die Namensfindung, Zugriffsberechtigung und diverse 
     
 ![Initialisierung](/../main/images/backup3.png)
 
-Nach Erstellung des Repository erfolgt eine Weiterleitung zum derzeitigen "Root-Verzeichnis" 
+Nach Erstellung des Repository erfolgt eine Weiterleitung zum derzeitigen "Root-Verzeichnis". 
 Kopiert die HTTPS-URL eurers Repository und fügt diese in einen Texteditor eurer Wahl ein. 
 
 ![HTTPS-URL](/../main/images/backup4.png)
 
 ## **Zugriffs-Token erstellen**
 Um Zugriff auf das Repository über den Drucker zu erhalten, benötigen wir ein "access token" welches wir <a href="https://github.com/settings/tokens">hier</a> erstellen.
-+ Auf "Generate new  token" klicken
-+ "Generate new token (classic) wählen
++ Auf "Generate new  token" klicken.
++ "Generate new token (classic) wählen.
 
 ![Token-Auswahl](/../main/images/backup5.png)
 
-Im nächsten Schritt wird das Token mit entsprechenden Zugriffsrechten konfiguriert
+Im nächsten Schritt wird das Token mit entsprechenden Zugriffsrechten konfiguriert.
 1. Namen des Tokens
    + Unter "Note" wählt ihr einen passenden Namen, welcher mit eurem Drucker in Verbindung gebracht werden kann.
 2. Gültigkeitsdauer
