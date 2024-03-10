@@ -31,7 +31,7 @@ Mit einer Aktualisierung des kompletten Systems bekommt man die Möglichkeit, je
 Ich persönlich würde jedoch zur 32 GB-Karte von Qidi raten, da mit einigen zusätzlichen Tools der Speicherverbrauch schnell die 8GB überschreitet. Vereinfacht gesagt bekommt ihr einen Drucker, welcher richtig konfiguriert dem Original überlegen ist und der dem Gedanken von Open Source so nah wie nur möglich kommt.
 
 
-Wo Licht ist, ist leider auch Schatten. In diesem Fall betrifft das das originale Display des Druckers. Dieses lässt sich derzeit nach der Aktualisierung nicht mehr benutzen. Das Display ist im Prinzip ein eigenes System auf dem die Druckoberfläche des Druckers läuft und seriell an das Mainboard angeschlossen ist. Aufgrund diverser Modifikationen an Klipper und Moonraker durch Qidi hat man so eine Schnittstelle zwischen Display und System geschaffen. Dies ist somit auch der Grund warum eine Aktualisierung von Moonraker bzw. Klipper auf einem bestehenden System diese Fehlermeldung erzeugt.
+Wo Licht ist, ist leider auch Schatten. In diesem Fall betrifft es das originale Display des Druckers. Dieses lässt sich derzeit nach der Aktualisierung nicht mehr benutzen. Das Display ist im Prinzip ein eigenes System auf dem die Druckoberfläche des Druckers läuft und seriell an das Mainboard angeschlossen ist. Aufgrund diverser Modifikationen an Klipper und Moonraker durch Qidi hat man so eine Schnittstelle zwischen Display und System geschaffen. Dies ist somit auch der Grund warum eine Aktualisierung von Moonraker bzw. Klipper auf einem bestehenden System diese Fehlermeldung erzeugt.
 
 ![Fehlermeldung](/../main/images/display_error.png)
 
@@ -131,7 +131,7 @@ Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipp
 
 ## **Flashen des Druckkopfs - Einleitung**
 
-Um ihn zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dies wird nur einmal nötig sein, da wir einen speziellen Bootloader Namens "katapult" flashen werden, zukünftige Firmwareupdates können dann ohne physischen Zugriff erfolgen.
+Um den Druckkopf zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen.
 
 ### **Installation von katapult**
 
@@ -221,9 +221,9 @@ ls /dev/serial/by-id
 
 ![Putty](/../main/images/flash_3.png)
 
-Von nun an, können zukünftige Versionen von Klipper ohne physischen Zugriff auf den Druckkopf geflasht warden. Nicht vergessen die Abdeckung des Druckkopfs zu montieren.
+Nachdem nun Katapult auf dem Druckkopf installiert wurde, wird der nächste Schritt das Flashen von klipper sein. Da wir erstmal nicht mehr an den Druckkopf müssen, kann die hintere Abdeckung des Druckkopfs montiert werden.
 
-Jetzt müssen wir Klipper auf den Druckkopf flashen, Folgende Befehle in die Konsole eingeben:
+Folgende Befehle in die Konsole eingeben:
 
 ```bash
 cd ~/klipper
@@ -395,7 +395,7 @@ Crownsnest ist für die Konfiguration und Steuerung von Webcams etc. verantwotli
 
 ## **Octoeverywhere**
 Octoeverywhere ist ein Remote-Tool mit dem ihr über das Internet euren Drucker steuern könnt.
-+ Octoeverywhere für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf Octoeverywhere.com/code ein und folgt den Anweisungen.
++ Octoeverywhere für die Installation wählen und während der Installation alles mit "Yes" bestätigen. Zum Ende der Installation wird in der Konsole ein mehrstelliger Code angezeigt. Diesen Code gebt ihr auf <a href="https://octoeverywhere.com/code">Octoeverywhere.com/code</a> ein und folgt den Anweisungen.
  
 Wir sind mit der Installation über KIAUH fertig und schließen das Tool im Hauptmenü mit "Q".
 
@@ -483,6 +483,8 @@ path: ~/Spoolman
 Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und Port 7912 aufgerufen werden
 
 ![Spoolman](/../main/images/spoolman1.png)
+
+## **client.cfg**
 
 + Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
 
