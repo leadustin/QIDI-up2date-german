@@ -204,7 +204,54 @@ Wir sind soweit das erste Backup zu erstellen.
 
 + Wie eine Änderung an einer Config angezeigt wird zeigt nachfolgendes Bild. Als Beispiel dient eine Änderung in der printer.cfg
 
-  ![BackupChange](/../main/images/backup18.png) 
+  ![BackupChange](/../main/images/backup18.png)
+
+## **Historie auf Github**
+Schauen wir uns nun den Änderungsverlauf auf Github an. Im Root-Verzeichnis des Repository auf Commits klicken
+ ![Commits](/../main/images/backup19.png)
+
+Es werden alle derzeit getätigten Änderungen angezeigt. Diese werden nach Datum und Uhrzeit sortiert angezeigt.
+
+ ![Commits2](/../main/images/backup20.png)
+
+Mit einem Klick auf eine der Commits öffnet sich die Vergleichsansicht. In diesem Fall wurde der Wert von max_accel avon 1000 auf 10000 gesetzt.
+
+ ![Commits](/../main/images/backup21.png)
+
+## **Update per Macro**
+Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die Datei ein, die eure Macros enthält. Solltet ihr meinen Guide des Komplett-Updates des Druckers durchgeführt haben, sollte das Macro in die Macros/macro.cfg eingefügt werden.
+```bash
+ [gcode_shell_command backup_cfg]
+ command: ~/printer_data/config/autocommit.sh
+ timeout: 30
+ verbose: True
+
+ [gcode_macro BACKUP_CFG]
+ description: Backs up config directory GitHub
+ gcode:
+     RUN_SHELL_COMMAND CMD=backup_cfg
+ [delayed_gcode auto_backups]
+ initial_duration: 10 #Nach 10 Sekunden wird automatisch ein Backup erstellt
+ gcode:
+    RUN_SHELL_COMMAND CMD=backup_cfg
+```
+Wir nähern uns dem Ende, benötigen aber noch das Tool "gcode_shell_command". Solltet ihr Klippain Shake&Tune installiert haben, entfällt dieser Schritt, da Klippain Shake&Tune das Script mit installiert. 
+Für den fall das Klippain Shake&Tune noch nicht installiert wurde,gibt es jetzt 2 Wege für die Installation. 
++ Entweder über KIAUH über Punkt 4 und dann Punkt 8.
++ Weg 2 wäre über nachfolgenden Befehl in der Konsole:
+
+```bash
+ wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+```
+## **Ausführen des Macros**
+In der Macro-Übersicht befindet sich nun das Macro "BACKUP CFG". Dies ist der manuelle Weg seine Daten zu sichern.
+
+![MACRO](/../main/images/backup22.png)
+
+Zusätzlich wird bei jedem Neustart von Klipper nach 10 Sekunden das Macro automatisch aufgerufen
+
+![MACRO](/../main/images/backup23.png)
+
 
   
 
