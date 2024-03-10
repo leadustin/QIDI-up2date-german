@@ -1,11 +1,11 @@
 # **Github-Backup**
-Dieser Guide beschreibt den Weg  seine Configs, Macros etc. manuell oder automatisch in sein eigenes Github-Repository hochzuladen und bei Bedarf auch als Backup auf seinem 3D-Drucker wiederherzustellen.
+Dieser Guide basiert auf der Arbeit von <a href="https://github.com/EricZimmerman">Eric Zimmerman</a> und beschreibt den Weg  seine Configs, Macros etc. manuell oder automatisch in sein eigenes Github-Repository hochzuladen und bei Bedarf auch als Backup auf seinem 3D-Drucker wiederherzustellen.
 Um den Guide besser folgen zu können, sind alle Konsolenbefehle für Copy&Paste vorbereitet. Ebenso sind diesem Guide Bilder hinzugefügt um einzelne Schritte besser verständlich zu machen.
 
 ## **Was wird benötigt?**
 + ein 3D-Drucker
 + Putty für eine SSH-Verbindung
-+ einen Account bei Github
++ einen Account bei Github (den wir in diesem Guide erstellen)
 
 ## **Wo für braucht man so etwas?**
 Wer seinen Drucker optimiert und zusätzliche Software installiert, ändert zwangsläufig seine Configs. Dabei kann etwas schiefgehen, man hat alte Werte vergessen oder komplett gelöscht.
@@ -251,6 +251,18 @@ In der Macro-Übersicht befindet sich nun das Macro "BACKUP CFG". Dies ist der m
 Zusätzlich wird bei jedem Neustart von Klipper nach 10 Sekunden das Macro automatisch aufgerufen
 
 ![MACRO](/../main/images/backup23.png)
+
+## **Backup wiederherstellen**
+Die Wiederherstellung des aktuellsten Backups erfolgt mit folgenden Befehlen. Es muss natürlich eure Token-URL eingefügt werden. Daran denken, dass in der .gitignore hinterlegte Dateien und Pfade nicht gesichert werden und dem entsprechend auch nicht wiederhergestellt werden können!
+
+```bash
+cd ~/printer_data/config
+ git init -b main
+ git remote add origin https://<token>@github.com/leadustin/testconfig.git
+ git fetch
+ git reset origin/main
+ git reset --hard HEAD
+```
 
 
   
