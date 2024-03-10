@@ -90,7 +90,7 @@ Als nächster Schritt müssen Token und URL kombiniert werden.
 
 ![Token+URL](/../main/images/backup10.png)
 
-## ** Verbindung zum Drucker per SSH**
+## **Verbindung zum Drucker per SSH**
 Mit dem Tool euer Wahl per SSH auf den Drucker verbinden. Ich benutze in diesem Guide "Putty"
 + mit folgendem Befehl das Verzeichnis wechseln
 
