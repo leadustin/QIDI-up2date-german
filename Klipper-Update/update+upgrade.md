@@ -487,7 +487,7 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 
 ## **client.cfg**
 
-+ Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren.
++ Im Ordner Macros die client.cfg im Mainsail Editor öffnen und entsprechend der eigenen Wünsche konfigurieren. Es lassen sich unteranderem diverse Parkpositionen des Druckkopfs konfigurieren.
 
 ## Alternatives Touchdisplay!
 
