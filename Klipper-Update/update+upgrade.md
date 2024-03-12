@@ -239,7 +239,7 @@ Mit "Q" beenden und mit "Y" speichern.
 
 ![Putty](/../main/images/klipper2.png)
 
-Mit nachfolgenden Befehlen wird die Firmware kompliliert:
+Mit nachfolgenden Befehlen wird die Firmware komplilliert:
 
 ```bash
 make clean
