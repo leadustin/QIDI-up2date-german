@@ -222,7 +222,7 @@ ls /dev/serial/by-id
 
 ![Putty](/../main/images/flash_3.png)
 
-Nachdem nun Katapult auf dem Druckkopf installiert wurde, wird der nächste Schritt das Flashen von klipper sein. Da wir erstmal nicht mehr an den Druckkopf müssen, kann die hintere Abdeckung des Druckkopfs montiert werden.
+Nachdem nun Katapult auf dem Druckkopf installiert wurde, wird der nächste Schritt das Flashen von Klipper sein. Da wir erstmal nicht mehr an den Druckkopf müssen, kann die hintere Abdeckung des Druckkopfs montiert werden.
 
 Folgende Befehle in die Konsole eingeben:
 
@@ -258,7 +258,7 @@ ls /dev/serial/by-id/*
 
 Das muss in eurer Konsole stehen - “/dev/serial/by-id/usb-katapult_rp2040_EURE-ID”
 
-Installation python3-serial mit folgeden Befehl. Dies ermöglicht es uns den Druckkopf zu flashen.
+Installation python3-serial mit folgendem Befehl. Dies ermöglicht es uns den Druckkopf zu flashen.
 
 ```bash
 sudo apt install python3-serial
