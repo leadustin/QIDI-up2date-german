@@ -245,7 +245,7 @@ Mit nachfolgenden Befehlen wird die Firmware komplilliert:
 make clean
 make -j4
 ```
-Dies sollte nach dem Kompillieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
+Dies sollte nach dem kompilieren der Firmware in der Konsole stehen. Die Warnung kann ignoriert werden.
 
 ![Putty](/../main/images/klipper3.png)
 
