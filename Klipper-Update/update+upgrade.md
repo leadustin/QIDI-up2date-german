@@ -122,12 +122,13 @@ Bei der Installation von Mainsail wird die Frage gestellt, ob Macros installiert
 
 Die Installation wird einige Zeit in Anspruch nehmen, daher geduldig sein auch wenn sich in der Konsole mal nichts tut. So sollte das am Ende in KIAUH aussehen.
 
-![Putty](/../main/images/kiuah_tools.png)
+![KIAUH](/../main/images/kiuah_tools.png)
 
 
 Die IP des Druckers im Browser eingeben und so auf die Weboberfläche zu verbinden.
 Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipper-Firmware installiert ist. Kein Grund zur Panik. Jetzt beginnt der Spaß.
-![Putty](/../main/images/klipper_mcu_error.png)
+
+![MCU-Error](/../main/images/klipper_mcu_error.png)
 
 ## **Flashen des Druckkopfs - Einleitung**
 
@@ -145,11 +146,11 @@ make menuconfig
 
 Wir befinden uns nun im Katapult-Konfigurations-Menü.
 
-![Putty](/../main/images/katapult1.png)
+![Katapult](/../main/images/katapult1.png)
 
 Zuerst ändern wir die Section “Micro-controller Architecture" auf RP2040.
 
-![Putty](/../main/images/katapult2.png)
+![Katapult](/../main/images/katapult2.png)
 
 Als nächstes sicherstellen, das unter „Build Katapult deployment application der Bootloader auf „16KiB bootloader“ steht.
 
@@ -189,7 +190,7 @@ Druckkopf in DFU-Mode versetzen. Hierfür wie folgt vorgehen:
 + Reset-Knopf drücken und wieder loslassen
 + Boot-Knopf loslassen
 
-
+![Druckkopf](/../main/images/druckkopf1.png)
 
 Folgende Befehle in die Konsole eingeben um das Flashen des Druckkopfs vorzubereiten:
 
