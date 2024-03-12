@@ -132,7 +132,7 @@ Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipp
 
 ## **Flashen des Druckkopfs - Einleitung**
 
-Um den Druckkopf zu flashen, müssen wir ihn in den "dfu-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen.
+Um den Druckkopf zu flashen, müssen wir ihn in den "DFU-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dieser Schritt wird später genauer erklärt.
 
 ### **Installation von katapult**
 
