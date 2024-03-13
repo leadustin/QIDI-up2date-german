@@ -673,4 +673,6 @@ Und ein weiterer Screen.
 
 ![Display](/../main/images/display2.png)
 
+Wenn dir dieser Guide gefallen hat:
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G7VMD0W)
