@@ -5,6 +5,9 @@ Derzeit sind die Guides mit dem Qidi X-Max 3 und dem X-Plus 3 kompatibel.
 Für den kompletten Umbau des Druckers sollte man diesem Guide folgen. Hier wird beschrieben, wie die alte Software des Druckers auf die jeweils aktuellste Version aktualisiert wird.
 + [Total-Umbau](Klipper-Update/update+upgrade.md)
 
+Mit diesem Macro lässt sich der für den Display-Tausch verwendete Raspberry Pi aus Mainsail sicher herunterfahren.
++ [Macro Klipperscreen-Shutdown](Klipperscreen-Shutdown/README.md)
+
 Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Github Repository erstellen möchte, findet hier eine Lösung.
 + [Automatisches Backup](Git-Backup/Autobackup.md)
 
