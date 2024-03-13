@@ -7,3 +7,7 @@ Für den kompletten Umbau des Druckers sollte man diesem Guide folgen. Hier wird
 
 Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Github Repository erstellen möchte, findet hier eine Lösung.
 + [Automatisches Backup](Git-Backup/Autobackup.md)
+
+Wenn dir meine Arbeit gefällt kannst du mich gern unterstützen
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G7VMD0W)
