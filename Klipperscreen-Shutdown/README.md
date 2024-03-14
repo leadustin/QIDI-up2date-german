@@ -1,6 +1,6 @@
 # **Shutdown Klipperscreen**
 > [!NOTE]
-> Dieses Macro bringt nur etwas, wenn ihr den im [Total-Umbau](Klipper-Update/update+upgrade.md) bechriebenen Weg bzgl. des Display-Tauschs befolgt habt! 
+> Dieses Macro bringt nur etwas, wenn ihr den im [Total-Umbau](Klipper-Update/update+upgrade.md) beschriebenen Weg bzgl. des Display-Tauschs befolgt habt! 
 ## **Installation eines Makros um den Raspberry, auf dem Klipperscreen läuft, per Makro herunterzufahren.**
 
 Mit diesem Makro lässt sich der Raspberry Pi bequem aus Mainsail herunterfahren. Dies ist nützlich wenn der Drucker vom PC entfernt aufgestellt ist.
