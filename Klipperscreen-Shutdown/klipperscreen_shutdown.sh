@@ -17,7 +17,7 @@ countdown() {
 }
 
 # Countdown ausgeben
-echo "Herunterfahren des Klipperscreens in:"
+echo "Klipperscreen wird heruntergefahren:"
 countdown
 
 # SSH-Verbindung mit deaktivierter Host-Key-Prüfung herstellen und Klipperscreen herunterfahren
