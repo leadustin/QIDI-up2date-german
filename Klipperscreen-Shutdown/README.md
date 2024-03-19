@@ -11,7 +11,7 @@ Da abrupte Stromunterbrechungen für die SD-Karte des Pis nicht zu empfehlen sin
 
 Die eigentliche Installation ist simpel. Kopiert die klipperscreen_shutdown.cfg und die klipperscreen_shutdown.sh und ladet sie auf euren Drucker.
 Wenn ihr das Tutorial für das automatsiche Github-Backup befolgt habt, befindet sich auf dem Drucker ein Ordner mit der Bezeichnung "Scripts". In diesen Ordner wird das Script kipperscreen_shutdown.sh kopiert.
-Wurde der Guide für das Total-Update befolgt, befindet sich auf dem Drucker auch ein Ordner mit der Bezeichnung "Macros" Kopiert dort die klipperscreen_shutdown.cfg.
+Wurde der Guide für das Total-Update befolgt, befindet sich auf dem Drucker auch ein Ordner mit der Bezeichnung "Macros" Kopiert dort die klipperscreen_shutdown.cfg hinein. Im Grunde werden beide Ordner benötigt und müssen, falls nicht vorhanden, erstellt werden.
 
 ## **Konfigurations klipperscreen_shutdown.sh**
 + Öffnet nun in Mainsail die klipperscreen_shutdown.sh und passt die IP des Druckers und falls ihr einen anderen User/Passwort benutzt, entsprechend diesen Abschnitt an eure Daten an.
