@@ -1,5 +1,5 @@
 # **Github-Backup**
-Dieser Guide basiert auf der Arbeit von <a href="https://github.com/EricZimmerman">Eric Zimmerman</a> und beschreibt den Weg  seine Configs, Macros etc. manuell oder automatisch in sein eigenes Github-Repository hochzuladen und bei Bedarf auch als Backup auf seinem 3D-Drucker wiederherzustellen.
+Dieser Guide basiert auf der Arbeit von <a href="https://github.com/EricZimmerman">Eric Zimmerman</a> und beschreibt den Weg Configs, Macros etc. manuell oder automatisch in das eigene Github-Repository hochzuladen und bei Bedarf auch als Backup auf seinem 3D-Drucker wiederherzustellen.
 Um den Guide besser folgen zu können, sind alle Konsolenbefehle für Copy&Paste vorbereitet. Ebenso sind diesem Guide Bilder hinzugefügt um einzelne Schritte besser verständlich zu machen.
 > [!IMPORTANT]
 > Der in diesem Guide gezeigte Access-Token sowie das Repository wurden nur für diesen Guide erstellt. Beides wurde bereits gelöscht. Nur für den Fall das jemand mit diesen Daten versucht Zugriff zu erlangen. 😄
