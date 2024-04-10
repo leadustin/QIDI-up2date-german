@@ -262,7 +262,7 @@ In der Macro-Übersicht befindet sich nun das Macro "BACKUP CFG". Dies ist der m
 
 ![MACRO](/../main/images/backup22.png)
 
-Zusätzlich wird bei jedem Neustart von Klipper nach 10 Sekunden das Macro automatisch aufgerufen
+Zusätzlich wird bei jedem Neustart von Klipper nach 10 Sekunden das Macro automatisch aufgerufen.
 
 ![MACRO](/../main/images/backup23.png)
 
