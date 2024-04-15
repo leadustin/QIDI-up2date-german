@@ -266,7 +266,7 @@ sudo apt install python3-serial
 
 > [!WARNING]
 > ### **Flashen des Druckkopfs mit Klipper**
-> Stellt sicher, dass ihr auch **EURE ID** benutzt. Nachfolgenden Befehl komplett mit **EURER ID** in die Konsole einfügen. **Eure ID** habt ihr in einer Text-Datei zwischengespeichert.
+> Stellt sicher, dass ihr auch **EURE ID** benutzt. Nachfolgenden Befehl komplett mit **EURER ID** in die Konsole einfügen. **EURE ID** habt ihr in einer Text-Datei zwischengespeichert.
 >
 > ```bash
 > python3 ~/katapult/scripts/flashtool.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-katapult_rp2040_EURE_ID
