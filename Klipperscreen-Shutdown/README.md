@@ -18,7 +18,7 @@ sudo apt install sshpass
 ```
 
 Die eigentliche Installation ist simpel. Kopiert die klipperscreen_shutdown.cfg und die klipperscreen_shutdown.sh und ladet sie auf euren Drucker.
-Wenn ihr das Tutorial für das automatsiche Github-Backup befolgt habt, befindet sich auf dem Drucker ein Ordner mit der Bezeichnung "Scripts". In diesen Ordner wird das Script kipperscreen_shutdown.sh kopiert.
+Wenn ihr das Tutorial für das automatsiche Github-Backup befolgt habt, befindet sich auf dem Drucker ein Ordner mit der Bezeichnung "Scripts". In diesen Ordner wird das Script klipperscreen_shutdown.sh kopiert.
 Wurde der Guide für das Total-Update befolgt, befindet sich auf dem Drucker auch ein Ordner mit der Bezeichnung "Macros" Kopiert dort die klipperscreen_shutdown.cfg hinein. Im Grunde werden beide Ordner benötigt und müssen, falls nicht vorhanden, erstellt werden.
 
 ## **Konfigurations klipperscreen_shutdown.sh**
