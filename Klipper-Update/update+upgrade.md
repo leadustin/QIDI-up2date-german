@@ -673,6 +673,71 @@ Und ein weiterer Screen.
 
 ![Display](/../main/images/display2.png)
 
+## **Alternative für den Touchscreen**
+
+Eine Alternative für den Touchscreen und Raspberry Pi ist die Verwendung eines alten Tablets oder Smartphones.   
+> [!IMPORTANT]
+> Abhängig von der Leistungsfähigkeit des genutzen Geräts sowie der Netzwerkverbindung kann es Unterschiede in der Benutzung  im vergleich mit einem nativ installierten Klipperscreen geben.
+
+### **Installation auf dem Drucker**
+
+Wir verbinden uns mit via putty mit dem Drucker und installieren über KIAUH Klipperscreen. Dies wird ein paar Minuten dauern. Auf Nachfrage Klipperscreens ob es als Standalone installiert werden soll, mit JA beantworten.
+
+Der nächste Schritt ist die Installation eines VNC-Servers. Folgende Befehl in die Konsole einfügen:
+```bash
+sudo apt install tigervnc-standalone-server
+```
+Als nächstest muss die Datei "launch_KlipperScreen.sh" erstellt werden.
++ Hierfür folgendes in die Konsole einfügen:
+```bash
+cd ~/KlipperScreen/scripts/
+nano launch_KlipperScreen.sh
+```
+Nach dem sich der Nano-Editor geöffnet hat folgende Befehle einfügen:
+```bash
+#!/bin/bash
+# Use display 10 to avoid clashing with local X server, if any
+Xtigervnc -rfbport 5900 -noreset -AlwaysShared -SecurityTypes none :10&
+DISPLAY=:10 $KS_XCLIENT&
+wait
+```
+> [!TIP]
+> Wer die Auflösung anpassen möchte, muss folgendes Argument hinzufügen.
+> Nachfolgendes Beispiel für die Auflösung von 1280x720 Pixel.
+> ```bash
+> -geometry 1280x720
+> ```
+
+Ist alles eingetragen den Editor speichern und schliessen
++ In Nano, mit Ctrl+O (speichern), dann Enter drücken und mit Ctrl+X den Editor verlassen.
+
+Jetzt muss die erstellte Datei ausführbar gemacht werden. Daher nachfolgenden Befehl in die Konsole einfügen:
+```bash
+chmod +x ~/KlipperScreen/scripts/launch_KlipperScreen.sh
+```
+
+Nächster Schritt  ist ein Neustart des Klipperscreen-Service. Folgenden Befehl in der Konsole ausführen:
+```bash
+sudo systemctl restart KlipperScreen.service
+```
+Damit haben wir die Installation auf dem Drucker abgeschlossen.
+
+### **Installation auf dem Tablet/ Smartphone**
+
+Damit Klipperscreen auf dem Tablet angezeigt wird, benötigen wir einen VNC-Viewer. Ich empfehle die AVNC-App. Download findet ihr entweder auf Github direkt oder im Google Play Store.
+Wie man eine App aus dem Store installiert, sollte jedem bekannt sein.
+
++ <a href="https://github.com/gujjwal00/avnc" target="_blank" rel="noopener noreferrer">AVNC</a>
+
+Ist der Viewer installiert, erstellen wir nach dem Öffnen einen neuen Server. Hierfür die IP und einen Namen eintragen. Falls eine Nachricht bzgl. einer nicht verschlüsselten Verbindung erscheint, ignorieren und die Nachricht deaktivieren.
+
+Wenn alles korrekt installiert wurde, stellt das Smartphone/Tablet eine Verbindung zum Klipperscreen her.
+
+Zwei Einstellungen müssen noch in Klipperscreen vorgenommen werden: 
++ In den Klipperscreen-Einstellungen, "Screen DPMS" deaktivieren und "Screen Power Off Time" auf "Never" einstellen.
+
+Herzlichen Glückwunsch - Du bist fertig.
+
 Wenn dir dieser Guide gefallen hat:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G7VMD0W)
