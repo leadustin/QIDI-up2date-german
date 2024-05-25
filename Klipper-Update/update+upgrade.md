@@ -496,7 +496,7 @@ Nach der Installation von Spoolman kann das Tool über die IP eures Druckers und
 > Es gibt jedoch die Möglichkeit die Bedienung per Touchscreen wiederherzustellen. Stichwort ist hier "Klipperscreen".
 > Klipperscreen ist angelehnt an Octoscreen und bietet eine grafische Oberfläche zum Steuern eines oder mehrerer Drucker.
 >
-> Ich beschreibe hier den Austausch des originalen Displays mit einem 5 Zoll Touchdisplays in Kombination mit einem Raspberry Pi als fest installiertes Display.
+> Ich beschreibe hier den Austausch des originalen Displays mit einem 5 Zoll Touchdisplays in Kombination mit einem Raspberry Pi als fest installiertes Display. Als weitere Alternative befindet sich am Ende dieses Guides, eine Anleitung mit der Klipperscreen über ein altes Tablet oder Smartphone läuft.
 
 **Was benötigen wir dafür alles?**
 
