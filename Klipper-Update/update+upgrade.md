@@ -132,6 +132,11 @@ Es wird eine Fehlermeldung ausgegeben, da auf diversen MCUs eine veraltete Klipp
 
 ## **Flashen des Druckkopfs - Einleitung**
 
+> [!CAUTION]
+> Es ist wichtig, das ihr vor dem aktualisieren des Druckkopfs ALLE USB-Geräte vom Mainboard trennt.
+> Das sind Geräte wie eine Webcam oder den WLAN-Dongle.
+> Bei Nichtbeachtung wird es zu Problemen während des Aktualisierungsvorgangs kommen.
+
 Um den Druckkopf zu flashen, müssen wir ihn in den "DFU-Modus" versetzen. Dies erfordert das physische Drücken von 2 Knöpfen. Dieser Schritt wird später genauer erklärt.
 
 ### **Installation von katapult**
