@@ -452,6 +452,31 @@ Mit diesem Tool lassen sich unter anderem Vibrationskalibrierungen durchführen 
 ```bash
 wget -O - https://raw.githubusercontent.com/Frix-x/klippain-shaketune/main/install.sh | bash
 ```
+Nach der Installation die printer.cfg öffnen und über dem Eintrag "Input Shaping" folgendes einfügen:
+
+```bash
+[shaketune]
+result_folder: ~/printer_data/config/ShakeTune_results #Der Ordner, in dem die Ergebnisse gespeichert werden sollen. Er wird erstellt, wenn er nicht vorhanden ist.
+number_of_results_to_keep: 3 #Die Anzahl der Ergebnisse, die im result_folder gespeichert werden sollen. Die ältesten Ergebnisse werden nach jedem Lauf automatisch gelöscht.
+keep_raw_csv: False #Bei "True" werden die CSV-Rohdateien zusammen mit den PNG-Diagrammen im result_folder aufbewahrt. Bei „False“ werden sie gelöscht und nur die Diagramme bleiben erhalten.
+show_macros_in_webui: True #Mainsail und Fluidd erstellen keine Schaltflächen für „System-Makros", die nicht in der Datei printer.cfg enthalten sind. Wenn die Makros im Web-UI angezeigt sollen, muss der Wert auf "True" gesetzt werden.
+timeout: 300 #Die maximale Zeit in Sekunden, die Shake&Tune zur Verfügung steht, um die CSV-Dateien zu verarbeiten und die Diagramme zu erstellen.
+```
+Damit Klippain Shake&Tune automatisch auf Aktualisierungen geprüft werden kann, wird als nächster Schritt die moonraker.conf geöffnet und folgendes eingefügt:
+
+```bash
+## Klippain Shake&Tune automatic update management
+[update_manager Klippain-ShakeTune]
+type: git_repo
+origin: https://github.com/Frix-x/klippain-shaketune.git
+path: ~/klippain_shaketune
+virtualenv: ~/klippy-env
+requirements: requirements.txt
+system_dependencies: system-dependencies.json
+primary_branch: main
+managed_services: klipper
+```
+
 > [!TIP]
 > Über die Macros "BELTS_SHAPER_CALIBRATION" und "AXES_SHAPER_CALIBRATION" werden diverse Tests durchgeführt und zum Abschluss in einer Grafik aufbereitet. Vor Benutzung der Macros bitte den Drucker "homen".
 
