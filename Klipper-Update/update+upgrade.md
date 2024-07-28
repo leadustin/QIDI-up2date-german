@@ -21,7 +21,7 @@ Der Flaschenhals der Serie 3 ist jedoch die veraltete Software. Eine Gegenübers
 | ------------- | ------------- |
 | Armbian Buster  | Armbian Bookworm  |
 | Klipper 0.10.x  | Klipper 0.12.x  |
-| Moonraker 0.7.x  | Moonraker 0.8.x  |
+| Moonraker 0.7.x  | Moonraker 0.9.x  |
 | Fluidd 1.19.x  | Fluidd 1.30.x |
 | Mainsail?  | Mainsail 2.11  |
 | Python 2.7 und 3.7  | Python 3.12 |
