@@ -10,7 +10,7 @@ Damit feuchte Luft entweichen kann, muss die Dose mit Löchern versehen werden, 
 
 # **Disclaimer**
 > [!CAUTION]
->Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
+> Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
 > Lasst euren Drucker während des Trocknungsprozess nicht unbeaufsichtigt. Ergreift Brandschutzmaßnahmen wie die Installation einens Brandschutzmelders!
 
 ## Installation
