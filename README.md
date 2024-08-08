@@ -12,7 +12,7 @@ Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Gith
 + [Automatisches Backup](Git-Backup/Autobackup.md)
 
 Dies ist die Möglichkeit über das Druckbett feuchtes Filament zu trocknen.
-+ [Filamentrocknung](Filamentrocknung/readme.md)
++ [Filamentrocknung](Filamenttrocknung/readme.md)
 
 Hier gibt es 3D-Modelle des Druckkopfs sowie der Baugruppen der XY-Achsen
 + [3D-Modelle](3D-Modelle/3D-Modelle.md)
