@@ -1,6 +1,6 @@
 # **Filamenttrocknung per Druckbett**
 
-Dieses Macro ermöglicht es über das Heizbett des Qidi Max-3, Plus-3 sowie bauähnliche Drucker feuchtes Filament zu trocknen.
+Dieses Macro ermöglicht es über das Druckbett des Qidi Max-3, Plus-3 sowie bauähnliche Drucker feuchtes Filament zu trocknen.
 Möglicherweise müssen bei Nicht-QIDI-Druckern die PIN-Belegungen der Lüfter entsprechend angepasst werden. 
 Sollte der Drucker keine aktive Bauraumheizung haben, muss auch hier entprechend auskommentiert werden.
 
