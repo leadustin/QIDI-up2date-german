@@ -11,7 +11,7 @@ Mit diesem Macro lässt sich der für den Display-Tausch verwendete Raspberry Pi
 Wer ein automatisiertes Backup alle Configs, Macros etc. auf seinem eigenen Github Repository erstellen möchte, findet hier eine Lösung.
 + [Automatisches Backup](Git-Backup/Autobackup.md)
 
-Dies ist die Möglichkeit über das Druckbett feuchtes Filament zu trocknen.
+Mit diesem Macro hat man die Möglichkeit über das Druckbett feuchtes Filament zu trocknen.
 + [Filamentrocknung](Filamenttrocknung/readme.md)
 
 Hier gibt es 3D-Modelle des Druckkopfs sowie der Baugruppen der XY-Achsen
