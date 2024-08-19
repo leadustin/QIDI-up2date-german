@@ -96,7 +96,7 @@ Das bedeutet, dass der Lüfter nach 30 Minuten für eine Laufzeit von 10 Minuten
 Dies wird solange wiederholt, bis die eingestellte Trocknungsdauer abgelaufen ist oder der Trocknungsprozess manuell gestoppt wurde.
 Wird bei Laufzeit und Wartezeit eine "0" eingetragen, laufen die jeweiligen Lüfter permanent bis zum Trocknungsende.
 
-Somit kann zu fest deinierten Zeiten feuchte Luft abgesaugt werden oder eine zusätzliche Luftumwälzung erfolgen.
+Somit kann zu fest definierten Zeiten feuchte Luft abgesaugt werden oder eine zusätzliche Luftumwälzung erfolgen.
 
 ### Konfiguration und Funktion des Macros STOP_TROCKNUNG
 
