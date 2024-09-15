@@ -1,6 +1,12 @@
 # **Shutdown Klipperscreen**
 > [!NOTE]
-> Dieses Macro bringt nur etwas, wenn ihr den im [Total-Umbau](Klipper-Update/update+upgrade.md) beschriebenen Weg bzgl. des Display-Tauschs befolgt habt! 
+> Dieses Macro bringt nur etwas, wenn ihr den im [Total-Umbau](Klipper-Update/update+upgrade.md) beschriebenen Weg bzgl. des Display-Tauschs befolgt habt! Das Tool „gcode_shell_command“ muss installiert sein, damit das Skript funktioniert. Wenn Klippain Shake&Tune aus dem Klipper Update Tutorial bereits installiert ist, ist der folgende Schritt nicht notwendig, da das Tool bereits installiert wurde. Wenn Klippain Shake&Tune nicht installiert ist, müssen die folgenden Schritte durchgeführt werden.
++ Über KIAUH Menüpunkt 4 und dann Punkt 8.
++ Option 2 als Eingabe über die Konsole:
+
+```bash
+ wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+```
 ## **Installation eines Makros um den Raspberry, auf dem Klipperscreen läuft, per Makro herunterzufahren.**
 
 Mit diesem Makro lässt sich der Raspberry Pi bequem aus Mainsail herunterfahren. Dies ist nützlich wenn der Drucker vom PC entfernt aufgestellt ist.
