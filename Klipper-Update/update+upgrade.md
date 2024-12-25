@@ -458,7 +458,7 @@ Nach der Installation die printer.cfg öffnen und über dem Eintrag "Input Shapi
 [shaketune]
 result_folder: ~/printer_data/config/ShakeTune_results #Der Ordner, in dem die Ergebnisse gespeichert werden sollen. Er wird erstellt, wenn er nicht vorhanden ist.
 number_of_results_to_keep: 3 #Die Anzahl der Ergebnisse, die im result_folder gespeichert werden sollen. Die ältesten Ergebnisse werden nach jedem Lauf automatisch gelöscht.
-keep_raw_csv: False #Bei "True" werden die CSV-Rohdateien zusammen mit den PNG-Diagrammen im result_folder aufbewahrt. Bei „False“ werden sie gelöscht und nur die Diagramme bleiben erhalten.
+keep_raw_data: False #Bei "True" werden die CSV-Rohdateien zusammen mit den PNG-Diagrammen im result_folder aufbewahrt. Bei „False“ werden sie gelöscht und nur die Diagramme bleiben erhalten.
 show_macros_in_webui: True #Mainsail und Fluidd erstellen keine Schaltflächen für „System-Makros", die nicht in der Datei printer.cfg enthalten sind. Wenn die Makros im Web-UI angezeigt sollen, muss der Wert auf "True" gesetzt werden.
 timeout: 300 #Die maximale Zeit in Sekunden, die Shake&Tune zur Verfügung steht, um die CSV-Dateien zu verarbeiten und die Diagramme zu erstellen.
 ```
