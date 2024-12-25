@@ -22,7 +22,7 @@ Der Flaschenhals der Serie 3 ist jedoch die veraltete Software. Eine Gegenübers
 | Armbian Buster  | Armbian Bookworm  |
 | Klipper 0.10.x  | Klipper 0.12.x  |
 | Moonraker 0.7.x  | Moonraker 0.9.x  |
-| Fluidd 1.19.x  | Fluidd 1.30.x |
+| Fluidd 1.19.x  | Fluidd 1.31.x |
 | Mainsail?  | Mainsail 2.13  |
 | Python 2.7 und 3.7  | Python 3.12 |
 
@@ -481,9 +481,7 @@ managed_services: klipper
 > Über die Macros "BELTS_SHAPER_CALIBRATION" und "AXES_SHAPER_CALIBRATION" werden diverse Tests durchgeführt und zum Abschluss in einer Grafik aufbereitet. Vor Benutzung der Macros bitte den Drucker "homen".
 
 ### Spoolman
-Spoolman ist ein Filamentverwaltungs-Tool mit dem der Verbrauch des Filaments protokolliert wird. Mittlerweile lässt sich Spoolman bequem über KIAUH installieren. Um die Installation zu starten, Menü-Punkt 1 Installation wählen und dann über Punkt 13 den Installationsschritten folgen. Spoolman als selbststartenden Service installieren. 
-
-Wer lieber direkt in der Konsole arbeiten will, kann auch weiterhin manuell installieren
+Spoolman ist ein Filamentverwaltungs-Tool mit dem der Verbrauch des Filaments protokolliert wird. 
 
 + Folgende Befehle kopieren und in die Konsole einfügen:
 
