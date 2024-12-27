@@ -84,7 +84,7 @@ Sicher ist sicher.
 + Entsprechend der Anleitung die EMMC wieder auf dem Mainboard einstecken.
 + LAN-Kabel und Stromversorgung anschließen.
 + Drucker einschalten – Das System fährt nun hoch und der Drucker bekommt seine IP vom Router zugewiesen.
-+ Router öffnen und die derzeitige IP des Druckers heraussuchen und dem Drucker fest zuweisen. Nachfolgend ein Bild der Einstellungen auf der Fritz!Box. Wer einen anderen Router hat, muss selber suchen.
++ Die Weboberfläche eueres Router öffnen und die derzeitige IP des Druckers heraussuchen und dem Drucker fest zuweisen. Nachfolgend ein Bild der Einstellungen auf der Fritz!Box. Wer einen anderen Router hat, muss selber suchen.
 
 ![Fritz!Box](/../main/images/fritzbox_ip.png)
 
