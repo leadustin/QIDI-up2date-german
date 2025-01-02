@@ -364,8 +364,8 @@ Alles was Macros betrifft ist in einer eigenen macro.cfg gesammelt. Dazu kommen 
 Alles per "include" in die printer.cfg eingebunden.
 
 
-+ Die dem Drucker entsprechende RAR-Datei herunterladen und entpacken
-+ Mainsail aufrufen und im Tab "Maschine" die printer.cfg mit einem Rechtsklick markieren, löschen und über "Datei hochladen" die printer.cfg aus dem Archiv hochladen
++ Die dem Drucker entsprechende printer.cfg herunterladen.
++ Mainsail aufrufen und im Tab "Maschine" die printer.cfg mit einem Rechtsklick markieren, löschen und über "Datei hochladen" die neue printer.cfg hochladen
 
 ![Mainsail Upload](/../main/images/mainsail_upload.png)
 
@@ -379,12 +379,16 @@ Alles per "include" in die printer.cfg eingebunden.
 
 Im Mainsail-Editor auf "Speichern und Neustart" klicken. Klipper wird neu gestartet und lädt alle Configs.
 Wenn die ID unter mcu MKS_THR korrekt eingetragen wurde, sollte auch die mcu-bezogene rote Fehlermeldung weg sein. Dafür haben wir jetzt eine andere rote Fehlermeldung. 
-Es fehlt die Adaptive_Mesh.cfg. Diese befindet sich in der heruntergeladenen RAR-Datei im Ordner "Macros".
- + Erstellt In Mainsail einen Ordner mit dem Namen "Macros" über den Button "Verzeichnis erstellen"
+Es fehlt die adaptive_mesh.cfg. Diese ladet ihr euch aus dem Ordner "macros" herunter.
+ + Erstellt In Mainsail einen Ordner mit dem Namen "macros" über den Button "Verzeichnis erstellen"
 
 ![Mainsail Folder](/../main/images/mainsail_folder.png)
 
-+ Öffnet diesen Ordner und ladet alle Dateien aus dem entpackten Ordner "Macros" hoch
++ Öffnet diesen Ordner und kopiert folgende Dateinen in  "macros" hinein
++ adaptive_mesh.cfg
++ client.cfg
++ macros.cfg
++ sensorless_homing_override.cfg
 
 Da uns noch ein paar Dateien fehlen, starten wir nun Putty und loggen uns mit mks/makerbase auf den Drucker ein.
 
@@ -429,7 +433,7 @@ output_path: ~/printer_data/timelapse/
 frame_path: /tmp/timelapse/printer
 ```
 
-Nach der Installation von Mainsail Timelapse befindet sich im Ordner "Config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "Macros".
+Nach der Installation von Mainsail Timelapse befindet sich im Ordner "config" die Datei "timelapse.cfg. Diese kopiert ihr in Mainsail per Drag&Drop in den Ordner "macros".
 
 Damit wir später Aktualisierungsbenachrichtigungen bei Updates bekommen, öffnen wir in Mainsail die moonraker.conf und fügen am Ende der Datei folgendes ein:
 
