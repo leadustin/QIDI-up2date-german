@@ -102,19 +102,19 @@ Mit dem Tool euer Wahl per SSH auf den Drucker verbinden. Ich benutze in diesem 
 + Wir benötigen einen Ordner mit dem Namen "Scripts", den wir mit folgendem Befehl erstellen:
 
   ```bash
-  mkdir Scripts
+  mkdir scripts
   ```
   
 + mit nachfolgendem Befehl wird das autocommit-Script heruntergeladen
 
   ```bash
-  wget -O ~/printer_data/config/Scripts/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+  wget -O ~/printer_data/config/scripts/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
   ```
 
 + Als nächstes wird die bevorzugte Weboberfläche ausgewählt. Wer Mainsail benutzt, entfernt die # in der Mainsail-Zeile. Wer Fluidd nutzt entsprechend bei Fluidd. Dafür öffnen wir mit folgendem Befehl die autocommit.sh
 
   ```bash
-  nano ~/printer_data/config/Scripts/autocommit.sh
+  nano ~/printer_data/config/scripts/autocommit.sh
   ```
 + Nachfolgendes Bild zeigt die Konfiguration für Mainsail. Fluidd ist entsprechend auskommentiert.
 
@@ -204,7 +204,7 @@ Wir sind soweit das erste Backup zu erstellen.
 + Nachfolgenden Befehl in die Konsole einfügen:
 
   ```bash
-  cd ~/printer_data/config/Scripts
+  cd ~/printer_data/config/scripts
   sh autocommit.sh
   ```
 + Wenn alle notwendigen Schritte zuvor richtig ausgeführt wurden, sollte es in der Konsole in etwas so aussehen. Da ich für diesen Guide ein eigenes System aufgesetzt habe, werden bei euch die übermittelten Daten von der Anzahl her höher sein.
@@ -235,7 +235,7 @@ Mit einem Klick auf eine der Commits öffnet sich die Vergleichsansicht. In dies
 Um komfortabel ein Backup per Macro zu erstellen fügt ihr folgenden Code in die Datei ein, die eure Macros enthält. Solltet ihr meinen Guide des [Komplett-Updates](/Klipper-Update/update+upgrade.md) des Druckers durchgeführt haben, sollte das Macro in die Macros/macro.cfg eingefügt werden.
 ```bash
  [gcode_shell_command backup_cfg]
- command: ~/printer_data/config/Scripts/autocommit.sh
+ command: ~/printer_data/config/scripts/autocommit.sh
  timeout: 30
  verbose: True
 
