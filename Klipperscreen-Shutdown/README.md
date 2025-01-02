@@ -32,7 +32,7 @@ Wurde der Guide für das Total-Update befolgt, befindet sich auf dem Drucker auc
 + Als nächstes muss dem Script die Berechtigung zum ausführen gegeben werden. Führt folgenden Befehl in Putty aus. Alternativ kann auch in WinSCP die Berechtigung gesetzt werden. Siehe nachfolgendes Bild.
   
   ```bash
-  chmod 0755 ~/printer_data/config/Scripts/klipperscreen_shutdown.sh
+  chmod 0755 ~/printer_data/config/scripts/klipperscreen_shutdown.sh
   ```
 + die Datei klipperscreen_shutdown.sh per Rechtsklick markieren, dann Eigenschaften und dann wie im Bild entsprechend die Häkchen setzen.
 
