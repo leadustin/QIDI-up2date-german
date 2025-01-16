@@ -12,7 +12,6 @@ Die Geräte, die auf der Anschlussseite einen Port mit der Bezeichnung FAN2 besi
 Geräte die an dieser Stelle ein VIN0 haben, fehlt die Möglichkeit diesen Lüfter nach bedarf steuern zu können. Dieser Lüfter läuft permanent sobald der Drucker eingeschaltet wird.
 
 Hier kommt nun der Klipper Expander ins Spiel. 
-
 ![Mainboard](/../klipper_expander/images/Klipper_Expander.png)
 
 Diese kleine Platine ermöglicht es den Mainboardlüfter seinen Vorstellungen entsprechend zu steueren. 
