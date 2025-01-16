@@ -1,5 +1,10 @@
 # **Klipper Expander**
 
+# **Disclaimer**
+> [!CAUTION]
+>Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
+>Es müssen Arbeiten mit elektrischen Leitungen vorgenommen werden. Auch wenn wir primär nur mit 24V arbeiten, bei unsachgemäßer Ausführung besteht unteranderem die Gefahr von Kurzschlüssen!
+
 Jeder der einen Drucker der Serie 3 besitzt, wird mitbekommen haben, dass der Mainboardlüfter permanent läuft sobald das Gerät angeschaltet wird.
 Hier werden wir ansetzen und Abhilfe schaffen. Qidi hat für die Mainboards X-6 V1.0 mehrere Revisionen veröffentlicht, jedoch nicht nach außen kommuniziert.
 So gibt es Mainboards mit einem als FAN2 bezeichneten Lüfterausgang, der sich ansteuern lässt
@@ -8,11 +13,6 @@ So gibt es Mainboards mit einem als FAN2 bezeichneten Lüfterausgang, der sich a
 
 Geräte die an dieser Stelle ein VIN0 haben, fehlt die Möglichkeit diesen Lüfter nach Bedarf steuern zu können. Dieser Lüfter wird immer permanent laufen sobald der Drucker eingeschaltet wird.
 Bei näherer Betrachtung keine komfortable Lösung.
-
-# **Disclaimer**
-> [!CAUTION]
->Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
->Es mussen Arbeiten mit elektrischen Leitungen vorgenommen werden. Auch wenn wir primär nur mit 24V arbeiten, bei unsachgemäßer Ausführung besteht unteranderem die Gefahr von Kurzschlüssen!
 
 Hier kommt nun der Klipper Expander ins Spiel. 
 ![Mainboard](/../klipper_expander/images/Klipper_Expander.png)
