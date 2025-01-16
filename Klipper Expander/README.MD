@@ -28,6 +28,7 @@ Diese kleine Platine bietet mehrere Möglichkeiten weitere Peripherie hinzuzufü
 
 Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgendes Material
 + 1x Klipper Expander
++ 1x Micro-USB-Kabel mit Datenleitungen
 + 2x Ringkabelschuhe in der Größe 0,5-1,5 mm²
 + 4x Aderendhülsen in der Größe 0,5 mm²
 + 1m Kabel 0,5mm²
