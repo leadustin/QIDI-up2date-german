@@ -9,6 +9,11 @@ So gibt es Mainboards mit einem als FAN2 bezeichneten Lüfterausgang, der sich a
 Geräte die an dieser Stelle ein VIN0 haben, fehlt die Möglichkeit diesen Lüfter nach Bedarf steuern zu können. Dieser Lüfter wird immer permanent laufen sobald der Drucker eingeschaltet wird.
 Bei näherer Betrachtung keine komfortable Lösung.
 
+# **Disclaimer**
+> [!CAUTION]
+>Bitte beachtet, dass weder ich noch andere dritte Personen für Schäden an eurem Drucker verantwortlich sind, solltet ihr diesem Tutorial folgen.
+>Es mussen Arbeiten mit elektrischen Leitungen vorgenommen werden. Auch wenn wir primär nur mit 24V arbeiten, bei unsachgemäßer Ausführung besteht unteranderem die Gefahr von Kurzschlüssen!
+
 Hier kommt nun der Klipper Expander ins Spiel. 
 ![Mainboard](/../klipper_expander/images/Klipper_Expander.png)
 
@@ -19,10 +24,16 @@ Diese kleine Platine bietet mehrere Möglichkeiten weitere Peripherie hinzuzufü
 + 1 GPIO-Header
 + I2C-Header mit Pullup-Widerständen
 
-möglicht es den Mainboardlüfter seinen Vorstellungen entsprechend zu steuern. 
-Dies kann temperaturgesteuert oder drehzahlgesteuert  erfolgen. Beide Möglichkeiten werden später genauer beschrieben.
+# **Drucker OHNE FAN2**
 
-# **Benötigtes Material**
+Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgendes Material
++ 1x Klipper Expander
++ 2x Ringkabelschuhe in der Größe 0,5-1,5 mm²
++ 4x Aderendhülsen in der Größe 0,5 mm²
++ 1m Kabel 0,5mm²
++ 1x Crimpzange
++ 1x Lüfter 24V sofern der originale Lüfter nicht verwendet werden soll
+
 
 
 
