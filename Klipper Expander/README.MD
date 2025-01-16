@@ -1,4 +1,4 @@
-Klipper Expander
+# **Klipper Expander**
 
 Der von Qidi verbaute Mainboardlüfter ist leider aufgrund der Größe von 40mm sehr laut. Dies lässt sich durch den Austausch durch qualitativ bessere und größere Lüfter relativ einfach ändern.
 Allerdings hat Qidi mehrere Revisionen der X-6 Mainboards als V1.0 veröffentlich.
