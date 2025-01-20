@@ -34,6 +34,9 @@ Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgend
 + 1m Kabel 0,5mm²
 + 1x Crimpzange
 + 1x Lüfter 24V sofern der originale Lüfter nicht verwendet werden soll
++ Schrumpfschlauch, passend für die verwendeten Kabel
+
+
 
 
 
