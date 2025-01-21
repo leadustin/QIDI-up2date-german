@@ -15,10 +15,10 @@ Damit feuchte Luft entweichen kann, muss die Dose mit Löchern versehen werden, 
 
 ## Installation
 
-Wenn der Drucker entsprechend meines <a href="https://github.com/leadustin/QIDI-up2date-german/blob/main/Klipper-Update/update%2Bupgrade.md">Guides</a> angepasst wurde, kann die Datei trocknung.cfg in den Macros-Ordner kopiert werden.
+Wenn der Drucker entsprechend meines <a href="https://github.com/leadustin/QIDI-up2date-german/blob/main/Klipper-Update/update%2Bupgrade.md">Guides</a> angepasst wurde, kann die Datei trocknung.cfg in den Ordner macros kopiert werden.
 Danach per include die Datei in der printer.cfg inkludieren
 ```bash
-[include Macros/trocknung.cfg]
+[include macros/trocknung.cfg]
 ```
 Die printer.cfg speichern und Klipper neustarten.
 
