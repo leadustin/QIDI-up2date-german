@@ -24,7 +24,7 @@ Diese kleine Platine bietet mehrere Möglichkeiten weitere Peripherie hinzuzufü
 + 1 GPIO-Header
 + I2C-Header mit Pullup-Widerständen
 
-# **Drucker OHNE FAN2**
+# ***Drucker OHNE FAN2***
 
 Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgendes Material
 + 1x Klipper Expander
