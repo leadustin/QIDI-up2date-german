@@ -36,7 +36,7 @@ Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgend
 + 1x Lüfter 24V sofern der originale Lüfter nicht verwendet werden soll
 + Schrumpfschlauch, passend für die verwendeten Kabel
 
-#**Vorbereitung Hardware**
+# **Vorbereitung Hardware**
 + Als erstes beginnen wir mit den elektrischen Leitungen. Längt entsprechend der Montageposition zwei gleich lange Kabel ab.
 + An das eine Ende kommen die Ringkabelschuhe und an das andere Ende die Aderendhülsen. 
 + Ordendlich crimpen und die Schrumpfschläuche nicht vegessen.
@@ -52,7 +52,7 @@ Darauf achten, das die Polarität der Anschlüße beachtet wird!
 
 ![Mainboard](/../klipper_expander/images/expander_power.png)
 
-#**Anschluß Lüfter**
+# **Anschluß Lüfter**
 Nachdem die Stromversorgung des Expander Board abgeschlossen ist, wird der nächste Schritt der Anschluss des Mainboardlüfters sein.
 Zuerst den Stecker, sofern vorhanden, des Lüfters abschneiden und mit den beiden restlichen Aderendhüslen vercrimpen.
 Die beiden Kabel werden nun in das erste Anschlussterminal der Mosfets verschraubt. Achtet darauf, das auch hier die Polarität beachtet wird.
