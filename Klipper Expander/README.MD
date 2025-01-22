@@ -59,6 +59,31 @@ Die beiden Kabel werden nun in das erste Anschlussterminal der Mosfets verschrau
 VIN muss mit Plus und M0 mit dem Minus-Pol verschraubt werden.
 ![Mainboard](/../klipper_expander/images/expander_mosfet_power.png)
 
+# **Anschluss USB**
+Der letzte Schritt ist die Verbindung des Expander Boards mit einem USB-Port des Mainboard
+Hier wird ein Typ A auf Micro-USB-Kabel benötigt. 
+> [!CAUTION]
+> Unbedingt darauf achten, ein Kabel mit Datenleitungen zu benutzen. Ich habe den Fehler gemacht ein altes Kabel aus der Sammelkiste zu nehmen.
+> Dies was ein Kabel zum laden einer USB-Lampe und besaß keine Datenleitungen. Somit war keine Verbindung des Expander zum Mainboard möglich.
+
+# **Flashen des Klipper Expander**
+
+Damit der Drucker mit dem Klipper Expander interagieren kann, muss dieser mit Klipper geflasht werden.
++ Den Drucker hierfür anschalten. Auf dem Klipper Expander sollten mehrere rote LEDs leuchten.
++ Als nächster Schritt muss der Boot-Jumper auf die beiden Boot-PINs gesteckt werden.
++ Reset-Knopf drücken
+![Mainboard](/../klipper_expander/images/expander_boot.png)
++ per SSH auf den Drucker verbinden. 
+```bash
+lsusb
+```
+In der Konsole sollte nun ein STM32-Gerät im DFU-Modus aufgeführt sein.
++ als nächstes folgenden Befehl ausführen
+```bash
+sudo dfu-util --list
+```
+
+
 
 
 
