@@ -24,7 +24,7 @@ Diese kleine Platine bietet mehrere Möglichkeiten weitere Peripherie hinzuzufü
 + 1 GPIO-Header
 + I2C-Header mit Pullup-Widerständen
 
-# ***Drucker OHNE FAN2***
+# **Drucker OHNE FAN2**
 
 Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgendes Material
 + 1x Klipper Expander
@@ -52,14 +52,14 @@ Darauf achten, das die Polarität der Anschlüße beachtet wird!
 
 ![Mainboard](/../klipper_expander/images/expander_power.png)
 
-# **Anschluß Lüfter**
+## **Anschluß Lüfter**
 Nachdem die Stromversorgung des Expander Board abgeschlossen ist, wird der nächste Schritt der Anschluss des Mainboardlüfters sein.
 Zuerst den Stecker, sofern vorhanden, des Lüfters abschneiden und mit den beiden restlichen Aderendhüslen vercrimpen.
 Die beiden Kabel werden nun in das erste Anschlussterminal der Mosfets verschraubt. Achtet darauf, das auch hier die Polarität beachtet wird.
 VIN muss mit Plus und M0 mit dem Minus-Pol verschraubt werden.
 ![Mainboard](/../klipper_expander/images/expander_mosfet_power.png)
 
-# **Anschluss USB**
+## **Anschluss USB**
 Der letzte Schritt ist die Verbindung des Expander Boards mit einem USB-Port des Mainboard
 Hier wird ein Typ A auf Micro-USB-Kabel benötigt. 
 > [!CAUTION]
