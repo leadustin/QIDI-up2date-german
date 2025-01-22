@@ -42,6 +42,15 @@ Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgend
 + Ordendlich crimpen und die Schrumpfschläuche nicht vegessen.
 
 Dreht am Mainboard die Schrauben der Stromversorgung heraus und legt das entsprechende Kabel in den Port
+Die auf dem Bild rot markierte Seite ist der stromführende Plus-Pol. Blau ist der Minus-Pol
+![Mainboard](/../klipper_expander/images/mainboard.png)
+
+Die Befestigungsschrauben wieder festdrehen.
+Die Kabelseite mit den Aderendhülsen in das Anschlussterminal des Klipper Expander einstecken und verschrauben.
+Darauf achten, das die Polarität der Anschlüße beachtet wird. 
+![Mainboard](/../klipper_expander/images/expander_power.png)
+
+
 
 
 
