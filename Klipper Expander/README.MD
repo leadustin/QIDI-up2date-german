@@ -36,7 +36,12 @@ Für die Realisierung eines steuerbaren Mainboardlüfters benötigen wir folgend
 + 1x Lüfter 24V sofern der originale Lüfter nicht verwendet werden soll
 + Schrumpfschlauch, passend für die verwendeten Kabel
 
+#**Vorbereitung Hardware**
++ Als erstes beginnen wir mit den elektrischen Leitungen. Längt entsprechend der Montageposition zwei gleich lange Kabel ab.
++ An das eine Ende kommen die Ringkabelschuhe und an das andere Ende die Aderendhülsen. 
++ Ordendlich crimpen und die Schrumpfschläuche nicht vegessen.
 
+Dreht am Mainboard die Schrauben der Stromversorgung heraus und legt das entsprechende Kabel in den Port
 
 
 
