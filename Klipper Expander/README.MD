@@ -73,7 +73,8 @@ Damit der Drucker mit dem Klipper Expander interagieren kann, muss dieser mit Kl
 + Als nächster Schritt muss der Boot-Jumper auf die beiden Boot-PINs gesteckt werden.
 + Reset-Knopf drücken
 ![Mainboard](/../klipper_expander/images/expander_boot.png)
-+ per SSH auf den Drucker verbinden. 
++ per SSH auf den Drucker verbinden.
++ In der Konsole folgenden Befehl ausführen
 ```bash
 lsusb
 ```
@@ -81,6 +82,15 @@ In der Konsole sollte nun ein STM32-Gerät im DFU-Modus aufgeführt sein.
 + als nächstes folgenden Befehl ausführen
 ```bash
 sudo dfu-util --list
+```
++ Den Inhalt dieses Codeblocks notieren [xxxx:yyyy]
++ Mit nachfolgenden Befehl in das Klipper-Verzeichnis wechseln
+```bash
+cd ~/klipper
+```
++ Mit nachfolgenden Befehl das Klipper Configuration Menu öffnen
+```bash
+make menuconfig
 ```
 
 
