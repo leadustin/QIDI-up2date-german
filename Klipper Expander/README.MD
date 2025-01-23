@@ -150,6 +150,7 @@ pid_Kd: 1.0
 pid_deriv_time: 4.0
 ```
 In Mainsail wird das dann so angezeigt:
+
 ![Mainboard](/../klipper_expander/images/mainboard_temp.png)
 
 # **Weitere Lüfter etc.**
