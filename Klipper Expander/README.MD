@@ -92,6 +92,26 @@ cd ~/klipper
 ```bash
 make menuconfig
 ```
++ Alles wie im nachfolgenden Bild einstellen
+![Mainboard](/../klipper_expander/images/placeholder.png)
++ Um Speicherplatz zu sparen im Bereich "Optionale Features" folgende Punkte einstellen
+![Mainboard](/../klipper_expander/images/placeholder.png)
++ Mit Q die Konfiguration speichern und schliessen
++ Nachfolgenden Befehl zum aufräumen ausführen
+```bash
+make clean
+```
++ Mit dem nächsten Befehl die Firmware flashen. Die xxxx:yyyy durch die mit Befehl dfu-util ausgelesenen Codeblock ersetzen
+```bash
+make flash FLASH_DEVICE=xxxx:yyyy
+```
++ Im nächsten Schritt den Boot Jumper entfernen und danach den Reset-Knopf drücken
++ Folgenden Befehl in der Konsole ausführen
+```bash
+ls /dev/serial/by-id/*
+```
++ Wenn alles richtig geflasht wurde sollte ein Gerät ähnlich diesem angezeigt werden.
+/dev/serial/by-id/usb-Klipper_stm32f042x6_19002A00115330374E333320-if00
 
 
 
