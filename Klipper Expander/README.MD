@@ -111,7 +111,105 @@ make flash FLASH_DEVICE=xxxx:yyyy
 ls /dev/serial/by-id/*
 ```
 + Wenn alles richtig geflasht wurde sollte ein Gerät ähnlich diesem angezeigt werden.
+```bash
 /dev/serial/by-id/usb-Klipper_stm32f042x6_19002A00115330374E333320-if00
+```
+# **printer.cfg**
+Damit der Drucker mit dem Klipper Expander kommunizieren kann müssen folgende Eintragungen in der printer.cfg vorgenommen werden.
+Bitte beachten, das hier EURE ID eingetragen werden muss
+```bash
+[mcu expander]
+serial: /dev/serial/by-id/usb-Klipper_stm32f042x6_EURE_ID
+restart_method: command
+```
+Für Zugriff auf den Mainboardlüfter folgenden Code in die Lüfter-Sektion der printer.cfg kopieren
+```bash
+## Mainboardlüfter
+[output_pin mainboard]
+pin: expander:PA0
+pwm: true
+cycle_time: 0.010
+value: 0
+shutdown_value: 0
+
+[temperature_fan mainboard]
+sensor_type: temperature_host
+pin: expander:PA0
+max_temp: 80.0
+target_temp: 35.0
+min_temp: 0
+shutdown_speed: 0.0
+kick_start_time: 0.5
+off_below: 0.25
+max_speed: 1.0
+min_speed: 0.2
+control: pid
+pid_Kp: 1.0
+pid_Ki: 2.5
+pid_Kd: 1.0
+pid_deriv_time: 4.0
+```
+# **Weitere Lüfter etc.**
+Wer weitere Lüfter einbinden möchte kann diese 3 weiteren Mosfets entsprechend in sein System einbauen
+```bash
+[output_pin mosfet1]
+pin: expander:PA1
+pwm: true
+cycle_time: 0.010
+value: 0
+shutdown_value: 0
+
+[output_pin mosfet2]
+pin: expander:PA2
+pwm: true
+cycle_time: 0.010
+value: 0
+shutdown_value: 0
+
+[output_pin mosfet3]
+pin: expander:PA3
+pwm: true
+cycle_time: 0.010
+value: 0
+shutdown_value: 0
+```
+Die beiden zusätzlichen Anschlüsse für Temperaturfühler können so eingefügt werden. In diesem Beispiel sind es 2 Thermistoren die die Temperatur der X und Y-Stepper messen.
+```bash
+## Thermistor
+[thermistor Generic_3950]
+temperature1: 25
+resistance1: 100000
+beta: 3950
+
+## Treiber X
+[temperature_sensor Treiber_X]
+sensor_type: Generic 3950
+sensor_pin: expander:PA6
+min_temp: 0
+max_temp: 140
+
+## Treiber Y
+[temperature_sensor Treiber_Y]
+sensor_type: Generic 3950
+sensor_pin: expander:PA5
+min_temp: 0
+max_temp: 140
+```
+
+Das einbinden von NeoPixel-LEDs erfolgt mit diesem Block
+```bash
+# Status LED lights when klipper connects 
+[static_digital_output onboardLED]
+pins: !expander:PA4
+
+
+[neopixel expanderPixel]
+pin: expander:PB1
+chain_count: 1
+initial_RED: 0.9
+initial_GREEN: 0.3
+initial_BLUE: 0.0
+```
 
 
 
