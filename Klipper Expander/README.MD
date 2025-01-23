@@ -62,7 +62,7 @@ VIN muss mit Plus und M0 mit dem Minus-Pol verschraubt werden.
 ## **Anschluss USB**
 Der letzte Schritt ist die Verbindung des Expander Boards mit einem USB-Port des Mainboard
 Hier wird ein Typ A auf Micro-USB-Kabel benötigt. 
-> [!ATTENTION]
+> [!TIP]
 > Unbedingt darauf achten, ein Kabel mit Datenleitungen zu benutzen. Ich habe den Fehler gemacht ein altes Kabel aus der Sammelkiste zu nehmen.
 > Dies was ein Kabel zum laden einer USB-Lampe und besaß keine Datenleitungen. Somit war keine Verbindung des Expander zum Mainboard möglich.
 
