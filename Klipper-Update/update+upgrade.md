@@ -216,7 +216,7 @@ Es folgt eine Abfrage des Passworts des User mks. Hier also makerbase eintragen.
 Nachfolgende Befehle flashen Katapult auf den Druckkopf:
 
 ```bash
-sudo cp out/katapult.uf2 /mnt
+sudo cp out/katapult.withclear.uf2 /mnt
 sudo umount /mnt
 ```
 
